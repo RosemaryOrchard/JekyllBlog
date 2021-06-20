@@ -30,7 +30,7 @@ twitter_username: RosemaryOrchard
 github_username:  RosemaryOrchard
 
 # Build settings
-theme: minimal-mistakes-jekyll
+theme: minima
 plugins:
   - jekyll-feed
   - jekyll-archives
