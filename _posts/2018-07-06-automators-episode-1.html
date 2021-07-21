@@ -1,0 +1,302 @@
+---
+layout: post
+title: 'Automators 1: Automating Calendar Events'
+date: 2018-07-06 17:30:00.000000000 +01:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Automators
+- Blog
+- Podcast
+tags:
+- AppleScript
+- Automators
+- Calendar Events
+- IFTTT
+- Keyboard Maestro
+- Podcast
+- Workflow
+meta:
+  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
+    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357071;}
+  mf2_type: a:1:{i:0;s:7:"h-entry";}
+  mf2_category: a:1:{i:0;s:78:"automators,podcast,calendar events,keyboard maestro,workflow,applescript,ifttt";}
+  mf2_mp-slug: a:1:{i:0;s:20:"automators-episode-1";}
+  mf2_name: 'a:1:{i:0;s:40:"Automators 1: Automating Calendar Events";}'
+  mf2_published: a:1:{i:0;s:16:"06-07-2018 17:30";}
+  mf2_updated: a:1:{i:0;s:16:"06-07-2018 17:30";}
+  mf2_content: |-
+    a:1:{i:0;a:1:{s:4:"html";s:14225:"<p><a href="https://resources.rosemaryorchard.com/images/posts/images/automators/artwork.jpeg?cropResize=100">https://resources.rosemaryorchard.com/images/posts/images/automators/artwork.jpeg?cropResize=100</a> "Automators Artwork"){.image-right} This week's episodes of <a href="https://www.relay.fm/automators/1">The Automators</a> is focused on calendar event creation. There are many ways you can automatically create calendar events, and it's useful to be able to do so, to avoid losing information. You can also use calendar events as a trigger to do something - which we cover towards the end. Below there are details of all the automations we cover, including 4 (really, four!) screencasts.</p>
+    <h2>Workflow: Calendar Event Templates</h2>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-calendar-event-templates.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-calendar-event-templates.png?cropResize=100</a> "Calendar Event Templates"){.image-left} This is a very simple Workflow which asks me for the date and time of the event, and then what kind of event this is (the demo has 3 examples) - it then adjusts the time to add an appropriate length for the appointment and adds it to my calendar. This is very useful because I can never remember what floor my dentist is on or exactly where to turn to find my hairdresser - so I can add this to the notes. Even if the places you frequent are not hidden like mine are you can still use this!
+    You can get the workflow here: <a href="https://workflow.is/workflows/434bd4cf625f419282aee780d3414a4c">Calendar Event Templates</a> Make sure to read on to find out about the "Run Workflow" action at the end of it.</p>
+    <h2>Workflow: Add Event To Work Calendar</h2>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-add-event-to-work-calendar.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-add-event-to-work-calendar.png?cropResize=100</a> "Add Event To Work Calendar (Menu)"){.image-right} This workflow follows the first one, and is in fact run by it - or could be. It simply asks you if the appointment you've made is during working hours, and if you say yes, adds an event that starts half an hour before and ends half an hour after the appointment you've just created to your calendar. Make sure to tweak the calendar setting here! You can get the workflow here: <a href="https://workflow.is/workflows/7028582e422441209e36690ab4621b94">Add Event To Work Calendar (Menu)</a></p>
+    <p>Of course, you can automate this too, this formats the date of the event as one letter (so Monday becomes M, Friday becomes F), and if it's not Saturday or Sunday, checks if the event starts after 8 am but before 6pm - if yes it adds an event to your calendar. It's not <em>insanely</em> complicated, but it's not as simple as the Workflow above.
+    You can get the workflow here: <a href="https://workflow.is/workflows/3a0dd365141d4146981c1297148f2a24">Add Event To Work Calendar (Auto)</a></p>
+    <h2>David's Hyper Scheduling Workflow</h2>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-block-schedule.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-block-schedule.png?cropResize=100</a> "Block Schedule"){.image-left} Since February David has had an ongoing <a href="https://www.macsparky.com/blog/2018/2/the-hyper-scheduling-experiment">Hyper-Scheduling Experiment</a>, which involves scheduling blocks of time in his calendar to provide a framework throughout his day. You can see his Workflow to generate some of the core blocks here.</p>
+    <p><a href="https://youtu.be/mRDUdsRBiIk">plugin:youtube</a></p>
+    <p>You can get the workflow here: <a href="https://workflow.is/workflows/4568f7c24b8e415c9e77305b26e4768e">Block Schedule</a></p>
+    <h2>Add Travel Time</h2>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-travel-time.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-travel-time.png?cropResize=100</a> "Travel Time"){.image-right} Here David walks you through how his Workflow to add travel time events to your calendar works.
+    <a href="https://youtu.be/Do6UWlnO_5g">plugin:youtube</a></p>
+    <p>You can get the workflow here: <a href="https://workflow.is/workflows/9bd57fd605034d3bade12d8486b80d7e">Travel Time</a></p>
+    <h2>Repeating Events</h2>
+    <p>Of course, one of the simplest ways to automate calendar event creation is repeats - and you can go from very simple up to fairly complex within that. The simplest repeats are every day/week/month/year, but if you go into the <code>Custom...</code> options then you can create repeats such as "On the first weekday of every month".</p>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-simple-repeat-options.png?cropResize=150,150">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-simple-repeat-options.png?cropResize=150,150</a>)
+    <a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-weekly-repeat-options.png?cropResize=200,200">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-weekly-repeat-options.png?cropResize=200,200</a>)
+    <a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-monthly-repeat-options.png?cropResize=200,200">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-monthly-repeat-options.png?cropResize=200,200</a>)</p>
+    <h2>Copy and paste</h2>
+    <p>If repeating events count as automation (they do!) then copying and pasting events does as well.</p>
+    <ul>
+    <li><code>CMD+D</code> allows you to duplicate an event, and then you can drag and drop it.</li>
+    <li><code>CMD+C</code> and then <code>CMD+V</code> lets you paste, if you select a new date before you paste then the event is automatically added to that day. In many apps you can even paste it in at the time you have selected.</li>
+    <li>Fantastical on iOS gives you the option to duplicate an event when you tap and hold on it, or when you swipe, and tap "More...", BusyCal allows you to duplicate an event by force touching it. I personally prefer Fantastical as it immediately asks me for the new date where as with BusyCal you need to edit the new event.</li>
+    </ul>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/fantastical-duplicate-event.png?cropResize=200">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/fantastical-duplicate-event.png?cropResize=200</a>)
+    <a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/busycal-duplicate-event.png?cropResize=200">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/busycal-duplicate-event.png?cropResize=200</a>)</p>
+    <h2>Workflow: Copy a Calendar Event</h2>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-copy-calendar-event.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-copy-calendar-event.png?cropResize=100</a> "Copy Calendar Event"){.image-right} This Workflow lets you choose from calendar events, and uses the chosen item to create a new event. It is currently set to use events from today, but you can easily change the filter in the "Find Calendar Events" action to look in the last week, the next week, or any time period of your choice.
+    <a href="https://youtu.be/BNYbLxzKx2M">plugin:youtube</a>
+    <a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-copy-calendar-event-detail.png?cropResize=400){.image-center">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-copy-calendar-event-detail.png?cropResize=400){.image-center</a>}</p>
+    <p>You can get the workflow here: <a href="https://workflow.is/workflows/ac14868356bd40a4b9223bbac1a844df">Copy Calendar Event</a></p>
+    <h2>Parsing a list of events with Numbers</h2>
+    <p>I first mentioned this automation in <a href="https://www.relay.fm/mpu/418">episode 418 of the Mac Power Users</a>, this is designed to help you take a list of events and quickly add them to the right calendars. As David mentioned on the podcast you could also use it to calculate dates backwards from a specific event (he used a trial as an example) to add other events or deadlines to your calendar.
+    <a href="https://youtu.be/tvlrZpEklbw">plugin:youtube</a></p>
+    <p>You can <a href="https://www.dropbox.com/s/mxx77d2bblqgt6k/Fantastical%20Calendar%20Event%20Creation.numbers?dl=1">download the spreadsheet here</a>.</p>
+    <p>The Keyboard Maestro Macro is very simple, it splits the text on your clipboard into lines, and then runs the following AppleScript on each line.</p>
+    <pre><code class="language-applescript">tell application "Keyboard Maestro Engine" to set myEvent to getvariable "Event"
+
+    tell application "Fantastical 2"
+        parse sentence myEvent with add immediately
+    end tell</code></pre>
+    <p>This AppleScript merely sets a local variable to the Keyboard Maestro variable for the line, and then uses Fantastical's AppleScript support to get it to parse the event and add it straight to your calendar. If you wanted to evaluate each event before it gets added then you would remove the <code>with add immediately</code>.</p>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/keyboard-maestro-macro-clipboard-to-fantastical-lines.png){.image-center">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/keyboard-maestro-macro-clipboard-to-fantastical-lines.png){.image-center</a>}</p>
+    <p>You can download this <a href="https://www.dropbox.com/s/0hthy74msa5j1ti/Add-clipboard-events-to-Fantastical.kmmacros?dl=1">Keyboard Maestro Macro here</a></p>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-clipboard-events-to-fantastical.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-clipboard-events-to-fantastical.png?cropResize=100</a> "Clipboard Events To Fantastical"){.image-right} You can also make this system iOS friendly in two ways, the Numbers sheet itself of course works on iOS. But you can do two things with the list of events it generates, the first is to use a Workflow, <a href="https://workflow.is/workflows/8be06c81e6f4408687a1a5ca1e8b772d">Clipboard Events To Fantastical</a> which goes through all the lines on your clipboard adding them to Fantastical for you. The second way is to use Drafts, with the <a href="https://actions.getdrafts.com/a/1ED">Events in Fantastical</a> action provided by Agile Tortoise.</p>
+    <p>As mentioned in the show, David has a great series of <a href="https://flexibits.com/fantastical/videos">video tutorials for Fantastical</a> where he guides you through the core features and some of the syntax options.</p>
+    <h2>Adding event with AppleScript</h2>
+    <p>As we mentioned in the show, AppleScript is not the most flexible when it comes to adding events to your calendar. However it is definitely possible! I highly recommend the <a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/CalendarScriptingGuide/Calendar-CreateanEvent.html#//apple_ref/doc/uid/TP40016646-CH94-SW3">official Apple documentation</a> as a starting point for a script that <em>works</em>, There's also a library called <a href="https://www.macosxautomation.com/applescript/apps/Script_Libs.html#CalendarLib_EC">CalendarLib</a> which is linked on the very helpful <a href="http://macosautomation.com">macosautomation.com</a>.</p>
+    <p>Of course, you can also use AppleScript to control Fantastical - as demonstrated in my Keyboard Maestro Macro above, here's their <a href="https://flexibits.com/fantastical/help/integration-with-other-apps">documentation for integration with other apps</a>.</p>
+    <h2>Cloud Based Automation</h2>
+    <p>Using web services like IFTTT or Zapier to automate things based on calendar events can be limited if you're not using the "right" calendar system - so you can have IFTTT trigger things based on an event starting in Google calendar, but not in iCloud calendar. You can however use a variety of triggers from time and date, to RSS feed entries, to add events to your calendar on almost any system - as long as if it's iCloud you have the IFTTT app installed.</p>
+    <h2>Favourite Workflows</h2>
+    <p>In this last part of the show we talked about our two favourite automations related to calendars.</p>
+    <h3>David - Meeting Confirmation</h3>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-meeting-confirmation.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-meeting-confirmation.png?cropResize=100</a> "Meeting Confirmation"){.image-right} This workflow is really useful if you have meetings that you need to remind other people of, David actually has two - one for in person meetings, and one for scheduled calls. You can get them here:</p>
+    <ul>
+    <li><a href="https://workflow.is/workflows/2995a75e01ef4bad9295a9f91d98d05d">Meeting Confirmation</a></li>
+    <li><a href="https://workflow.is/workflows/0e2c5184e2c647a39dfb999f11b6dc62">Phone Confirmation</a></li>
+    </ul>
+    <h3>Rose - Workflow: Event Review</h3>
+    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-event-review.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-event-review.png?cropResize=100</a> "Event Review"){.image-left} I use this Workflow to help me review the events that have happened in the last week, as well as to prepare tasks for appointments in the upcoming week. This adds the calendar events from last week to a Drafts note, and combines any tasks you note down for the next week into Taskpaper and adds them to Omnifocus.</p>
+    <p>You can get the workflow here: <a href="https://workflow.is/workflows/cda1965b59ae4ef19ece6958be097187">Event Review</a></p>";}}
+  geo_timezone: UTC
+  _thumbnail_id: '1743'
+  _edit_last: '1'
+  _genesis_scripts_body_position: bottom
+  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
+  geo_weather: a:2:{s:4:"icon";s:4:"none";s:10:"visibility";s:6:"public";}
+  mf2_syndication: a:0:{}
+  _oembed_b583ee9f2e7cc414195a6b0fab5b2255: <iframe width="916" height="515" src="https://www.youtube.com/embed/mRDUdsRBiIk?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_b583ee9f2e7cc414195a6b0fab5b2255: '1553418855'
+  _oembed_512f568435e4cb5de066704f543dee9c: <iframe width="916" height="515" src="https://www.youtube.com/embed/Do6UWlnO_5g?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_512f568435e4cb5de066704f543dee9c: '1553418877'
+  _oembed_5051ed49228ffc17adf8e6eed135c1ae: "{{unknown}}"
+  _oembed_3bdcdceb4a3082d83c3d8b7d14057a7a: "{{unknown}}"
+  _oembed_f5cef106703cdc2c04ba8b660217cb5b: <iframe width="916" height="515" src="https://www.youtube.com/embed/BNYbLxzKx2M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_f5cef106703cdc2c04ba8b660217cb5b: '1553418996'
+  _oembed_e5442bcfd98e03da5407f1a395c51522: "{{unknown}}"
+  _oembed_9f895d3fe5dd405855c2f37ff69e9d3d: <iframe width="916" height="515" src="https://www.youtube.com/embed/tvlrZpEklbw?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_9f895d3fe5dd405855c2f37ff69e9d3d: '1553419015'
+  _oembed_d3bc5675d4ca6a3e77e1faef220bba06: "{{unknown}}"
+  _oembed_6eb2ceccbb8d73b3cbf83e2d071c6667: "{{unknown}}"
+  _oembed_6815d9d958ebb55a1f543383a0299e80: "{{unknown}}"
+  _oembed_2cb00a065c2057ae84e37bb0d2b47f77: <iframe width="500" height="281" src="https://www.youtube.com/embed/mRDUdsRBiIk?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_2cb00a065c2057ae84e37bb0d2b47f77: '1553419089'
+  _oembed_192190c2baabefcac7c1b0cfea11247a: <iframe width="500" height="281" src="https://www.youtube.com/embed/Do6UWlnO_5g?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_192190c2baabefcac7c1b0cfea11247a: '1553419089'
+  _oembed_351b8af36ab3b9e848e7ff968e875912: <iframe width="500" height="281" src="https://www.youtube.com/embed/BNYbLxzKx2M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_351b8af36ab3b9e848e7ff968e875912: '1553419089'
+  _oembed_700e140433d5a998b190611d778d85ff: <iframe width="920" height="518" src="https://www.youtube.com/embed/Do6UWlnO_5g?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_700e140433d5a998b190611d778d85ff: '1553419089'
+  _oembed_54925af66811f8b3a74f0ca50d63d221: <iframe width="500" height="281" src="https://www.youtube.com/embed/tvlrZpEklbw?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_54925af66811f8b3a74f0ca50d63d221: '1553419090'
+  _oembed_aa352d6136af244024a5d5697089007a: <iframe width="920" height="518" src="https://www.youtube.com/embed/BNYbLxzKx2M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_aa352d6136af244024a5d5697089007a: '1553419090'
+  _oembed_677e17c02d05376fc2602a618551c558: <iframe width="920" height="518" src="https://www.youtube.com/embed/tvlrZpEklbw?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_677e17c02d05376fc2602a618551c558: '1553419090'
+  _oembed_014d9185014ffe43d9ceaae5a82dc6ef: <iframe width="920" height="518" src="https://www.youtube.com/embed/mRDUdsRBiIk?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_014d9185014ffe43d9ceaae5a82dc6ef: '1553419090'
+  _oembed_72be85af75453c32a6a5c3ed2a98dccd: "{{unknown}}"
+  _oembed_9a776965cc33ffdbd932eff8a707e056: "{{unknown}}"
+  _oembed_14eb7ccd1de766c31633818262d63738: "{{unknown}}"
+  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557889146;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:103;}i:1;a:1:{s:2:"id";i:33;}i:2;a:1:{s:2:"id";i:50;}}}}
+  _oembed_f5a1d1e9d0476d7057371ce58f839e98: <iframe title="Automators 01 Block Events
+    with Workflow" width="900" height="506" src="https://www.youtube.com/embed/mRDUdsRBiIk?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_f5a1d1e9d0476d7057371ce58f839e98: '1557663196'
+  _oembed_7d20454deba837dfd4c1a862696b8760: <iframe title="Automators 01- Automating
+    Travel Time" width="900" height="506" src="https://www.youtube.com/embed/Do6UWlnO_5g?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_7d20454deba837dfd4c1a862696b8760: '1557663196'
+  _oembed_0e3ab6164fd31f4ffec378b8a48c8a8c: <iframe title="Automators 01 Workflow
+    Copy a Calendar Event" width="900" height="506" src="https://www.youtube.com/embed/BNYbLxzKx2M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_0e3ab6164fd31f4ffec378b8a48c8a8c: '1557663196'
+  _oembed_7682ce41f144b3a132f7dee88489bac3: <iframe title="Automators 01 Numbers &amp;
+    Fantastical for Batch Events" width="900" height="506" src="https://www.youtube.com/embed/tvlrZpEklbw?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen></iframe>
+  _oembed_time_7682ce41f144b3a132f7dee88489bac3: '1557663196'
+  _lyte_mRDUdsRBiIk: eJydkEFPwkAQhf/KZM/Q7gqt2JsEDR6MihAT04RsuwNd2Xbr7hQkxv/uFo3Rq9c38743894ZaTLIMnbZka0lWeeBC5gaW+7gao8NeThoquDJut3G2AMbMKq6ulg5E1wVUeuzPM5jHR1J19uotHUe73Ue14vZSvnFVN/s8rh6VbiRnaHopd0GxPzhH5Bavjn0f0FKEl5rNCpwzriYDPn5kKdLkWQjkYk04pw/92udk6RtE7bul+PbXkFfOt1+i3N0CNpDZQ8wk3utoPPof54G24C+ewSyUHTaKHDYoiRZGITiVBV+VaUbqAKmlAYbJV3IKeUpw6/DpZJlG2k8/lLDu+hJ1i3LRJImSTK6SPiAmSNh78C1VArVachHQkzS8ccnsZSS2A==
+  _lyte_Do6UWlnO_5g: eJydUdFOgzAU/ZUGE582aMfKGD6ZzMUXo0aWJYZkKfQC1UKx7ZiL8d8tODN99a333HPPvef0w7PCSvAS73pvVcOs0gZhMkWnUrQVSjXrQaJUNOBNPFvvm3yjpRupre1MkgVZIPyjFU3lF6rJgl5kwUpFm61s73e0yoL6jUPJ9tL6L13lJG4f/yHSsHcN5q8QZxbWAiR3OjNM4ileTHGUEpqEJCHUxxg/D7S9dk5U61gP6fyOLp8GEEyhRXfC11o16KYTRnFAZIJq0HB5gcPllUEr1gv+U2yVfi2lOqBSacTOIdnvkJwBMGMPemitQQdhayRVMR5gfJTWcNYQBrGeCclyCePKBJ3jOJxYvjDnwj2XOaeLkkeY4nDOw5xxIDMez+MojzFfDH9UsNGX2bmAmJeUTBr4hY5HWtZ0ngspopSGS4onnjxaGCZgxzgHPjZxSEgczT+/AEJLuEE=
+  _lyte_BNYbLxzKx2M: eJydkFtPhDAQhf/KhOcVWqCIvKnRmHiJlzVGQ2IGOkgVKLZFdzX+d7vqZvXVpA/TM2dOZr73wCnXUVAEu5PTPTptLDAON9o8NZ1+hX09LgFhHzsaJBo4eKHBBbPAtVNfXZvOT7bOjbYoozJS4dKp/iGsdV9GL6qM9s5uq5PF2/EiPi2j9llSg1PnwsfxwUccXfwjpMeFIfs3SKKjQ0Wd9Dkx4/kW295i2ZyLIuEFFyFj7G5lmww6pQfvOp+L0zi5Wolka6PGH/3Q6B5oVFZLAj4D1yoL/rWexKW2BJMlu4HjNNTffOo1H1rxCWHeEryubTUOUBE0ehoktGSogM25a1eo7ObjS6x5mmd5IrJKpgzTaieOk6ryMuZpKhu/e41fe9t7DwCDosHO0i/VUyTrsB8DDyETQiQ7gs2CbuloNUH3KCXJryZLOM8z8fEJZYewAw==
+  _lyte_tvlrZpEklbw: eJydUU1PwzAM/StWD5xGmzJ1QDmBtAkJDfF5mSohr3HXQNKUxB1MiP+OO+0AVy5J9Pzes/3ylbBhS0mZXA7sHbIPEVQOt4NbkzyP0PUXsMCOMbKp0ULjA1wh1y3Mt9RxTCYJt8J+DlZcWuY+llVWZSbdsXGbtPauyramynhrw6qfv9n1R5W175oaHCynr/1GLK7v/2Hi8DNQ/GukkWlhyGrxOVH52bE6PVazp7wop3mZF6lSajXShoBsfCesu6diefI4YhTrYPoDvAjeAfUmek2QT+DBRwJNzneRRUsRuCXoDjnFlogBOw03tFt7DBqWSML0ctdy7vwANXYwiAt7WA/2DVBrsJ4j+AaiccZiANqHOlJEEURiqdMYUpmvxv1s8UV2xKRs0Eb6hUpQ0lD+K5E9Z0VRTM8LNUnsjmlU0Iu0I70vqmmen82K7x9PKa5i
+  _oembed_8717c315acd000225f1abb958565b8f3: <iframe title="Automators 01 Block Events
+    with Workflow" width="640" height="360" src="https://www.youtube.com/embed/mRDUdsRBiIk?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_8717c315acd000225f1abb958565b8f3: '1625424459'
+  _oembed_f21c0cb3a5ec7ff3ec50c1fed9d4a69a: <iframe title="Automators 01- Automating
+    Travel Time" width="640" height="360" src="https://www.youtube.com/embed/Do6UWlnO_5g?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_f21c0cb3a5ec7ff3ec50c1fed9d4a69a: '1625424459'
+  _oembed_e52c75a32d054729a55db37ac7fc954f: <iframe title="Automators 01 Workflow
+    Copy a Calendar Event" width="640" height="360" src="https://www.youtube.com/embed/BNYbLxzKx2M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_e52c75a32d054729a55db37ac7fc954f: '1625424459'
+  _oembed_cb8d4858bca2776e10a7061b9dbed290: <iframe title="Automators 01 Numbers &amp;
+    Fantastical for Batch Events" width="640" height="360" src="https://www.youtube.com/embed/tvlrZpEklbw?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_cb8d4858bca2776e10a7061b9dbed290: '1625424459'
+  _oembed_7bee54959eeb50b41d7d5256c9b229fc: <iframe title="Automators 01 Block Events
+    with Workflow" width="750" height="422" src="https://www.youtube.com/embed/mRDUdsRBiIk?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_7bee54959eeb50b41d7d5256c9b229fc: '1625425455'
+  _oembed_23d2ec5ac4ed868def13450d40f1940a: <iframe title="Automators 01- Automating
+    Travel Time" width="750" height="422" src="https://www.youtube.com/embed/Do6UWlnO_5g?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_23d2ec5ac4ed868def13450d40f1940a: '1625425455'
+  _oembed_01f6bb9fd171d6f213ed045058923762: <iframe title="Automators 01 Workflow
+    Copy a Calendar Event" width="750" height="422" src="https://www.youtube.com/embed/BNYbLxzKx2M?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_01f6bb9fd171d6f213ed045058923762: '1625425455'
+  _oembed_7859d7f26adbdfb7c04deded6e10e38a: <iframe title="Automators 01 Numbers &amp;
+    Fantastical for Batch Events" width="750" height="422" src="https://www.youtube.com/embed/tvlrZpEklbw?feature=oembed"
+    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
+    gyroscope; picture-in-picture" allowfullscreen></iframe>
+  _oembed_time_7859d7f26adbdfb7c04deded6e10e38a: '1625425455'
+author:
+  login: rosemaryorchard
+  email: me@rosemaryorchard.com
+  display_name: Rosemary Orchard
+  first_name: Rosemary
+  last_name: Orchard
+permalink: "/blog/automators-episode-1/"
+---
+<p>This week's episodes of <a href="https://www.relay.fm/automators/1">The Automators</a> is focused on calendar event creation. There are many ways you can automatically create calendar events, and it's useful to be able to do so, to avoid losing information. You can also use calendar events as a trigger to do something - which we cover towards the end. Below there are details of all the automations we cover, including 4 (really, four!) screencasts.</p>
+<h2>Workflow: Calendar Event Templates</h2>
+<p><img class=" alignright" src="{{ site.baseurl }}/assets/2018/07/workflow-calendar-event-templates.png" width="163" height="163" /></p>
+<p>This is a very simple Workflow which asks me for the date and time of the event, and then what kind of event this is (the demo has 3 examples) - it then adjusts the time to add an appropriate length for the appointment and adds it to my calendar. This is very useful because I can never remember what floor my dentist is on or exactly where to turn to find my hairdresser - so I can add this to the notes. Even if the places you frequent are not hidden like mine are you can still use this!<br />
+You can get the workflow here: <a href="https://workflow.is/workflows/434bd4cf625f419282aee780d3414a4c">Calendar Event Templates</a> Make sure to read on to find out about the "Run Workflow" action at the end of it.</p>
+<h2>Workflow: Add Event To Work Calendar</h2>
+<p><img class=" alignleft" src="{{ site.baseurl }}/assets/2018/07/workflow-add-event-to-work-calendar.png" width="143" height="143" />This workflow follows the first one, and is in fact run by it - or could be. It simply asks you if the appointment you've made is during working hours, and if you say yes, adds an event that starts half an hour before and ends half an hour after the appointment you've just created to your calendar. Make sure to tweak the calendar setting here! You can get the workflow here: <a href="https://workflow.is/workflows/7028582e422441209e36690ab4621b94">Add Event To Work Calendar (Menu)</a></p>
+<p>Of course, you can automate this too, this formats the date of the event as one letter (so Monday becomes M, Friday becomes F), and if it's not Saturday or Sunday, checks if the event starts after 8 am but before 6pm - if yes it adds an event to your calendar. It's not <em>insanely</em> complicated, but it's not as simple as the Workflow above.<br />
+You can get the workflow here: <a href="https://workflow.is/workflows/3a0dd365141d4146981c1297148f2a24">Add Event To Work Calendar (Auto)</a></p>
+<h2>David's Hyper Scheduling Workflow</h2>
+<p><img class=" alignright" src="{{ site.baseurl }}/assets/2018/07/workflow-block-schedule.png" width="144" height="144" />Since February David has had an ongoing <a href="https://www.macsparky.com/blog/2018/2/the-hyper-scheduling-experiment">Hyper-Scheduling Experiment</a>, which involves scheduling blocks of time in his calendar to provide a framework throughout his day. You can see his Workflow to generate some of the core blocks here.</p>
+<p>https://youtu.be/mRDUdsRBiIk</p>
+<p>You can get the workflow here: <a href="https://workflow.is/workflows/4568f7c24b8e415c9e77305b26e4768e">Block Schedule</a></p>
+<h2>Add Travel Time</h2>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-travel-time.png?cropResize=100"><img class="" src="{{ site.baseurl }}/assets/2018/07/workflow-travel-time.png" width="100" height="100" /></a>Here David walks you through how his Workflow to add travel time events to your calendar works.</p>
+<p>https://youtu.be/Do6UWlnO_5g</p>
+<p>You can get the workflow here: <a href="https://workflow.is/workflows/9bd57fd605034d3bade12d8486b80d7e">Travel Time</a></p>
+<h2>Repeating Events</h2>
+<p>Of course, one of the simplest ways to automate calendar event creation is repeats - and you can go from very simple up to fairly complex within that. The simplest repeats are every day/week/month/year, but if you go into the <code>Custom...</code> options then you can create repeats such as "On the first weekday of every month".</p>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-simple-repeat-options.png?cropResize=150,150"><img src="{{ site.baseurl }}/assets/2018/07/calendar-simple-repeat-options.png" /></a></p>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-simple-repeat-options.png?cropResize=150,150"><img class="" src="{{ site.baseurl }}/assets/2018/07/calendar-weekly-repeat-options.png" width="441" height="423" /></a><br />
+<a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/calendar-monthly-repeat-options.png?cropResize=200,200"><img class="" src="{{ site.baseurl }}/assets/2018/07/calendar-monthly-repeat-options.png" width="413" height="495" /></a></p>
+<h2>Copy and paste</h2>
+<p>If repeating events count as automation (they do!) then copying and pasting events does as well.</p>
+<ul>
+<li><code>CMD+D</code> allows you to duplicate an event, and then you can drag and drop it.</li>
+<li><code>CMD+C</code> and then <code>CMD+V</code> lets you paste, if you select a new date before you paste then the event is automatically added to that day. In many apps you can even paste it in at the time you have selected.</li>
+<li>Fantastical on iOS gives you the option to duplicate an event when you tap and hold on it, or when you swipe, and tap "More...", BusyCal allows you to duplicate an event by force touching it. I personally prefer Fantastical as it immediately asks me for the new date where as with BusyCal you need to edit the new event.</li>
+</ul>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/fantastical-duplicate-event.png?cropResize=200"><img class="" src="{{ site.baseurl }}/assets/2018/07/fantastical-duplicate-event.png" width="359" height="720" /><img class="" src="{{ site.baseurl }}/assets/2018/07/busycal-duplicate-event.png" width="357" height="716" /></a></p>
+<h2>Workflow: Copy a Calendar Event</h2>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-copy-calendar-event.png?cropResize=100"><img class="alignright" src="{{ site.baseurl }}/assets/2018/07/workflow-copy-calendar-event.png" width="155" height="155" /></a>This Workflow lets you choose from calendar events, and uses the chosen item to create a new event. It is currently set to use events from today, but you can easily change the filter in the "Find Calendar Events" action to look in the last week, the next week, or any time period of your choice.</p>
+<p>https://youtu.be/BNYbLxzKx2M</p>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-copy-calendar-event-detail.png?cropResize=400){.image-center"><img src="{{ site.baseurl }}/assets/2018/07/workflow-copy-calendar-event-detail.png" /></a></p>
+<p>You can get the workflow here: <a href="https://workflow.is/workflows/ac14868356bd40a4b9223bbac1a844df">Copy Calendar Event</a></p>
+<h2>Parsing a list of events with Numbers</h2>
+<p>I first mentioned this automation in <a href="https://www.relay.fm/mpu/418">episode 418 of the Mac Power Users</a>, this is designed to help you take a list of events and quickly add them to the right calendars. As David mentioned on the podcast you could also use it to calculate dates backwards from a specific event (he used a trial as an example) to add other events or deadlines to your calendar.</p>
+<p>https://youtu.be/tvlrZpEklbw</p>
+<p>You can <a href="https://www.dropbox.com/s/mxx77d2bblqgt6k/Fantastical%20Calendar%20Event%20Creation.numbers?dl=1">download the spreadsheet here</a>.</p>
+<p>The Keyboard Maestro Macro is very simple, it splits the text on your clipboard into lines, and then runs the following AppleScript on each line.</p>
+<pre><code class="language-applescript">tell application "Keyboard Maestro Engine" to set myEvent to getvariable "Event"
+
+tell application "Fantastical 2"
+    parse sentence myEvent with add immediately
+end tell</code></pre>
+<p>This AppleScript merely sets a local variable to the Keyboard Maestro variable for the line, and then uses Fantastical's AppleScript support to get it to parse the event and add it straight to your calendar. If you wanted to evaluate each event before it gets added then you would remove the <code>with add immediately</code>.</p>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/keyboard-maestro-macro-clipboard-to-fantastical-lines.png){.image-center"><img src="{{ site.baseurl }}/assets/2018/07/keyboard-maestro-macro-clipboard-to-fantastical-lines.png" /></a></p>
+<p>You can download this <a href="https://www.dropbox.com/s/0hthy74msa5j1ti/Add-clipboard-events-to-Fantastical.kmmacros?dl=1">Keyboard Maestro Macro here</a></p>
+<p><img class="alignright" src="{{ site.baseurl }}/assets/2018/07/workflow-clipboard-events-to-fantastical.png" width="196" height="196" /></p>
+<p>You can also make this system iOS friendly in two ways, the Numbers sheet itself of course works on iOS. But you can do two things with the list of events it generates, the first is to use a Workflow, <a href="https://workflow.is/workflows/8be06c81e6f4408687a1a5ca1e8b772d">Clipboard Events To Fantastical</a> which goes through all the lines on your clipboard adding them to Fantastical for you. The second way is to use Drafts, with the <a href="https://actions.getdrafts.com/a/1ED">Events in Fantastical</a> action provided by Agile Tortoise.</p>
+<p>As mentioned in the show, David has a great series of <a href="https://flexibits.com/fantastical/videos">video tutorials for Fantastical</a> where he guides you through the core features and some of the syntax options.</p>
+<h2>Adding event with AppleScript</h2>
+<p>As we mentioned in the show, AppleScript is not the most flexible when it comes to adding events to your calendar. However it is definitely possible! I highly recommend the <a href="https://developer.apple.com/library/archive/documentation/AppleApplications/Conceptual/CalendarScriptingGuide/Calendar-CreateanEvent.html#//apple_ref/doc/uid/TP40016646-CH94-SW3">official Apple documentation</a> as a starting point for a script that <em>works</em>, There's also a library called <a href="https://www.macosxautomation.com/applescript/apps/Script_Libs.html#CalendarLib_EC">CalendarLib</a> which is linked on the very helpful <a href="http://macosautomation.com">macosautomation.com</a>.</p>
+<p>Of course, you can also use AppleScript to control Fantastical - as demonstrated in my Keyboard Maestro Macro above, here's their <a href="https://flexibits.com/fantastical/help/integration-with-other-apps">documentation for integration with other apps</a>.</p>
+<h2>Cloud Based Automation</h2>
+<p>Using web services like IFTTT or Zapier to automate things based on calendar events can be limited if you're not using the "right" calendar system - so you can have IFTTT trigger things based on an event starting in Google calendar, but not in iCloud calendar. You can however use a variety of triggers from time and date, to RSS feed entries, to add events to your calendar on almost any system - as long as if it's iCloud you have the IFTTT app installed.</p>
+<h2>Favourite Workflows</h2>
+<p>In this last part of the show we talked about our two favourite automations related to calendars.</p>
+<h3>David - Meeting Confirmation</h3>
+<p><img class="alignright" src="{{ site.baseurl }}/assets/2018/07/workflow-meeting-confirmation.png" width="190" height="190" /></p>
+<p>This workflow is really useful if you have meetings that you need to remind other people of, David actually has two - one for in person meetings, and one for scheduled calls. You can get them here:</p>
+<ul>
+<li><a href="https://workflow.is/workflows/2995a75e01ef4bad9295a9f91d98d05d">Meeting Confirmation</a></li>
+<li><a href="https://workflow.is/workflows/0e2c5184e2c647a39dfb999f11b6dc62">Phone Confirmation</a></li>
+</ul>
+<h3>Rose - Workflow: Event Review</h3>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/automators-episode-1/workflow-event-review.png?cropResize=100"><img class="alignright" src="{{ site.baseurl }}/assets/2018/07/workflow-event-review.png" width="140" height="140" /></a>I use this Workflow to help me review the events that have happened in the last week, as well as to prepare tasks for appointments in the upcoming week. This adds the calendar events from last week to a Drafts note, and combines any tasks you note down for the next week into Taskpaper and adds them to Omnifocus.</p>
+<p>You can get the workflow here: <a href="https://workflow.is/workflows/cda1965b59ae4ef19ece6958be097187">Event Review</a></p>

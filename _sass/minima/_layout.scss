@@ -1,7 +1,28 @@
 /**
  * Site header
  */
+ 
 .site-header {
+  @media (prefers-color-scheme: light) {
+    background: $rose-purple;
+    color: white;
+    
+    #site-title,
+    body > header > div > nav > div > a,
+    body > header > div > a {
+      color: white !important;
+    }
+  }
+  @media (prefers-color-scheme: dark) {
+    background: $rose-purple-dark;
+    color: $rose-purple-light;
+    
+    #site-title,
+    body > header > div > nav > div > a,
+    body > header > div > a {
+      color: $rose-purple-light !important;
+    }
+  }
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $border-color-01;
   min-height: $spacing-unit * 1.865;
@@ -20,11 +41,6 @@
 
   @include media-query($on-palm) {
     padding-right: 45px;
-  }
-
-  &,
-  &:visited {
-    color: $site-title-color;
   }
 }
 

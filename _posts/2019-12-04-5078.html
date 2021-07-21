@@ -1,0 +1,98 @@
+---
+layout: post
+title: ''
+date: 2019-12-04 00:38:27.000000000 +00:00
+type: post
+parent_id: '0'
+published: true
+password: ''
+status: publish
+categories:
+- Everything
+tags: []
+meta:
+  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:34:"create
+    update read follow channels";s:2:"me";s:28:"https://rosemaryorchard.com/";s:9:"issued_by";s:55:"https://rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:23:"https://monocle.p3k.io/";s:11:"client_name";s:7:"Monocle";s:11:"client_icon";s:34:"https://monocle.p3k.io/favicon.ico";s:9:"issued_at";i:1575107539;s:4:"user";i:1;s:13:"last_accessed";i:1575416307;}
+  mf2_type: a:1:{i:0;s:7:"h-entry";}
+  mf2_in-reply-to: |-
+    a:1:{i:0;a:2:{s:4:"type";a:1:{i:0;s:6:"h-cite";}s:10:"properties";a:12:{s:3:"uid";a:1:{i:0;i:5070;}s:11:"post_author";a:1:{i:0;s:1:"1";}s:9:"post_type";a:1:{i:0;s:4:"post";}s:6:"author";a:2:{s:4:"type";a:1:{i:0;s:6:"h-card";}s:10:"properties";a:3:{s:4:"name";a:1:{i:0;s:16:"Rosemary Orchard";}s:3:"url";a:1:{i:0;s:28:"https://rosemaryorchard.com/";}s:5:"photo";a:1:{i:0;s:84:"https://secure.gravatar.com/avatar/6454cee1467de5a12ea9f1c91d48e100?s=96&d=retro&r=g";}}}s:11:"publication";a:1:{i:0;s:16:"Rosemary Orchard";}s:9:"published";a:1:{i:0;s:25:"2019-12-03T18:00:48+01:00";}s:7:"updated";a:1:{i:0;s:25:"2019-12-04T00:38:10+01:00";}s:7:"content";a:1:{i:0;a:2:{s:4:"html";s:5029:"<h1>Keeping Track of My Someday Maybe Tasks with Git</h1>
+
+    Someday and maybe tasks and projects are one of those things where I can never seem to find the perfect system. I’ve tried putting these things in OmniFocus and tagging them, using Trello (which I still use, but for different purposes) and I know there has been more than one paper planner over the years!
+
+    Some of you may be asking “what is a someday maybe task?”. The name comes from Getting Things Done by David Allen, the idea is something is a task or project you want to do, but you can’t work on it right now - so you put it on a list called “Someday/Maybe” to get around to when the time is right.
+
+    A few months ago I turned to Git to try and solve my problem. There were a few features I knew I wanted from a system:
+
+    <ul>
+        <li>Some interoperability with OmniFocus to make it easy to take things out as well as put things back in, or something I could easily script.</li>
+        <li>The ability to track what changed, when, and optionally <em>why</em> .</li>
+        <li>The ability to tweak my system easily without rebuilding it.</li>
+        <li>Automation options.</li>
+    </ul>
+
+    <pre><code>- [ ] This is a sample task in the format I started with
+    </code></pre>
+
+    I started in Drafts, using the task format. This is nice and visual but doesn’t offer all the other features I wanted without setting up lots of actions and cobbling things together. Drafts has versions - which satisfies my want to be able to look back in time, but it lacks explicit change messages connected to these. While Drafts is the right tool for many jobs, it wasn’t quite what I was looking for here.
+
+    Next, I did some digging around and stumbled across my old friends <a href="https://www.barebones.com/products/bbedit/">BBEdit</a> and <a href="https://www.textasticapp.com">Textastic</a>. These are my preferred text-based file editing apps on macOS and iOS, but alone neither of them really hit the spot - until I decided to take some lessons from the professional side of my life and use Version Control.
+
+    Version Control systems are designed for programming, so you can track who changed what, when, and assuming they wrote a decent commit message to accompany the change, <em>why</em>. There are quite a few services out there offering these, I chose to use Git and to use GitLab for this. (That said, the sample to accompany this blog post is on GitHub because I know most people are more familiar with that!)
+
+    Now, I can make a change to my Someday/Maybe lists from any device, including the web, and just type why I changed it. Version control, in this case, Git, automatically stores what changed and when. You can even do a diff, compare two files side by side so see exactly what was added or removed!
+
+    Now it’s time to get into the nitty-gritty! Let’s start with the apps. As mentioned above, on macOS I use BBEdit, this has Git integration so I can theoretically do everything with that. That said, sometimes I switch up my apps so I also have <a href="https://www.sourcetreeapp.com">SourceTree</a> around to handle the Git stuff. I <em>could</em> use the command line, but I usually don’t want to. On iOS I use two apps <a href="https://workingcopyapp.com">Working Copy</a> and Textastic. There’s <a href="https://www.textasticapp.com/v8/manual/integration_other_apps/git_client_working_copy.html">good documentation on how to connect the two of them together</a> so I won’t go into detail on that here. To be clear, I use Working Copy for the Git side of things and Textastic for the writing.
+
+    Next up: Files. I have two primary lists, Someday and Maybe. Someday is “I really want to do this and will make time for it, but that time is not now”, whereas Maybe is “I like the sound of this”. Projects/tasks stay within these lists until they become unwieldy. If a project has more than 10 tasks that I want to document I create a special list for it. To keep things organised I start these file names with an underscore (_) and then add a note below the task to see that file.
+
+    Finally: Format. This took a while to nail down. As I mentioned I started in Drafts so as of when I recorded an episode of <a href="https://nestedfolderspodcast.com/podcast/episode-11-someday-maybe-never/">Nested Folders 11: Someday/Maybe/Never</a> I was still using <code>- [ ]</code> to indicate a task. This does give you the look of pretty checkboxes - but the point of your Someday/Maybe list isn’t to keep of what you have <em>done</em>, but what you want <em>to do</em>. This means I would never check the tasks off. Instead, I’ve changed to just Taskpaper (at least the elements that OmniFocus uses) as this allows me to copy items over directly when I am ready to do so, and also to export easily.
+
+    Now I can update my someday/maybe list whenever I like, across devices, and see what I changed, and when. If you want to see a sample of this check out my <a href="https://github.com/RosemaryOrchard/Someday-Maybe-Sample">GitHub Repository</a> for a sample!";s:5:"value";s:4446:"Keeping Track of My Someday Maybe Tasks with Git
+
+    Someday and maybe tasks and projects are one of those things where I can never seem to find the perfect system. I’ve tried putting these things in OmniFocus and tagging them, using Trello (which I still use, but for different purposes) and I know there has been more than one paper planner over the years!
+
+    Some of you may be asking “what is a someday maybe task?”. The name comes from Getting Things Done by David Allen, the idea is something is a task or project you want to do, but you can’t work on it right now - so you put it on a list called “Someday/Maybe” to get around to when the time is right.
+
+    A few months ago I turned to Git to try and solve my problem. There were a few features I knew I wanted from a system:
+
+
+        Some interoperability with OmniFocus to make it easy to take things out as well as put things back in, or something I could easily script.
+        The ability to track what changed, when, and optionally why .
+        The ability to tweak my system easily without rebuilding it.
+        Automation options.
+
+
+    - [ ] This is a sample task in the format I started with
+
+
+    I started in Drafts, using the task format. This is nice and visual but doesn’t offer all the other features I wanted without setting up lots of actions and cobbling things together. Drafts has versions - which satisfies my want to be able to look back in time, but it lacks explicit change messages connected to these. While Drafts is the right tool for many jobs, it wasn’t quite what I was looking for here.
+
+    Next, I did some digging around and stumbled across my old friends BBEdit and Textastic. These are my preferred text-based file editing apps on macOS and iOS, but alone neither of them really hit the spot - until I decided to take some lessons from the professional side of my life and use Version Control.
+
+    Version Control systems are designed for programming, so you can track who changed what, when, and assuming they wrote a decent commit message to accompany the change, why. There are quite a few services out there offering these, I chose to use Git and to use GitLab for this. (That said, the sample to accompany this blog post is on GitHub because I know most people are more familiar with that!)
+
+    Now, I can make a change to my Someday/Maybe lists from any device, including the web, and just type why I changed it. Version control, in this case, Git, automatically stores what changed and when. You can even do a diff, compare two files side by side so see exactly what was added or removed!
+
+    Now it’s time to get into the nitty-gritty! Let’s start with the apps. As mentioned above, on macOS I use BBEdit, this has Git integration so I can theoretically do everything with that. That said, sometimes I switch up my apps so I also have SourceTree around to handle the Git stuff. I could use the command line, but I usually don’t want to. On iOS I use two apps Working Copy and Textastic. There’s good documentation on how to connect the two of them together so I won’t go into detail on that here. To be clear, I use Working Copy for the Git side of things and Textastic for the writing.
+
+    Next up: Files. I have two primary lists, Someday and Maybe. Someday is “I really want to do this and will make time for it, but that time is not now”, whereas Maybe is “I like the sound of this”. Projects/tasks stay within these lists until they become unwieldy. If a project has more than 10 tasks that I want to document I create a special list for it. To keep things organised I start these file names with an underscore (_) and then add a note below the task to see that file.
+
+    Finally: Format. This took a while to nail down. As I mentioned I started in Drafts so as of when I recorded an episode of Nested Folders 11: Someday/Maybe/Never I was still using - [ ] to indicate a task. This does give you the look of pretty checkboxes - but the point of your Someday/Maybe list isn’t to keep of what you have done, but what you want to do. This means I would never check the tasks off. Instead, I’ve changed to just Taskpaper (at least the elements that OmniFocus uses) as this allows me to copy items over directly when I am ready to do so, and also to export easily.
+
+    Now I can update my someday/maybe list whenever I like, across devices, and see what I changed, and when. If you want to see a sample of this check out my GitHub Repository for a sample!";}}s:4:"kind";a:1:{i:0;s:7:"article";}s:3:"url";a:1:{i:0;s:82:"https://rosemaryorchard.com/blog/keeping-track-of-my-someday-maybe-tasks-with-git/";}s:4:"name";a:1:{i:0;s:48:"Keeping Track of My Someday Maybe Tasks with Git";}s:8:"category";a:1:{i:0;s:4:"Blog";}}}}
+  mf2_content: "a:1:{i:0;s:90:\"Whoops, sorry! I just fixed it :) \nhttps://github.com/RosemaryOrchard/Someday-Maybe-Sample\";}"
+  _wpcom_is_markdown: '1'
+  _wpas_done_all: '1'
+  _oembed_7a176aab5ec776e79dc969d34e60148b: "{{unknown}}"
+  mf2_syndication: a:1:{i:0;s:42:"https://micro.blog/rosemaryorchard/6911115";}
+  _oembed_547e34f3ec2d3c41c90c59f27f0f0e92: "{{unknown}}"
+author:
+  login: rosemaryorchard
+  email: me@rosemaryorchard.com
+  display_name: Rosemary Orchard
+  first_name: Rosemary
+  last_name: Orchard
+permalink: "/everything/5078/"
+---
+<p>Whoops, sorry! I just fixed it :)<br />
+https://github.com/RosemaryOrchard/Someday-Maybe-Sample</p>
