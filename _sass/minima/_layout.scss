@@ -24,7 +24,7 @@
     }
   }
   border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $border-color-01;
+  border-bottom: 1px solid $rose-purple;
   min-height: $spacing-unit * 1.865;
   line-height: $base-line-height * $base-font-size * 2.25;
 
@@ -48,8 +48,7 @@
   position: absolute;
   top: 9px;
   right: $spacing-unit / 2;
-  background-color: $background-color;
-  border: 1px solid $border-color-01;
+  background-color: $rose-purple-dark;
   border-radius: 5px;
   text-align: right;
 
@@ -64,10 +63,6 @@
     line-height: 0;
     padding-top: 10px;
     text-align: center;
-
-    > svg path {
-      fill: $border-color-03;
-    }
   }
 
   label[for="nav-trigger"] {
