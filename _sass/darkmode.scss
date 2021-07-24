@@ -10,6 +10,12 @@
 	.site-nav {
 	    fill: black;
 	}
+	.site-nav .page-link {
+		color: white !important;
+	}
+	.site-header div.wrapper a.site-title {
+		color: $rose-purple-light;
+	}
 }
 
 @media (prefers-color-scheme: dark){

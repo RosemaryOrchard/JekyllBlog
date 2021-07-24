@@ -4,7 +4,7 @@
  
 .site-header {
   @media (prefers-color-scheme: light) {
-    background: $rose-purple;
+    background: $rose-purple-dark;
     color: white;
     
     #site-title,
@@ -33,11 +33,12 @@
 }
 
 .site-title {
-  @include relative-font-size(1.625);
+  @include relative-font-size(1.75);
   font-weight: 300;
   letter-spacing: -1px;
   margin-bottom: 0;
   float: left;
+  font-family: $title-font-family;
 
   @include media-query($on-palm) {
     padding-right: 45px;
