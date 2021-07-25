@@ -3,58 +3,13 @@ layout: post
 title: 'Workflow: Add Task & Sub Tasks To OmniFocus'
 date: 2018-08-24 07:00:00.000000000 +01:00
 type: post
-parent_id: '0'
 published: true
-password: ''
 status: publish
 categories:
 - Blog
 tags:
 - OmniFocus
 - Workflow
-meta:
-  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
-    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357075;}
-  mf2_type: a:1:{i:0;s:7:"h-entry";}
-  mf2_category: a:1:{i:0;s:18:"workflow,omnifocus";}
-  mf2_mp-slug: a:1:{i:0;s:40:"workflow-add-task-sub-tasks-to-omnifocus";}
-  mf2_name: 'a:1:{i:0;s:43:"Workflow: Add Task & Sub Tasks To OmniFocus";}'
-  mf2_published: a:1:{i:0;s:16:"24-08-2018 07:00";}
-  mf2_updated: a:1:{i:0;s:16:"24-08-2018 07:00";}
-  mf2_syndication: a:2:{i:0;s:62:"https://twitter.com/rosemaryorchard/status/1032972243847049216";i:1;s:62:"https://twitter.com/rosemaryorchard/status/1033676649404002304";}
-  mf2_content: |-
-    a:1:{i:0;a:1:{s:4:"html";s:4504:"<p><a href="https://resources.rosemaryorchard.com/images/blog/workflow-add-task-sub-tasks-to-omnifocus/workflow-add-task-sub-tasks-to-omnifocus.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/workflow-add-task-sub-tasks-to-omnifocus/workflow-add-task-sub-tasks-to-omnifocus.png?cropResize=100</a> "Add Task &amp; Sub Tasks To OmniFocus"){.image-right} One thing I frequently do in OmniFocus is to add an action group, that is a task with a series of sub tasks. Action groups are flexible because they can be turned into projects if necessary, or be a series of tasks within a project.</p>
-    <p>The Workflow works by asking you for the main task, then it asks for the sub tasks. Each sub task is indented (and has a dash added in front of the name to make it TaskPaper friendly), and then the whole lot is put into my OmniFocus inbox.</p>
-    <p>Exact Workflow Steps: </p>
-    <ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>:  This is the main task.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Text") <code>Text</code>: Add a dash before it - which in TaskPaper makes it a task not a project.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Variable.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Variable.png?cropResize=25</a> "Add to Variable") <code>Add to Variable</code> - <code>Task List</code></li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>:  Ask for the sub tasks.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Split Text") <code>Split Text</code>: Turn this into a repeatable item</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Repeat with Each") <code>Repeat with Each</code> - go through the sub tasks.<ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Text") <code>Text</code>: Add the tab indent and the dash before each task.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Variable.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Variable.png?cropResize=25</a> "Add to Variable") <code>Add to Variable</code> - <code>Task List</code></li>
-    </ul>
-    </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Variable.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Variable.png?cropResize=25</a> "Get Variable") <code>Get Variable</code> - <code>Task List</code>. This makes sure we get the main task too, the output of the repeat loop would just be the sub tasks.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Combine Text") <code>Combine Text</code>: Put the action group together.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/com.omnigroup.OmniFocusiPhone@2x.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/com.omnigroup.OmniFocusiPhone@2x.png?cropResize=25</a> "Add TaskPaper to OmniFocus") <code>Add TaskPaper to OmniFocus</code>: Everything goes into my OmniFocus inbox.</li>
-    </ul>
-    <p>You can get the workflow here: <a href="https://workflow.is/workflows/c78d1a35f5f84e2fb645d01e46a1888b">Add Task &amp; Sub Tasks To OmniFocus</a>.</p>";}}
-  geo_timezone: UTC
-  _edit_last: '1'
-  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
-  _genesis_scripts_body_position: bottom
-  geo_weather: a:2:{s:4:"icon";s:4:"none";s:10:"visibility";s:6:"public";}
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557890062;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:55;}i:1;a:1:{s:2:"id";i:44;}i:2;a:1:{s:2:"id";i:58;}}}}
-author:
-  login: rosemaryorchard
-  email: me@rosemaryorchard.com
-  display_name: Rosemary Orchard
-  first_name: Rosemary
-  last_name: Orchard
-permalink: "/blog/workflow-add-task-sub-tasks-to-omnifocus/"
 ---
 <p><a href="https://resources.rosemaryorchard.com/images/blog/workflow-add-task-sub-tasks-to-omnifocus/workflow-add-task-sub-tasks-to-omnifocus.png?cropResize=100"><img class="alignright" src="{{ site.baseurl }}/assets/2018/08/workflow-add-task-sub-tasks-to-omnifocus.png" /></a>One thing I frequently do in OmniFocus is to add an action group, that is a task with a series of sub tasks. Action groups are flexible because they can be turned into projects if necessary, or be a series of tasks within a project.</p>
 <p>The Workflow works by asking you for the main task, then it asks for the sub tasks. Each sub task is indented (and has a dash added in front of the name to make it TaskPaper friendly), and then the whole lot is put into my OmniFocus inbox.</p>

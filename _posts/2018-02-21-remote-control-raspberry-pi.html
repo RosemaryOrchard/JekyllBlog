@@ -3,45 +3,11 @@ layout: post
 title: Controlling a Raspberry Pi via SSH
 date: 2018-02-21 20:00:00.000000000 +00:00
 type: post
-parent_id: '0'
 published: true
-password: ''
 status: publish
 categories:
 - Blog
 tags: []
-meta:
-  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
-    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357053;}
-  mf2_type: a:1:{i:0;s:7:"h-entry";}
-  mf2_category: a:1:{i:0;s:21:"raspberry pi,workflow";}
-  mf2_mp-slug: a:1:{i:0;s:27:"remote-control-raspberry-pi";}
-  mf2_name: a:1:{i:0;s:34:"Controlling a Raspberry Pi via SSH";}
-  mf2_published: a:1:{i:0;s:16:"21-02-2018 20:00";}
-  mf2_updated: a:1:{i:0;s:16:"21-02-2018 20:00";}
-  mf2_content: |-
-    a:1:{i:0;a:1:{s:4:"html";s:1828:"<p>I have a Raspberry Pi 3 running <a href="https://github.com/nfarina/homebridge">HomeBridge</a>, <a href="https://home-assistant.io">HomeAssistant</a>, and a few other services. It has a <a href="https://www.raspberrypi.org/products/raspberry-pi-touch-display/">7" touchscreen display</a> attached which is lovely - but bright. I prefer to turn the screen on and off when I want to use it instead of relying on the energy saver preferences (as I inevitably use the device just before I want to sleep) - however typing the terminal commands to do it is rather old fashioned.</p>
-    <p>?cropResize=500px "Dictionary of actions in Workflow")</p>
-    <p>The first action is a dictionary - so every ssh command I run has a name which I look at when running the Workflow. You can have anything here of course - providing it's a valid SSH command. My commands are as follows:</p>
-    <p><strong>Screen On</strong>
-    <code>sudo bash -c "echo 0 &gt; /sys/class/backlight/rpi_backlight/bl_power"</code></p>
-    <p><strong>Screen Off</strong>
-    <code>sudo bash -c "echo 1 &gt; /sys/class/backlight/rpi_backlight/bl_power"</code></p>
-    <p><strong>Restart HomeBridge</strong>
-    <code>sudo systemctl restart homebridge</code></p>
-    <p><strong>Restart HomeAssistant</strong>
-    <code>sudo systemctl restart home-assistant@homeassistant</code></p>
-    <p>Then Workflow asks you to choose an action to execute, and executes it. Finally you see the result of the SSH command returned to you - which is useful if there is output.</p>
-    <p>You can <a href="https://workflow.is/workflows/bfd213edebfd4f9597cad6150a586e08">download the Workflow here</a>. You'll need to know the IP address of your Raspberry Pi, the username (default <code>pi</code>), and password (default <code>raspberry</code>). If your username and password are the default ones I recommend you change them.</p>";}}
-  geo_timezone: UTC
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557694046;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:29;}i:1;a:1:{s:2:"id";i:73;}i:2;a:1:{s:2:"id";i:61;}}}}
-author:
-  login: rosemaryorchard
-  email: me@rosemaryorchard.com
-  display_name: Rosemary Orchard
-  first_name: Rosemary
-  last_name: Orchard
-permalink: "/blog/remote-control-raspberry-pi/"
 ---
 <p>I have a Raspberry Pi 3 running <a href="https://github.com/nfarina/homebridge">HomeBridge</a>, <a href="https://home-assistant.io">HomeAssistant</a>, and a few other services. It has a <a href="https://www.raspberrypi.org/products/raspberry-pi-touch-display/">7" touchscreen display</a> attached which is lovely - but bright. I prefer to turn the screen on and off when I want to use it instead of relying on the energy saver preferences (as I inevitably use the device just before I want to sleep) - however typing the terminal commands to do it is rather old fashioned.</p>
 <p>?cropResize=500px "Dictionary of actions in Workflow")</p>

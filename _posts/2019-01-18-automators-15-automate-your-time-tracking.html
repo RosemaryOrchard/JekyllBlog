@@ -3,9 +3,7 @@ layout: post
 title: 'Automators 15: Automate Your Time Tracking'
 date: 2019-01-18 18:00:00.000000000 +00:00
 type: post
-parent_id: '0'
 published: true
-password: ''
 status: publish
 categories:
 - Automators
@@ -14,84 +12,6 @@ categories:
 tags:
 - Automators
 - Time Tracking
-meta:
-  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
-    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357085;}
-  mf2_type: a:1:{i:0;s:7:"h-entry";}
-  mf2_category: a:1:{i:0;s:24:"automators,time tracking";}
-  mf2_mp-slug: a:1:{i:0;s:41:"automators-15-automate-your-time-tracking";}
-  mf2_name: 'a:1:{i:0;s:42:"Automators 15: Automate Your Time Tracking";}'
-  mf2_published: a:1:{i:0;s:16:"18-01-2019 18:00";}
-  mf2_updated: a:1:{i:0;s:16:"18-01-2019 18:00";}
-  mf2_content: |-
-    a:1:{i:0;a:1:{s:4:"html";s:4590:"<p><a href="https://resources.rosemaryorchard.com/images/posts/images/automators/artwork.jpeg?cropResize=100">https://resources.rosemaryorchard.com/images/posts/images/automators/artwork.jpeg?cropResize=100</a> "Automators Artwork"){.image-right} Episode 15 of Automators has arrived - and with it our secrets for automating time tracking.</p>
-    <p>Time tracking is something some people are required to do, some people ought to do, and something everyone should try at least once just so you can see where all your time is going and how many of those "it will just take 2 minute" tasks really take 45 minutes. </p>
-    <p>David and Mike Schmitz talked about how to figure out what you shouldn't be doing in <a href="https://www.relay.fm/focused/53">episode 53 of Focused (formerly Free Agents)</a>, and that's one of the things I've kept an eye on through my time tracking - things that are taking a lot of my time, that I don't truly enjoy doing or that I know aren't beneficial to me.</p>
-    <h2>My Oversleeping Tracker</h2>
-    <p>Now, depending on the day of the week, this should perhaps more accurately be called my "lazing in bed" tracker, I title it oversleeping by default - you could call it whatever you like. This is is a solid example of a tracker which should automatically start at a specific time. </p>
-    <p>To make it I kept things simple - the trigger is the schedule action, set for 6am in my case. I have set it not to run on Saturdays and Sundays. Then the actions are as follows: Toggl, start a time entry (not create!) - I set the workspace, project (called Personal), and add a description of "Oversleeping". The final action is to send myself a Pushbullet link notification. I misremembered during the episode but I am actually triggering a Shortcut, the link is simply <code>shortcuts://run-shortcut?name=Stop%20Toggl</code> (you can download the Shortcut <a href="https://www.icloud.com/shortcuts/dfacc8698cdd45a59929ae8768555581">here</a>, you'll need to have the Toggl app installed for it to work), and the title is actually the description of the Toggl timer - so if I change what I put in the description later I don't need to remember to update the notification name. If you're on the free version of Toggl then you'll have to skip the notification part. </p>
-    <p>That's it! When the Zap runs it starts the timer, and sends me a notification - and when I open that notification it opens Shortcuts, which stops the timer. You could have it open the Toggl web page instead - or any number of things if you wanted to do so. (You could also run a different Shortcut, one which starts playing your morning playlist, tells you what events are on your calendar, etc., as well as stopping the timer.)</p>
-    <h2>My Zapier Stop Timer Automation</h2>
-    <p>This one does the opposite of the above - it stops a currently running timer at 10pm. The trick with this is you will need to use the Toggl API, and as such you'll need a premium Zapier plan to do this (you could use Microsoft Flow if you're comfortable doing the whole thing via APIs though, and that's free!). So, how does it work?</p>
-    <ol>
-    <li>Every day at 10pm is the schedule which triggers this, I have it run on weekends too.</li>
-    <li>GET - I make a call to the Toggl API. I call the URL <code>https://www.toggl.com/api/v8/time_entries/current</code>, and make sure to fill out the Basic Auth field with <code>email|password</code>. </li>
-    <li>Only continue if: the data returned by Toggl has a negative duration if the timer is still running, so if it's less than zero I continue. </li>
-    <li>Stop Time Entry - using the ID captured from the GET in step 2.</li>
-    <li>Send a link via PushBullet. This opens the alternative Toggl app I'm beta testing so I can just continue the timer if necessary. </li>
-    </ol>
-    <p><a href="https://resources.rosemaryorchard.com/images/blog/automators-15-automate-your-time-tracking/stop-timer-zapier.png">https://resources.rosemaryorchard.com/images/blog/automators-15-automate-your-time-tracking/stop-timer-zapier.png</a>)</p>
-    <p>A note: while I am doing some of my Toggl automations through IFTTT that is via their Maker service and the API, it doesn't have direct integration with Toggl itself. </p>
-    <p><a href="https://youtu.be/9sm5gxFOaMo">plugin:youtube</a></p>
-    <p><a href="https://www.relay.fm/automators/15">Automators Episode 15: Automated Time Tracking</a></p>
-    <p>A big thanks to our sponsors for this episode:</p>
-    <ul>
-    <li><a href="https://www.expressvpn.com/automators">ExpressVPN</a>: High-Speed, Secure &amp; Anonymous VPN Service. Get 3 months free with a 1-year package.</li>
-    </ul>";}}
-  geo_timezone: UTC
-  _thumbnail_id: '1743'
-  _edit_last: '1'
-  _genesis_scripts_body_position: bottom
-  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
-  geo_weather: a:2:{s:4:"icon";s:4:"none";s:10:"visibility";s:6:"public";}
-  mf2_syndication: a:0:{}
-  _oembed_0c88f5f4bc6293259a72511a60c2642e: "{{unknown}}"
-  _oembed_8de418aef6f8f1d129ee553a2aa30266: <iframe width="916" height="515" src="https://www.youtube.com/embed/9sm5gxFOaMo?feature=oembed"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-  _oembed_time_8de418aef6f8f1d129ee553a2aa30266: '1553418564'
-  _oembed_2c7c299aa244c0c60636039ea61b8195: <iframe width="500" height="281" src="https://www.youtube.com/embed/9sm5gxFOaMo?feature=oembed"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-  _oembed_time_2c7c299aa244c0c60636039ea61b8195: '1553418572'
-  _oembed_018068048537dec92bd5d0eb69a4d04d: <iframe width="920" height="518" src="https://www.youtube.com/embed/9sm5gxFOaMo?feature=oembed"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>
-  _oembed_time_018068048537dec92bd5d0eb69a4d04d: '1553418573'
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557890562;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:95;}i:1;a:1:{s:2:"id";i:103;}i:2;a:1:{s:2:"id";i:90;}}}}
-  _oembed_b50d03100728b43fd4e4d09cf7a1644f: '<iframe title="Automators 15: Shortcuts
-    for Time Tracking" width="900" height="506" src="https://www.youtube.com/embed/9sm5gxFOaMo?feature=oembed"
-    frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen></iframe>'
-  _oembed_time_b50d03100728b43fd4e4d09cf7a1644f: '1557663194'
-  _lyte_9sm5gxFOaMo: eJydkDFPwzAQhf+K5blNYoKrNhtLxVIBalhQpOqaXGODEwf7Qlsh/jt22qGsTLbfvffp/L45aTLIC/4wku2ArPNMyIJtlXVUj+TZwTpW6g5Z6aD+0H3LZ5zU2O1fnQk5RTT4okqrVCdn0l2b1Lar0i9dpSvfyfa0foKNrVL12eABRkPJ+xARjy//gHRwcuj/ghogXGs0TeDcZWI1z8RcLEuxLGRe3GdJlmVv0TY6IG374Hou5UYst1FEXzs9XPVSac+CgNjX4Il5ZY+ene3IwmU6a+iZ7gnbwEJGsRW6tsKOmhSzpNDdlAfG2GOcxjTZi/sSjH47EiOl+wkA+/jUlITFapiW8rvwO+DFAYzHGzUCPEE38ELIhZQyX8l8xs2ZMCZwB02DzTTMciGWi/znF1PBp/s=
-  _oembed_45f77660cfc1d3447ac224fa62afd0e0: '<iframe title="Automators 15: Shortcuts
-    for Time Tracking" width="640" height="360" src="https://www.youtube.com/embed/9sm5gxFOaMo?feature=oembed"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-    gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  _oembed_time_45f77660cfc1d3447ac224fa62afd0e0: '1625424458'
-  _oembed_e054863ddaf989508157f556a521cded: '<iframe title="Automators 15: Shortcuts
-    for Time Tracking" width="750" height="422" src="https://www.youtube.com/embed/9sm5gxFOaMo?feature=oembed"
-    frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media;
-    gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  _oembed_time_e054863ddaf989508157f556a521cded: '1625425454'
-author:
-  login: rosemaryorchard
-  email: me@rosemaryorchard.com
-  display_name: Rosemary Orchard
-  first_name: Rosemary
-  last_name: Orchard
-permalink: "/blog/automators-15-automate-your-time-tracking/"
 ---
 <p>Episode 15 of Automators has arrived - and with it our secrets for automating time tracking.</p>
 <p>Time tracking is something some people are required to do, some people ought to do, and something everyone should try at least once just so you can see where all your time is going and how many of those "it will just take 2 minute" tasks really take 45 minutes.</p>

@@ -3,56 +3,11 @@ layout: post
 title: Airmail Custom Actions
 date: 2017-07-19 08:00:00.000000000 +01:00
 type: post
-parent_id: '0'
 published: true
-password: ''
 status: publish
 categories:
 - Blog
 tags: []
-meta:
-  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
-    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357048;}
-  mf2_type: a:1:{i:0;s:7:"h-entry";}
-  mf2_category: a:1:{i:0;s:31:"workflow,airmail,ios automation";}
-  mf2_mp-slug: a:1:{i:0;s:22:"airmail-custom-actions";}
-  mf2_name: a:1:{i:0;s:22:"Airmail Custom Actions";}
-  mf2_published: a:1:{i:0;s:16:"19-07-2017 08:00";}
-  mf2_updated: a:1:{i:0;s:16:"19-07-2017 08:00";}
-  mf2_content: |-
-    a:1:{i:0;a:1:{s:4:"html";s:4476:"<p>I've been experimenting more with <a href="http://airmailapp.com">Airmail</a> on iOS recently, specifically the <a href="http://docs.airmailapp.com/airmail-for-ios/custom-actions-airmail-for-iphone">custom actions</a>. Being a regular user of <a href="http://www.rosemaryorchard.com/blog/tag:workflow">Workflow</a> I'm very familiar with the concept - but Airmail does things a little differently.<br />
-    <a href="http://airmailapp.com/ios">?forceResize=100)</a></p>
-    <p>To get started with the custom actions you first need to enable integration with the apps you want to work with - for me this is primarily OmniFocus and Workflow, but not exclusively, this is done in the Services section - and there's everything from Dropbox to Instapaper, and even GitHub.<br />
-    ?forceResize=600)  </p>
-    <p>So, what is the purpose of an action? An Airmail action allows you to chain multiple steps together - these can be purely email steps (e.g. forward an email, add a label, archive it), or involving external applications. I'll go through some of mine for you.  </p>
-    <p>?forceResize=400)  </p>
-    <h2>Receipts</h2>
-    <p>?forceResize=400)<br />
-    I prefer to handle receipts as PDFs on my Mac - or to be precise, I let Hazel handle my receipts on my Mac. This means I need to get my receipts to somewhere on my Mac Hazel is watching. I have a Workflow which I usually share a PDF directly to - and Airmail has an option to share the message as a PDF to Workflow, along with a whole host of other options.<br />
-    ?forceResize=400)<br />
-    The only catch is that Airmail shares a link to the PDF - but it can override the choice you previously made in Workflow to only accept certain document types. As such I added an If - and if the input is a URL I get the contents of it, and then have Workflow file the receipt in my chosen folder in Dropbox. You can get my <a href="https://workflow.is/workflows/3b0ca2be8e614dd19f5c48ad7e5e7dcc">Web Receipts Workflow here</a>.  </p>
-    <p>Once the receipt has been saved as a PDF and filed I have Airmail delete the Workflow and that's it! One less email in my inbox.  </p>
-    <h2>Travel</h2>
-    <p>?forceResize=400)<br />
-    I use <a href="https://www.tripit.com">TripIt</a> to organise my travel - and TripIt is very good at parsing booking emails for the right data. While they do have an option to scan your inbox, I get enough bookings forwarded to me from my family and friends that this isn't a great option - otherwise I'd be in two places at once and permanently on holiday! (Unless I did a lot of manual management in Tripit.) My preferred solution then is to forward emails to TripIt myself - I then apply my travel label and archive the message. With this custom action I just have to confirm the forwarding of the message and Airmail does the rest for me.  </p>
-    <h2>Waiting On</h2>
-    <p>?forceResize=400)<br />
-    Waiting on is used a lot in <a href="http://gettingthingsdone.com">Getting Things Done</a>, essentially it's a list of things you're waiting on other people for - simple enough. However most of my waiting on 'tasks' come via my email inbox. I send Workflow the title and the link to the email, have it parse that and then add the resulting task to OmniFocus. You can get my <a href="https://workflow.is/workflows/a34e6dbcbb1a4e008a8d751d5dfd69ad">Airmail Waiting On Workflow here</a>.  </p>
-    <h2>Link to Clipboard</h2>
-    <p>?forceResize=400)<br />
-    Airmail actually has a built in action for this, but I use it in parts of other custom actions and it's very handy to know how to get a link to an email as part of a custom action. All I do is use the Workflow action to send the mail link to a Workflow called <a href="https://workflow.is/workflows/7c537bb994a7486a8ee0dd6b895af03d">Copy to Clipboard</a> which has exactly one action - it takes whatever the input is and copies it to my clipboard. (I have this purely for the times when something is being difficult and the copy button is either not available or not working because I'm running a beta iOS).  </p>
-    <h2>Track Deliveries</h2>
-    <p>?forceResize=400)<br />
-    Last for now is Track Delivieries, I use the <a href="https://appsto.re/gb/DGbwr.i">Deliveries App by Junecloud</a>, and Airmail can either share a message to it directly, or as part of a custom action. I start by sharing to Deliveries, then use my Waiting On workflow from above, add an extra label of packages, and then archive the message. This way I can track my package, as well as see in OmniFocus I'm waiting on something.</p>";}}
-  geo_timezone: UTC
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557904995;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:103;}i:1;a:1:{s:2:"id";i:64;}i:2;a:1:{s:2:"id";i:2208;}}}}
-author:
-  login: rosemaryorchard
-  email: me@rosemaryorchard.com
-  display_name: Rosemary Orchard
-  first_name: Rosemary
-  last_name: Orchard
-permalink: "/blog/airmail-custom-actions/"
 ---
 <p>I've been experimenting more with <a href="http://airmailapp.com">Airmail</a> on iOS recently, specifically the <a href="http://docs.airmailapp.com/airmail-for-ios/custom-actions-airmail-for-iphone">custom actions</a>. Being a regular user of <a href="http://www.rosemaryorchard.com/blog/tag:workflow">Workflow</a> I'm very familiar with the concept - but Airmail does things a little differently.<br />
 <a href="http://airmailapp.com/ios">?forceResize=100)</a></p>

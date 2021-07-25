@@ -3,66 +3,12 @@ layout: post
 title: Good Morning Computer
 date: 2018-02-13 20:00:00.000000000 +00:00
 type: post
-parent_id: '0'
 published: true
-password: ''
 status: publish
 categories:
 - Blog
 tags:
 - Workflow
-meta:
-  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
-    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357053;}
-  mf2_type: a:1:{i:0;s:7:"h-entry";}
-  mf2_category: a:1:{i:0;s:8:"workflow";}
-  mf2_mp-slug: a:1:{i:0;s:21:"good-morning-computer";}
-  mf2_name: a:1:{i:0;s:21:"Good Morning Computer";}
-  mf2_published: a:1:{i:0;s:16:"13-02-2018 20:00";}
-  mf2_updated: a:1:{i:0;s:16:"13-02-2018 20:00";}
-  mf2_content: "a:1:{i:0;a:1:{s:4:\"html\";s:3062:\"<p>A while ago in the Mac Power
-    Users Facebook Group I was challenged to make a Workflow which would tell the
-    user about their upcoming day. When it runs Workflow will say something like this:</p>\n<blockquote>\n<p>Good
-    morning Rose, it is 07:38. \nIn Vienna the weather will be mixed precipitation
-    throughout the week, with temperatures rising to 6°C on Friday..\nThe current
-    temperature is 0 degrees celcius.\nThere is a 11% chance of rain.\nYour iPad has
-    80% battery.\nYour calendar events for today are Shrove Tuesday, Work.\nThe top
-    news headlines for today are:</p>\n<ol>\n<li>\n</li>\n<li>\n</li>\n<li>\n</li>\n<li>\n</li>\n<li>\n</li>\n<li>\n</li>\n</ol>\n</blockquote>\n<blockquote>\n<p>Here
-    is some of your favourite music:</p>\n</blockquote>\n<p>After it speaks this it
-    then plays some of my favourite music (shuffling from a playlist I chose). </p>\n<p>So,
-    how does this all work? </p>\n<p>When you import the Workflow it asks you three
-    questions, what you name is, your Dark Sky Weather API, and the RSS feed of your
-    favourite news source.</p>\n<p><a href=\"https://resources.rosemaryorchard.com/images/blog/good-morning-computer/workflow_import_questions.png\">https://resources.rosemaryorchard.com/images/blog/good-morning-computer/workflow_import_questions.png</a>)</p>\n<p>You
-    can get your <a href=\"https://darksky.net/dev/docs\">API Key from Dark Sky</a>,
-    on the free plan you get up to 1000 calls per day - more than enough for our Workflow.</p>\n<p>Next
-    the Workflow gets the data we need:</p>\n<ul>\n<li>the date</li>\n<li>the titles
-    of the last 6 items from the RSS feed</li>\n<li>the current location and the name
-    of it</li>\n<li>the weather for your current location</li>\n<li>the kind of device
-    you're using</li>\n<li>the battery level of the device you're using</li>\n<li>your
-    calendar events for today</li>\n</ul>\n<p>Then this information is inserted into
-    the text, let's look at that again.</p>\n<blockquote>\n<p>Good morning <strong>Name</strong>,
-    it is <strong>Current Time</strong>. \nIn <strong>City</strong> the weather will
-    be <strong>Weather Summary</strong>.\nThe current temperature is <strong>Temperature
-    degrees celcius</strong>.\nThere is a <strong>Rain %</strong>% chance of rain.\nYour
-    <strong>Device Model</strong> has <strong>Battery Level</strong>% battery.\n<strong>Calendar
-    Events.</strong>\nThe top news headlines for today are <strong>Headlines</strong>.\nHere
-    is some of your favourite music:</p>\n</blockquote>\n<p>Everything in bold is
-    a variable, replaced with data we either fetched from the internet, or collected
-    from the device. After this text all that Workflow has to do is use the speak
-    text action, and the play music action. </p>\n<p>There are two current versions
-    of the Workflow, <a href=\"https://workflow.is/workflows/94ba7b07407948bdbabccfdb4c1d63fa\">an
-    imperial version for those who prefer Farenheit</a> and a <a href=\"https://workflow.is/workflows/c9964e848eee49c6a3b4290f00338322\">metric
-    version for those who prefer Celsius</a>. If you download either of these you
-    can have your device talk to you in the morning, and tell you about your day.</p>\";}}"
-  geo_timezone: UTC
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557896555;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:64;}i:1;a:1:{s:2:"id";i:2208;}i:2;a:1:{s:2:"id";i:93;}}}}
-author:
-  login: rosemaryorchard
-  email: me@rosemaryorchard.com
-  display_name: Rosemary Orchard
-  first_name: Rosemary
-  last_name: Orchard
-permalink: "/blog/good-morning-computer/"
 ---
 <p>A while ago in the Mac Power Users Facebook Group I was challenged to make a Workflow which would tell the user about their upcoming day. When it runs Workflow will say something like this:</p>
 <blockquote>

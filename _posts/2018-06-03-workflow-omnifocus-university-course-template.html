@@ -3,9 +3,7 @@ layout: post
 title: 'Workflow: OmniFocus University Course'
 date: 2018-06-03 08:00:00.000000000 +01:00
 type: post
-parent_id: '0'
 published: true
-password: ''
 status: publish
 categories:
 - Blog
@@ -13,71 +11,6 @@ tags:
 - OmniFocus
 - University Studies
 - Workflow
-meta:
-  micropub_auth_response: a:10:{s:10:"token_type";s:6:"Bearer";s:5:"scope";s:19:"create
-    update media";s:2:"me";s:36:"https://testing.rosemaryorchard.com/";s:9:"issued_by";s:63:"https://testing.rosemaryorchard.com/wp-json/indieauth/1.0/token";s:9:"client_id";s:21:"https://quill.p3k.io/";s:11:"client_name";s:5:"Quill";s:11:"client_icon";s:46:"https://quill.p3k.io/images/quill-icon-196.png";s:9:"issued_at";i:1553356711;s:4:"user";i:1;s:13:"last_accessed";i:1553357065;}
-  mf2_type: a:1:{i:0;s:7:"h-entry";}
-  mf2_category: a:1:{i:0;s:37:"workflow,omnifocus,university studies";}
-  mf2_mp-slug: a:1:{i:0;s:45:"workflow-omnifocus-university-course-template";}
-  mf2_name: 'a:1:{i:0;s:37:"Workflow: OmniFocus University Course";}'
-  mf2_published: a:1:{i:0;s:16:"03-06-2018 08:00";}
-  mf2_updated: a:1:{i:0;s:16:"03-06-2018 08:00";}
-  mf2_syndication: a:1:{i:0;s:62:"https://twitter.com/rosemaryorchard/status/1003272479924674560";}
-  mf2_content: |-
-    a:1:{i:0;a:1:{s:4:"html";s:9156:"<p><a href="https://resources.rosemaryorchard.com/images/blog/workflow-omnifocus-university-course-template/workflow-omnifocus-university-course.png?cropResize=100">https://resources.rosemaryorchard.com/images/blog/workflow-omnifocus-university-course-template/workflow-omnifocus-university-course.png?cropResize=100</a> "OmniFocus University Course"){.image-right} I was asked to talk through my thought process behind a Workflow by <em>powderizedbookworm</em> in the OmniFocus Slack, so this post will go into more detail than usual.</p>
-    <p>The purpose of this Workflow is to add my syllabus to my OmniFocus project for that class. The project will already exist as I have to register for the course, and potentially order course materials or communicate with the course professors before I get the syllabus. Each of my courses is separated into action groups - sometimes the courses divide their materials into weekly blocks, and sometimes they're divided into blocks based on assessments. I always put assessments in their own blocks, because they are broken into sub sections as well. </p>
-    <p>This workflow should add each section of work or assessment to OmniFocus as an action group, deferred and due as is appropriate. As such the first thing it does after I input the project name (which is the class name) is to ask me how many sections there are in the course. We then go through every section inputting the name of it. If I know that the course is split into weeks then I modify this action in advance to just use "Week <code>Repeat Index</code>" as the name of the section. I use the start and end dates to set due and defer dates, and then select if this section is to study something or to submit something (study or assignment). This is a menu which allows me to use different actions based on which option is selected.</p>
-    <p>In the study section I input the tasks, and format them as taskpaper. In the assignment section I input the name of the assignment and the number of questions it has which generates subtasks for me. </p>
-    <p>This whole Workflow generates TaskPaper and adds it to OmniFocus for me. </p>
-    <p>Steps: </p>
-    <ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: The course name (which is the project name in OmniFocus)</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>:  How many sections or blocks does the course have?</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Repeat") <code>Repeat</code>: Going through every section/block<ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: The name of the section</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: The start date</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: The end date</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Choose from Menu") <code>Choose from Menu</code>: Is this a study or assignment section/block</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Choose from Menu") <code>Study</code><ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: Input the tasks which need to be completed.</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Split Text") <code>Split Text</code>: Break up the lines of tasks</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Repeat with Each") <code>Repeat with Each</code>: For every task<ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Text") <code>Text</code>: Format it with a tab indent and the <code>-</code> used to indicate a task in TaskPaper</li>
-    </ul>
-    </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Combine Text") <code>Combine Text</code>: Put these tasks back together with line breaks between them,</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Text") <code>Text</code>: Format the action group here, with the defer and due dates (these are inherited), followed by the tasks which were input and formatted.</li>
-    </ul>
-    </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Choose from Menu") <code>Assignment</code><ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Ask for Input") <code>Ask for Input</code>: </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Scripting.png?cropResize=25</a> "Repeat with Each") <code>Repeat with Each</code>: For every task<ul>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Text") <code>Text</code>: Format it with a tab indent and the <code>-</code> used to indicate a task in TaskPaper</li>
-    </ul>
-    </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Combine Text") <code>Combine Text</code>: Put these tasks back together with line breaks between them,</li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/Text.png?cropResize=25</a> "Text") <code>Text</code>: Format the action group here, with the name of the assignment, defer date and due date and the questions as sub tasks.</li>
-    </ul>
-    </li>
-    </ul>
-    </li>
-    <li><a href="https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/com.omnigroup.OmniFocusiPhone@2x.png?cropResize=25">https://resources.rosemaryorchard.com/images/posts/images/workflow-icons/com.omnigroup.OmniFocusiPhone@2x.png?cropResize=25</a> "Add TaskPaper to OmniFocus") <code>Add TaskPaper to OmniFocus</code>: Put everything we've generated above into OmniFocus.</li>
-    </ul>
-    <p>You can get the workflow here: <a href="https://workflow.is/workflows/e70385ca84394cccb7c5d5f827e8e797">OmniFocus University Course</a></p>";}}
-  geo_timezone: UTC
-  _edit_last: '1'
-  mf2_mp-syndicate-to: a:1:{i:0;s:4:"none";}
-  _genesis_scripts_body_position: bottom
-  geo_weather: a:2:{s:4:"icon";s:4:"none";s:10:"visibility";s:6:"public";}
-  _jetpack_related_posts_cache: a:1:{s:32:"8f6677c9d6b0f903e98ad32ec61f8deb";a:2:{s:7:"expires";i:1557643221;s:7:"payload";a:3:{i:0;a:1:{s:2:"id";i:72;}i:1;a:1:{s:2:"id";i:44;}i:2;a:1:{s:2:"id";i:93;}}}}
-author:
-  login: rosemaryorchard
-  email: me@rosemaryorchard.com
-  display_name: Rosemary Orchard
-  first_name: Rosemary
-  last_name: Orchard
-permalink: "/blog/workflow-omnifocus-university-course-template/"
 ---
 <p><a href="https://resources.rosemaryorchard.com/images/blog/workflow-omnifocus-university-course-template/workflow-omnifocus-university-course.png?cropResize=100"><img class="alignright" src="{{ site.baseurl }}/assets/2018/06/workflow-omnifocus-university-course.png" width="92" height="92" /></a>I was asked to talk through my thought process behind a Workflow by <em>powderizedbookworm</em> in the OmniFocus Slack, so this post will go into more detail than usual.</p>
 <p>The purpose of this Workflow is to add my syllabus to my OmniFocus project for that class. The project will already exist as I have to register for the course, and potentially order course materials or communicate with the course professors before I get the syllabus. Each of my courses is separated into action groups - sometimes the courses divide their materials into weekly blocks, and sometimes they're divided into blocks based on assessments. I always put assessments in their own blocks, because they are broken into sub sections as well.</p>
