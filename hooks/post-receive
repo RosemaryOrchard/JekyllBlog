@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+
+GIT_REPO=$HOME/JekyllBlog.git
+TMP_GIT_CLONE=/tmp/jekyll-blog
+PUBLIC_WWW=/var/www/jekyll.rosemaryorchard.com
+
+git clone $GIT_REPO $TMP_GIT_CLONE
+pushd $TMP_GIT_CLONE
+bundle exec jekyll build -d $PUBLIC_WWW
+popd
+rm -rf $TMP_GIT_CLONE
+
+exit
