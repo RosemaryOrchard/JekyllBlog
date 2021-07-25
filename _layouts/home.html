@@ -35,6 +35,8 @@ layout: default
           {{ post.excerpt }}
         {%- endif -%}
       </li>
+        {% if forloop.last == false %}
+          <hr />
         {% endif %}
       
       {%- endfor -%}
