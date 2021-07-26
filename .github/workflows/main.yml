@@ -18,3 +18,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         script: git pull; jekyll build;
+        timeout: 120s
