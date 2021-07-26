@@ -21,4 +21,4 @@ jobs:
         script: |
           cd /var/www/jekyll.rosemaryorchard.com
           git pull
-          jekyll build
+          bundle exec jekyll build
