@@ -18,4 +18,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         timeout: 120s
-        script: ls -al
+        script: whoami
