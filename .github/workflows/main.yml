@@ -18,7 +18,4 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         timeout: 120s
-        script: |
-          cd /var/www/jekyll.rosemaryorchard.com
-          git pull
-          jekyll build
+        script: ls -al
