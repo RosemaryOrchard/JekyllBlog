@@ -13,3 +13,15 @@ items:
         url: 'https://omnifocusbook.com'
       - page: Take Control of Shortcuts
         url: 'https://www.takecontrolbooks.com/shortcuts/'
+  - title: '<i class="fad fa-globe" alt="Social Media"></i>'
+    subfolderitems:
+      - page: '<i class="fab fa-github"></i> GitHub'
+        url: 'https://omnifocusbook.com'
+      - page: '<i class="fab fa-instagram"></i> Instagram'
+        url: 'https://omnifocusbook.com'
+      - page: '<i class="fab fa-twitter"></i> Twitter'
+        url: 'https://omnifocusbook.com'
+      - page: '<i class="fab fa-microblog"></i> Micro.Blog'
+        url: 'https://omnifocusbook.com'
+    
+  
