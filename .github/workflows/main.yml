@@ -28,4 +28,5 @@ jobs:
         botToken: ${{ secrets.BotToken }}
         chatId: ${{ secrets.ChatID }}
         jobStatus: ${{ job.status }}
+        skipSuccess: false
   
