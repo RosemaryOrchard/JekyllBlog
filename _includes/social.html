@@ -1,7 +1,11 @@
 {% assign social = site.minima.social_links %}
 
 <ul class="social-media-list">
-  {% for site in site.data.social_links %} 
-    <li><a rel="me" href="{{ site.url }}" title="{{ site.username }} on {{ site.mediaName }}"><i class="fab fa-{{ site.icon }}"></i></a></li>
+  {% for account in site.data.social_links %} 
+    <li id="{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}">
+      <a rel="me" href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
+        <i class="fab fa-{{ account[1].icon }}"></i>
+      </a>
+    </li>
   {% endfor %}
 </ul>
