@@ -44,6 +44,9 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
   indexpage: 'index'
+  trail: 
+    before: 2
+    after: 2
   
 # Exclude from processing.
 # The following items will not be processed, by default.
