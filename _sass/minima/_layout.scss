@@ -3,6 +3,10 @@
  */
  
 .site-header {
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
+
   @media (prefers-color-scheme: light) {
     background: $rose-purple-dark;
     color: white;
@@ -26,10 +30,6 @@
   border-top: 5px solid $border-color-03;
   border-bottom: 1px solid $rose-purple;
   min-height: $spacing-unit * 1.865;
-  line-height: $base-line-height * $base-font-size * 2.25;
-
-  // Positioning context for the mobile navigation icon
-  position: relative;
 }
 
 .site-title {
@@ -46,12 +46,57 @@
 }
 
 .site-nav {
-  position: absolute;
-  top: 9px;
-  right: $spacing-unit / 2;
   background-color: $rose-purple-dark;
   border-radius: 5px;
+  margin-bottom: 0 !important;
+  position: absolute;
+  right: $spacing-unit / 2;
   text-align: right;
+  top: 9px;
+  
+  li {
+    display: block;
+    float: left;
+    padding: 1rem;
+    text-align: center;
+    
+    ul {
+      margin-left: none !important;
+    }
+  }
+  
+  li a:hover {
+    text-decoration: underline;
+  }
+  
+  li, .dropbtn {
+    text-decoration: none;
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    background-color: $rose-purple-dark;
+    min-width: 160px;
+    margin-left: -1em !important;
+    position: absolute;
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: $rose-purple-light;
+    padding: 0.5em;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
 
   .nav-trigger {
     display: none;

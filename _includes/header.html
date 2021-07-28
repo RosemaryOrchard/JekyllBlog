@@ -17,20 +17,30 @@
           </span>
         </label>
 
-        <ul>
-          {% for item in site.data.menu.items %}
-            {% if item.url %}
-              <a href="{{ item.url }}"> 
-                <li>{{ item.title }}</li>
-              </a>
+        <ul class="site-nav">
+          {% for item in site.data.menu.items | reverse %}
+            {% if item.subfolderitems %}
+              {% assign dropButtonClass = 'class="dropdown"' %}
+              {% assign dropLinkClass = 'class="dropbtn"' %}
             {% else %}
-              <li>{{ item.title }}</li>
+              {% assign dropButtonClass = '' %}
+              {% assign dropLinkClass = '' %}
             {% endif %}
-              <ul>
+            
+            <li {{ dropButtonClass }}>
+            {% if item.url %}
+              <a {{ dropLinkClass }} href="{{ item.url }}">{{ item.title }}</a>
+            {% else %}
+              <span {{ dropLinkClass }}>{{ item.title }}</span>
+            {% endif %}
+            {% if item.subfolderitems %}
+              <ul class="dropdown-content">
                 {% for entry in item.subfolderitems %}
                   <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
                 {% endfor %}
               </ul>
+            {% endif %}
+            </li>
           {% endfor %}
         </ul>
       </nav>
