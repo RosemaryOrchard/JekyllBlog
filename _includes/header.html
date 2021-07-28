@@ -42,6 +42,18 @@
             {% endif %}
             </li>
           {% endfor %}
+          <li class="dropdown">
+            <span class="dropbtn"><i class="fad fa-globe" alt="Social Media"></i></span>
+            <ul class="dropdown-content">
+              {% for account in site.data.social_links %} 
+                <li id="menu-{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}">
+                  <a href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
+                    <i class="fab fa-{{ account[1].icon }}"></i>&nbsp;{{ account[1].mediaName }}
+                  </a>
+                </li>
+              {% endfor %}
+            </ul>
+          </li>
         </ul>
       </nav>
     {% endif %}
