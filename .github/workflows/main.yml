@@ -22,3 +22,10 @@ jobs:
           cd /var/www/jekyll.rosemaryorchard.com
           git pull
           bundle exec jekyll build
+    - name: Telegram Action
+      uses: xinthink/action-telegram@v1.1
+      with:
+        botToken: ${{ secrets.BotToken }}
+        chatId: ${{ secrets.ChatID }}
+        jobStatus: ${{ job.status }}
+  
