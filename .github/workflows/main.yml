@@ -21,6 +21,7 @@ jobs:
         script: |
           cd /var/www/jekyll.rosemaryorchard.com
           git pull
+          bundle install
           bundle exec jekyll build
     - name: Telegram Action
       uses: xinthink/action-telegram@v1.1

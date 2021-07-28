@@ -35,6 +35,7 @@ plugins:
   - jekyll-archives
   - jekyll-sitemap
   - jekyll-paginate-v2
+  - jekyll-seo-tag
   
 pagination:
   enabled: true
