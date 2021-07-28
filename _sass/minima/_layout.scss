@@ -55,14 +55,25 @@
   top: 9px;
   
   li {
+    border-radius: 1rem;
     display: block;
     float: left;
-    padding: 1rem;
+    padding: 0.75rem;
     text-align: center;
     
     ul {
+      border-radius: 1rem;
       margin-left: none !important;
+      margin-top: 1rem;
+      
+      li {
+        float: none;
+      }
     }
+  }
+  
+  li:hover {
+    background: $rose-purple;
   }
   
   li a:hover {
