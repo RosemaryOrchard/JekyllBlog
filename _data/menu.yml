@@ -1,6 +1,4 @@
 items:
-  - title: 'Blog'
-    url: '/blog'
   - title: 'Podcasts'
     subfolderitems:
       - page: Automators
