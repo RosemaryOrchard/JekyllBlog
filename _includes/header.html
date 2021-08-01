@@ -40,7 +40,7 @@
           </li>
         {% endfor %}
         <li class="dropdown">
-          <span class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i>&nbsp;<span class="no-js">Social Media</span></span>
+          <span class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="no-js">Social Media</span>&nbsp;</span>
           <ul class="dropdown-content">
             {% for account in site.data.social_links %} 
               <li id="menu-{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}">
