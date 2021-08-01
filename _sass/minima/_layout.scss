@@ -58,6 +58,7 @@
     border-radius: 1rem;
     display: block;
     float: left;
+    min-height: 1rem;
     padding: 0.75rem;
     text-align: center;
     
@@ -110,7 +111,7 @@
   }
 
   .nav-trigger {
-    display: none;
+    display: none !important;
   }
 
   .menu-icon {
@@ -136,18 +137,18 @@
     display: none;
   }
 
-  input:checked {
-    ~ .trigger {
+  input:checked ~ .trigger {
     display: block;
     padding-bottom: 5px;
   }
-  
-  @media screen and (max-width: $on-mobile) {
-    float: none;
-    display: block;
-    text-align: left;
+    
+  input:checked {
+    @media screen and (max-width: $on-mobile) {
+      float: none;
+      display: block;
+      text-align: left;
+    }
   }
-}
 
   .page-link {
     color: $text-color;
