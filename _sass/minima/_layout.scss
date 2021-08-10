@@ -40,7 +40,7 @@
   float: left;
   font-family: $title-font-family;
 
-  @include media-query($on-palm) {
+  @include media-query($on-mobile) {
     padding-right: 45px;
   }
 }
@@ -58,6 +58,7 @@
     border-radius: 1rem;
     display: block;
     float: left;
+    min-height: 1rem;
     padding: 0.75rem;
     text-align: center;
     
@@ -110,7 +111,7 @@
   }
 
   .nav-trigger {
-    display: none;
+    display: none !important;
   }
 
   .menu-icon {
@@ -139,6 +140,14 @@
   input:checked ~ .trigger {
     display: block;
     padding-bottom: 5px;
+  }
+    
+  input:checked {
+    @media screen and (max-width: $on-mobile) {
+      float: none;
+      display: block;
+      text-align: left;
+    }
   }
 
   .page-link {

@@ -8,9 +8,14 @@
   <script src="https://kit.fontawesome.com/2239de7a70.js" crossorigin="anonymous"></script>
   <link rel="shortcut icon" type="image/png" href="favicon.png">
   {% feed_meta %}
-  {% if jekyll.environment == 'production' and site.google_analytics %}
-    {% include google-analytics.html %}
-  {% endif %}
+  <script>
+    window.onload = function () {
+      for (const hideMe of document.getElementsByClassName("no-js")) {
+        hideMe.style.display = 'none';
+      };
+    }
+  </script>
+
 
   {% include custom-head.html %}
   
