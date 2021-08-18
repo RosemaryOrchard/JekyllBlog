@@ -106,8 +106,8 @@
     text-align: left;
   }
   
-  .dropdown:hover, .dropdown:active 
-  .dropdown-content {
+  .dropdown:hover .dropdown-content,
+  .dropdown:active .dropdown-content {
     display: block;
   }
 
