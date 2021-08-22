@@ -7,51 +7,53 @@
     <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
 
     <nav class="site-nav" id="site-nav">
-      <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-      <label for="nav-trigger">
-        <span class="menu-icon">
-          <i class="fad fa-bars"></i>
-        </span>
-      </label>
+      <span id="nav-trigger-box">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <i class="fad fa-bars"></i>
+          </span>
+        </label>
+      </span>
 
-      <ul class="trigger">
+      <div>
         {% for item in site.data.menu.items | reverse %}
           {% if item.subfolderitems %}
             {% assign dropButtonClass = 'class="dropdown"' %}
             {% assign dropLinkClass = 'class="dropbtn"' %}
+            {% assign endMenuTitle = '<i class="fas fa-caret-down"></i>' %}
           {% else %}
             {% assign dropButtonClass = '' %}
             {% assign dropLinkClass = '' %}
+            {% assign endMenuTitle = '' %}
           {% endif %}
           
-          <li {{ dropButtonClass }}>
+          <span {{ dropButtonClass }}>
           {% if item.url %}
-            <a {{ dropLinkClass }} href="{{ item.url }}">{{ item.title }}</a>
+            <a {{ dropLinkClass }} href="{{ item.url }}">{{ item.title }}{{endMenuTitle}}</a>
           {% else %}
-            <span {{ dropLinkClass }}>{{ item.title }}</span>
+            <span {{ dropLinkClass }}  aria-haspopup="true">{{ item.title }}{{endMenuTitle}}</span>
           {% endif %}
           {% if item.subfolderitems %}
-            <ul class="dropdown-content">
+            <div class="dropdown-content">
               {% for entry in item.subfolderitems %}
-                <li><a href="{{ entry.url }}">{{ entry.page }}</a></li>
+                <a href="{{ entry.url }}">{{ entry.page }}</a>
               {% endfor %}
-            </ul>
+            </div>
           {% endif %}
-          </li>
+          </span>
         {% endfor %}
-        <li class="dropdown">
-          <span class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="no-js">Social Media</span>&nbsp;</span>
-          <ul class="dropdown-content">
+        <span class="dropdown" id="socials">
+          <span class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="">Social Media</span>&nbsp;</span>
+          <span class="dropdown-content">
             {% for account in site.data.social_links %} 
-              <li id="menu-{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}">
-                <a href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
+                <a id="menu-{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}" href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
                   <i class="fab fa-{{ account[1].icon }}">&nbsp;</i>{{ account[1].mediaName }}
                 </a>
-              </li>
             {% endfor %}
-          </ul>
-        </li>
-      </ul>
+          </span>
+        </span>
+      </div>
     </nav>
   </div>
 </header>

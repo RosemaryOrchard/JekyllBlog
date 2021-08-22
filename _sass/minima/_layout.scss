@@ -1,35 +1,14 @@
 /**
  * Site header
  */
- 
+
 .site-header {
-  position: -webkit-sticky; /* Safari */
+  background: $rose-purple-dark;
+  color: white;
+  min-height: $spacing-unit * 1.865;
   position: sticky;
   top: 0;
-
-  @media (prefers-color-scheme: light) {
-    background: $rose-purple-dark;
-    color: white;
-    
-    #site-title,
-    body > header > div > nav > div > a,
-    body > header > div > a {
-      color: white !important;
-    }
-  }
-  @media (prefers-color-scheme: dark) {
-    background: $rose-purple-dark;
-    color: $rose-purple-light;
-    
-    #site-title,
-    body > header > div > nav > div > a,
-    body > header > div > a {
-      color: $rose-purple-light !important;
-    }
-  }
-  border-top: 5px solid $border-color-03;
-  border-bottom: 1px solid $rose-purple;
-  min-height: $spacing-unit * 1.865;
+  width: 100%;
 }
 
 .site-title {
@@ -46,155 +25,218 @@
 }
 
 .site-nav {
-  background-color: $rose-purple-dark;
-  border-radius: 5px;
-  margin-bottom: 0 !important;
+  overflow: hidden;
+  float: right;
+}
+
+.site-nav a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  color: $rose-purple-light;
+}
+
+.dropdown-content {
+  display: none;
   position: absolute;
-  right: $spacing-unit / 2;
-  text-align: right;
-  top: 9px;
-  
-  li {
-    border-radius: 1rem;
-    display: block;
-    float: left;
-    min-height: 1rem;
-    padding: 0.75rem;
-    text-align: center;
-    
-    ul {
-      border-radius: 1rem;
-      margin-left: none !important;
-      margin-top: 0.75rem;
-      
-      li {
-        float: none;
-      }
-    }
-  }
-  
-  li:hover {
-    background: $rose-purple;
-  }
-  
-  li a:hover {
-    text-decoration: underline;
-  }
-  
-  li, .dropbtn {
-    text-decoration: none;
-  }
-  
-  li.dropdown {
-    display: inline-block;
-  }
-  
-  .dropdown-content {
-    display: none;
-    background-color: $rose-purple-dark;
-    min-width: 160px;
-    margin-left: -1em !important;
-    position: absolute;
-    z-index: 1;
-  }
-  
-  .dropdown-content a {
-    color: $rose-purple-light;
-    padding: 0.5em;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  
-  .dropdown:hover .dropdown-content,
-  .dropdown:active .dropdown-content {
-    display: block;
-  }
+  background-color: $rose-purple-dark;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  min-width: 160px;
+  z-index: 1;
+}
 
-  .nav-trigger {
-    display: none !important;
-  }
+.dropdown-content a {
+  float: none;
+  color: white !important;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
 
-  .menu-icon {
-    float: right;
-    width: 36px;
-    height: 26px;
-    line-height: 0;
-    padding-top: 10px;
-    text-align: center;
-  }
+.dropdown-content a:hover {
+  color: $rose-purple-light !important;
+}
 
-  label[for="nav-trigger"] {
-    display: block;
-    float: right;
-    width: 36px;
-    height: 36px;
-    z-index: 2;
-    cursor: pointer;
-  }
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 
-  input ~ .trigger {
-    clear: both;
+.nav-trigger-box {
+  // display: none !important;
+  // float: right;
+}
+
+@media screen and (max-width: 600px) {
+  .site-nav a:not(:first-child) {
     display: none;
   }
-
-  input:checked ~ .trigger {
-    display: block;
-    padding-bottom: 5px;
-  }
-    
-  input:checked {
-    @media screen and (max-width: $on-mobile) {
-      float: none;
-      display: block;
-      text-align: left;
-    }
-  }
-
-  .page-link {
-    color: $text-color;
-    line-height: $base-line-height;
-    display: block;
-    padding: 5px 10px;
-
-    // Gaps between nav items, but not on the last one
-    &:not(:last-child) {
-      margin-right: 0;
-    }
-    margin-left: 20px;
-  }
-
-  @media screen and (min-width: $on-medium) {
-    position: static;
+  .site-nav a.menu-icon {
     float: right;
-    border: none;
-    background-color: inherit;
-
-    label[for="nav-trigger"] {
-      display: none;
-    }
-
-    .menu-icon {
-      display: none;
-    }
-
-    input ~ .trigger {
-      display: block;
-    }
-
-    .page-link {
-      display: inline;
-      padding: 0;
-
-      &:not(:last-child) {
-        margin-right: 20px;
-      }
-      margin-left: auto;
-    }
+    display: block;
   }
 }
 
+@media screen and (max-width: 600px) {
+  .site-nav.responsive {
+    position: relative;
+  }
+  .site-nav.responsive .menu-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .site-nav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
 
+li:hover {
+  background: $rose-purple;
+}
+
+li a:hover {
+  text-decoration: underline;
+}
+
+li,
+.dropbtn {
+  text-decoration: none;
+}
+
+li.dropdown {
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  background-color: $rose-purple-dark;
+  min-width: 160px;
+  margin-left: -1em !important;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: $rose-purple-light;
+  padding: 0.5em;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown:active .dropdown-content {
+  display: block;
+}
+
+.nav-trigger {
+  display: none !important;
+}
+
+.menu-icon {
+  float: right;
+  width: 36px;
+  height: 26px;
+  line-height: 0;
+  padding-top: 10px;
+  text-align: center;
+}
+
+label[for="nav-trigger"] {
+  display: block;
+  float: right;
+  width: 36px;
+  height: 36px;
+  z-index: 2;
+  cursor: pointer;
+}
+
+input ~ .trigger {
+  clear: both;
+  display: none;
+}
+
+input:checked ~ .trigger {
+  display: block;
+  padding-bottom: 5px;
+}
+
+input:checked {
+  @media screen and (max-width: $on-mobile) {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.page-link {
+  color: $text-color;
+  line-height: $base-line-height;
+  display: block;
+  padding: 5px 10px;
+
+  // Gaps between nav items, but not on the last one
+  &:not(:last-child) {
+    margin-right: 0;
+  }
+  margin-left: 20px;
+}
+
+@media screen and (min-width: $on-medium) {
+  position: static;
+  float: right;
+  border: none;
+  background-color: inherit;
+
+  label[for="nav-trigger"] {
+    display: none;
+  }
+
+  .menu-icon {
+    display: none;
+  }
+
+  input ~ .trigger {
+    display: block;
+  }
+
+  .page-link {
+    display: inline;
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+    margin-left: auto;
+  }
+}
 
 /**
  * Site footer
@@ -210,7 +252,7 @@
 }
 
 .feed-subscribe .svg-icon {
-  padding: 5px 5px 2px 0
+  padding: 5px 5px 2px 0;
 }
 
 .contact-list,
@@ -254,7 +296,7 @@
 
 @media screen and (min-width: $on-medium) {
   .footer-col-wrapper {
-    display: flex
+    display: flex;
   }
 
   .footer-col {
@@ -272,8 +314,6 @@
     }
   }
 }
-
-
 
 /**
  * Page content
@@ -310,8 +350,6 @@
   @include relative-font-size(1.5);
 }
 
-
-
 /**
  * Posts
  */
@@ -333,8 +371,16 @@
 .post-content {
   margin-bottom: $spacing-unit;
 
-  h1, h2, h3 { margin-top: $spacing-unit * 2 }
-  h4, h5, h6 { margin-top: $spacing-unit }
+  h1,
+  h2,
+  h3 {
+    margin-top: $spacing-unit * 2;
+  }
+  h4,
+  h5,
+  h6 {
+    margin-top: $spacing-unit;
+  }
 
   h2 {
     @include relative-font-size(1.75);
@@ -364,23 +410,24 @@
   }
 }
 
-
 .social-media-list {
   display: table;
   margin: 0 auto;
   li {
     float: left;
     margin: 5px 10px 5px 0;
-    &:last-of-type { margin-right: 0 }
+    &:last-of-type {
+      margin-right: 0;
+    }
     a {
       display: block;
       padding: $spacing-unit / 4;
-      &:hover { border-color: $border-color-02 }
+      &:hover {
+        border-color: $border-color-02;
+      }
     }
   }
 }
-
-
 
 /**
  * Pagination navbar
@@ -389,7 +436,8 @@
   margin-bottom: $spacing-unit;
   @extend .social-media-list;
   li {
-    a, div {
+    a,
+    div {
       min-width: 41px;
       text-align: center;
       box-sizing: border-box;
@@ -405,13 +453,11 @@
       }
     }
   }
-  
+
   li.selected {
     font-weight: bold;
   }
 }
-
-
 
 /**
  * Grid helpers
