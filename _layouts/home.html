@@ -10,7 +10,7 @@ layout: default
     <ul class="post-list">
       {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
         {% for post in paginator.posts %}
-          <li>
+          <li class="blog-post">
             <a class="post-link" href="{{ post.url | relative_url }}">
               <h3 style="margin-bottom: -0.5em;">
                 {{ post.title | escape }}
