@@ -31,11 +31,18 @@
 
 .site-nav a {
   float: left;
+  display: block;
   font-size: 16px;
   color: white;
   text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none !important;
+  line-height: 1.5em;
+  vertical-align: center;
+}
+
+.site-nav-icon {
+  display: none;
 }
 
 .dropdown {
@@ -52,11 +59,8 @@
   background-color: inherit;
   font-family: inherit;
   margin: 0;
-}
-
-.navbar a:hover,
-.dropdown:hover .dropbtn {
-  color: $rose-purple-light;
+  line-height: 1.5em;
+  vertical-align: center;
 }
 
 .dropdown-content {
@@ -86,16 +90,11 @@
   display: block;
 }
 
-.nav-trigger-box {
-  // display: none !important;
-  // float: right;
-}
-
 @media screen and (max-width: 600px) {
   .site-nav a:not(:first-child) {
     display: none;
   }
-  .site-nav a.menu-icon {
+  .site-nav-icon {
     float: right;
     display: block;
   }
@@ -105,14 +104,24 @@
   .site-nav.responsive {
     position: relative;
   }
-  .site-nav.responsive .menu-icon {
+  
+  .site-nav.responsive .site-nav-icon {
     position: absolute;
     right: 0;
     top: 0;
   }
+  
   .site-nav.responsive a {
     float: none;
     display: block;
+    text-align: left;
+  }
+  
+  .site-nav.responsive .dropdown {float: none;}
+  .site-nav.responsive .dropdown-content {position: relative;}
+  .site-nav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
     text-align: left;
   }
 }

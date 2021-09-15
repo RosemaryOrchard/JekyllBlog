@@ -13,5 +13,6 @@ items:
         url: 'https://omnifocusbook.com'
       - page: Take Control of Shortcuts
         url: 'https://www.takecontrolbooks.com/shortcuts/'
-    
+  - title: 'About'
+    url: '/about'
   
