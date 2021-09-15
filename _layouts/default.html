@@ -17,5 +17,15 @@
 
     {% include footer.html %}
 
+    <script>
+      function showNav() {
+        var x = document.getElementById("site-nav");
+        if (x.className === "site-nav") {
+          x.className = "site-nav-responsive";
+        } else {
+          x.className = "site-nav";
+        }
+      } 
+    </script>
   </body>
 </html>

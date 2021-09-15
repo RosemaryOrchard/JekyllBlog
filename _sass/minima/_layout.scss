@@ -54,7 +54,7 @@
   font-size: 16px;
   border: none;
   outline: none;
-  color: white;
+  color: $rose-purple-light;
   padding: 14px 16px;
   background-color: inherit;
   font-family: inherit;
@@ -91,7 +91,10 @@
 }
 
 @media screen and (max-width: 600px) {
-  .site-nav a:not(:first-child) {
+  .site-nav a {
+    display: none;
+  }
+  .site-nav .dropdown {
     display: none;
   }
   .site-nav-icon {
@@ -100,29 +103,38 @@
   }
 }
 
-@media screen and (max-width: 600px) {
-  .site-nav.responsive {
+@media screen and (max-width: $on-mobile) {  
+  .site-nav-responsive {
     position: relative;
   }
   
-  .site-nav.responsive .site-nav-icon {
+  .site-nav-responsive .site-nav-icon {
     position: absolute;
     right: 0;
     top: 0;
   }
   
-  .site-nav.responsive a {
+  .site-nav-responsive a,
+  .site-nav-responsive .dropdown {
     float: none;
     display: block;
-    text-align: left;
+    text-align: center;
+    width: 90%;
+    margin: auto;
+  }
+  .site-nav-responsive .dropdown-content {
+    position: relative;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    margin-left: auto;
+  }
+  .site-nav-responsive .dropdown-content a {
+    text-align: center;
   }
   
-  .site-nav.responsive .dropdown {float: none;}
-  .site-nav.responsive .dropdown-content {position: relative;}
-  .site-nav.responsive .dropdown .dropbtn {
-    display: block;
-    width: 100%;
-    text-align: left;
+  .site-nav-responsive .dropdown .dropbtn {
+    float: none;
   }
 }
 
@@ -147,7 +159,6 @@ li.dropdown {
   display: none;
   background-color: $rose-purple-dark;
   min-width: 160px;
-  margin-left: -1em !important;
   position: absolute;
   z-index: 1;
 }
