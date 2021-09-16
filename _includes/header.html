@@ -11,7 +11,7 @@
         {% for item in site.data.menu.items | reverse %}
           {% if item.subfolderitems %}
             <div class="dropdown">
-              <button class="dropbtn">{{ item.title }}
+              <button class="dropbtn menu-item">{{ item.title }}
                 <i class="fas fa-caret-down"></i>
               </button>
               <div class="dropdown-content">
@@ -21,11 +21,11 @@
               </div>
             </div>
           {% else %}
-            <a href="{{ item.url }}">{{ item.title }}</a>
+            <a class="menu-item" href="{{ item.url }}">{{ item.title }}</a>
           {% endif %}         
           </span>
         {% endfor %}
-        <div class="dropdown" id="socials">
+        <div class="dropdown menu-item" id="socials">
           <div class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="">Social Media</span>&nbsp;</span>
           <span class="dropdown-content">
             {% for account in site.data.social_links %} 
