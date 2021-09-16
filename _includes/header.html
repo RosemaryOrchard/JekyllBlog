@@ -26,7 +26,7 @@
           </span>
         {% endfor %}
         <div class="dropdown menu-item" id="socials">
-          <div class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="">Social Media</span>&nbsp;</span>
+          <div class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="no-js">Social Media</span>&nbsp;</span>
           <span class="dropdown-content">
             {% for account in site.data.social_links %} 
                 <a id="menu-{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}" href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
