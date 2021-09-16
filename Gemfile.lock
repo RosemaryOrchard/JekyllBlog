@@ -1,3 +1,10 @@
+GIT
+  remote: git@github.com:RosemaryOrchard/jekyll-json-feed.git
+  revision: 0b0ee74d89c2fd65dbfa5fd2795bf6f0e3193e6f
+  specs:
+    jekyll-json-feed-rose (1.0.1)
+      jekyll (>= 3.3, < 5.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -80,6 +87,7 @@ DEPENDENCIES
   jekyll (~> 4.2.0)
   jekyll-archives
   jekyll-feed (~> 0.12)
+  jekyll-json-feed-rose!
   jekyll-paginate-v2
   jekyll-sitemap
   minima (~> 2.5)
