@@ -20,7 +20,8 @@ jobs:
         timeout: 120s
         script: |
           cd /var/www/jekyll.rosemaryorchard.com
-          git pull
+          git stash
+          git pull -r
           bundle install
           bundle exec jekyll build
     - name: Telegram Action
