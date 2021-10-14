@@ -40,6 +40,10 @@
   vertical-align: center;
 }
 
+.site-nav a:visited {
+  color: $rose-purple-light !important;
+}
+
 .site-nav-icon {
   display: none;
 }
@@ -105,17 +109,17 @@
   }
 }
 
-@media screen and (max-width: $on-mobile) {  
+@media screen and (max-width: $on-mobile) {
   .site-nav-responsive {
     position: relative;
   }
-  
+
   .site-nav-responsive .site-nav-icon {
     position: absolute;
     right: 0;
     top: 0;
   }
-  
+
   .site-nav-responsive a,
   .site-nav-responsive .dropdown {
     color: $rose-purple-light;
@@ -135,7 +139,7 @@
   .site-nav-responsive .dropdown-content a {
     text-align: center;
   }
-  
+
   .site-nav-responsive .dropdown .dropbtn {
     float: none;
   }
