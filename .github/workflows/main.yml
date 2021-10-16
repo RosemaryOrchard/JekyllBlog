@@ -22,8 +22,8 @@ jobs:
             cd JekyllBlog
             git stash
             git pull -r
-            bundle install
-            bundle exec jekyll build
+            /usr/local/rvm/gems/ruby-3.0.0/bin/bundle install
+            /usr/local/rvm/gems/ruby-3.0.0/bin/bundle exec jekyll build
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
         with:
