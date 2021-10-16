@@ -12,14 +12,8 @@ layout: default
       {{ page.title | escape }}
     </h1>
     <p class="post-meta">
-      {% if page.tags %} 
-      <div class="post-tags"><i class="fad fa-tags"></i>
-      {% for tag in page.tags %}
-      <a class="tag p-category" href="/tag/{{ tag | slugify: "latin" }}">{{ tag }}</a>
-      {% endfor %} 
-    </div>
-      {% endif %} {% assign date_format = site.minima.date_format |
-      default: "%b %-d, %Y" %}
+      {% include tags.html tags=page.tags %} {% assign date_format =
+      site.minima.date_format | default: "%b %-d, %Y" %}
       <time
         class="dt-published"
         datetime="{{ page.date | date_to_xmlschema }}"

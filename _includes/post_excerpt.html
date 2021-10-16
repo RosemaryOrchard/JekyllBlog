@@ -8,6 +8,7 @@
   <a class="post-link" href="{{ post.url | relative_url }}"
     ><h3>{{ post.title }}</h3></a
   >
+  {% include tags.html tags=post.tags %}
   <time class="post-date dt-published"
     >{{ post.date | date: "%b %-d, %Y" }}</time
   >
