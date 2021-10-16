@@ -2,30 +2,18 @@
 layout: default
 ---
 
-<div class="home">
+<div class="home h-feed">
 
     {{ content }}
 
 
-    <ul class="post-list">
-      {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+    <div class="post-list">
+      
         {% for post in paginator.posts %}
-          <li class="blog-post">
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              <h3 style="margin-bottom: -0.5em;">
-                {{ post.title | escape }}
-              </h3>
-              <span class="post-meta">{{ post.date | date: date_format }}</span>
-            </a>
-            {% if site.show_excerpts %}
-              {{ post.excerpt }}
-            {% endif %}
-          </li>
-          {% if forloop.last == false %}
-            <hr />
-          {% endif %}
+          {% include post_excerpt.html post=post
+          last=forloop.last %}
         {% endfor %}
-    </ul>
+    </div>
     
     {% if paginator.total_pages > 1 %}
     <div class="pager">

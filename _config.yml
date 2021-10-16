@@ -41,6 +41,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-json-feed
   - jekyll-redirect-from
+  - jekyll-archives
 
 pagination:
   enabled: true
@@ -56,3 +57,21 @@ pagination:
 
 feed:
   posts_limit: 1000
+
+jekyll-archives:
+  enabled:
+    - categories
+    - tags
+    - year
+    - month
+  layouts:
+    year: archive-year
+    month: archive-month
+    category: archive-category
+    tag: archive-tag
+  permalinks:
+    year: "/:year/"
+    month: "/:year/:month/"
+    tag: "/tag/:name/"
+    category: "/category/:name/"
+  slug_mode: latin
