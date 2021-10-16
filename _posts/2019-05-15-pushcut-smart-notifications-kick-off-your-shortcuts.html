@@ -1,40 +1,170 @@
 ---
 layout: post
-title: 'Pushcut: Smart Notifications Kick Off Your Shortcuts'
+title: "Pushcut: Smart Notifications Kick Off Your Shortcuts"
 date: 2019-05-15 22:04:53.000000000 +01:00
 type: post
 published: true
 status: publish
+artwork: automators
 tags:
-- Automators
-- Blog
-- Podcast
+  - Automators
+  - Podcast
 ---
-<p>&nbsp;</p>
-<p><img src="{{ site.baseurl }}/assets/2019/05/pushcut-automation-your-way-150x150.png" class="alignright size-thumbnail wp-image-2548" width="150" height="150" alt="" />As I've talked about on Automators before, I have used Zapier to send notifications to my iPhone which trigger Shortcuts - this means that I can have a series of automated actions happen and follow it up with something I need to manually do. I've been using PushBullet and Pushover to do this - I've tried both and they're both good, but they're designed for notifications and the URLs triggering automations is not something it was designed to do. Additionally PushBullet still hasn't been updated for the iPhone X(s) screen format. Pushover has been updated more recently, but it still doesn't quite match up with what Pushcut can do as a dedicated app.</p>
+
+<p>
+  As I've talked about on Automators before, I have used Zapier to send
+  notifications to my iPhone which trigger Shortcuts - this means that I can
+  have a series of automated actions happen and follow it up with something I
+  need to manually do. I've been using PushBullet and Pushover to do this - I've
+  tried both and they're both good, but they're designed for notifications and
+  the URLs triggering automations is not something it was designed to do.
+  Additionally PushBullet still hasn't been updated for the iPhone X(s) screen
+  format. Pushover has been updated more recently, but it still doesn't quite
+  match up with what Pushcut can do as a dedicated app.
+</p>
 <p>Let's start by looking at a few use cases for this:</p>
 <ul>
-<li>MacSparky and I take it in turns to post the Automators episodes, that means every second episode when it releases I need to be prompted to put up my blog post about the episode. That post is prepared, and is in Drafts, so once the episode is up I get a notification that triggers a Shortcut to help me find the right Draft and post it.</li>
-<li>When an article of mine goes up on The Sweet Setup I like to go and clean it out of my Dropbox (where the drafts sit), which I do through a Shortcut, and then post about it on my site.</li>
+  <li>
+    MacSparky and I take it in turns to post the Automators episodes, that means
+    every second episode when it releases I need to be prompted to put up my
+    blog post about the episode. That post is prepared, and is in Drafts, so
+    once the episode is up I get a notification that triggers a Shortcut to help
+    me find the right Draft and post it.
+  </li>
+  <li>
+    When an article of mine goes up on The Sweet Setup I like to go and clean it
+    out of my Dropbox (where the drafts sit), which I do through a Shortcut, and
+    then post about it on my site.
+  </li>
 </ul>
-<p>Those are just two of the many use cases I have for this sort of thing, in each case there can be multiple steps I would like to execute on my device - some of these I've combined into a single Shortcut which runs those other shortcuts, but others I'm still trying to rely on my memory (which has more holes in it than a sieve!). Also if I want or need to change these I need to log into Zapier and change the URL scheme that's in the URL part of the notification action step (whether that's through Pushover or Pushbullet).</p>
-<p>Pushcut is a free app with two subscription levels, I'll give you a quick overview of those:</p>
+<p>
+  Those are just two of the many use cases I have for this sort of thing, in
+  each case there can be multiple steps I would like to execute on my device -
+  some of these I've combined into a single Shortcut which runs those other
+  shortcuts, but others I'm still trying to rely on my memory (which has more
+  holes in it than a sieve!). Also if I want or need to change these I need to
+  log into Zapier and change the URL scheme that's in the URL part of the
+  notification action step (whether that's through Pushover or Pushbullet).
+</p>
+<p>
+  Pushcut is a free app with two subscription levels, I'll give you a quick
+  overview of those:
+</p>
 <ul>
-<li><strong>Free</strong>: Create three notifications, which can each trigger one action (opening a URL or running a Shortcut).</li>
-<li><strong>Basic</strong>: Create as many notifications as you want, with as many actions as you want on each notification. Plus you can sync these between your devices.</li>
-<li><strong>Pro</strong>: Dynamic notifications - based on JSON you use to trigger the notification which can give you: inputs for Shortcuts and dynamic title and text in notifications. You can also target individual devices.</li>
+  <li>
+    <strong>Free</strong>: Create three notifications, which can each trigger
+    one action (opening a URL or running a Shortcut).
+  </li>
+  <li>
+    <strong>Basic</strong>: Create as many notifications as you want, with as
+    many actions as you want on each notification. Plus you can sync these
+    between your devices.
+  </li>
+  <li>
+    <strong>Pro</strong>: Dynamic notifications - based on JSON you use to
+    trigger the notification which can give you: inputs for Shortcuts and
+    dynamic title and text in notifications. You can also target individual
+    devices.
+  </li>
 </ul>
-<p>I immediately decided I wanted the Pro - I've been passing variables to Shortcuts as parameters through Zapier, and I've been building my own workarounds for branching to give me different information. Most people should start out with the free level and then try basic though to get to grips with the system.</p>
+<p>
+  I immediately decided I wanted the Pro - I've been passing variables to
+  Shortcuts as parameters through Zapier, and I've been building my own
+  workarounds for branching to give me different information. Most people should
+  start out with the free level and then try basic though to get to grips with
+  the system.
+</p>
 <h2>Setup</h2>
-<p><img src="{{ site.baseurl }}/assets/2019/05/IMG_1709.png" class="aligncenter wp-image-2661" alt="" width="320" height="636" /></p>
-<p>The first thing to do is to create a notification in the Pushcut app, and give it a name. The name of the in the app is separate to what appears as the title of the notification which is very useful allowing you to have useful internal descriptions, but have an action based title. The title gets URL encoded and becomes part of the URL you POST to in order to trigger the notification. Tapping this URL will copy it to your clipboard - and I'll come back to what to do with that near the end!</p>
-<p><img src="{{ site.baseurl }}/assets/2019/05/IMG_1710.png" class="aligncenter wp-image-2662" alt="" width="320" height="636" /></p>
-<p>Secondly you want to set the Notification Title and Description. These are what will show up on your device when you get the notification, I like mine to tell me what to do, and why I'm doing it - this way I won't just ignore the notifications because the seem irrelevant. After this you should set a default action, and you probably want to add this as action as well. The default action is what happens if you just tap on the notification, or swipe on it from the lock screen, and the actions are what you (can) trigger after force touching the notification - you can add multiple actions to a notification here, giving you a choice in which action to execute.</p>
-<p><img src="{{ site.baseurl }}/assets/2019/05/IMG_1711.png" class="aligncenter wp-image-2663" alt="" width="320" height="636" /></p>
-<p>Now we have the basics set up we can trigger the notification! Depending on your needs you could use this with something like IFTTT or Zapier's web hooks, or even build it into a script somewhere.</p>
-<p><img src="{{ site.baseurl }}/assets/2019/05/IMG_1713.png" class="aligncenter wp-image-2665" alt="" width="320" height="636" /></p>
-<p>Now whenever this is triggered you will get a notification sent to your device which when opened will trigger a Shortcut.</p>
-<p><span style="text-align: center"><img src="{{ site.baseurl }}/assets/2019/05/IMG_1714.png" class="aligncenter wp-image-2664" alt="" width="320" height="636" /></span></p>
-<p>In addition to what I've outlined above you can enhance this with the Pro options - allowing you to specify custom notification titles and content, and also pass input to your shortcuts. You can also run URL schemes allowing you to something like add a task to Due - without having to go via Shortcuts.</p>
-<p>I've been fortunate enough to talk to the developer of Pushcut over the last few weeks and he's been adding enhancements right and left! While the app and service are already a step up from existing solutions just because of the ease of use, the fact that this is a dedicated service for triggering automations on iOS means it really is well thought out.</p>
-<p><a href="https://itunes.apple.com/us/app/id1450936447?at=1010lumu">Pushcut - Automation your way</a></p>
+<p>
+  <img
+    src="{{ site.baseurl }}/assets/2019/05/IMG_1709.png"
+    class="aligncenter wp-image-2661"
+    alt=""
+    width="320"
+    height="636"
+  />
+</p>
+<p>
+  The first thing to do is to create a notification in the Pushcut app, and give
+  it a name. The name of the in the app is separate to what appears as the title
+  of the notification which is very useful allowing you to have useful internal
+  descriptions, but have an action based title. The title gets URL encoded and
+  becomes part of the URL you POST to in order to trigger the notification.
+  Tapping this URL will copy it to your clipboard - and I'll come back to what
+  to do with that near the end!
+</p>
+<p>
+  <img
+    src="{{ site.baseurl }}/assets/2019/05/IMG_1710.png"
+    class="aligncenter wp-image-2662"
+    alt=""
+    width="320"
+    height="636"
+  />
+</p>
+<p>
+  Secondly you want to set the Notification Title and Description. These are
+  what will show up on your device when you get the notification, I like mine to
+  tell me what to do, and why I'm doing it - this way I won't just ignore the
+  notifications because the seem irrelevant. After this you should set a default
+  action, and you probably want to add this as action as well. The default
+  action is what happens if you just tap on the notification, or swipe on it
+  from the lock screen, and the actions are what you (can) trigger after force
+  touching the notification - you can add multiple actions to a notification
+  here, giving you a choice in which action to execute.
+</p>
+<p>
+  <img
+    src="{{ site.baseurl }}/assets/2019/05/IMG_1711.png"
+    class="aligncenter wp-image-2663"
+    alt=""
+    width="320"
+    height="636"
+  />
+</p>
+<p>
+  Now we have the basics set up we can trigger the notification! Depending on
+  your needs you could use this with something like IFTTT or Zapier's web hooks,
+  or even build it into a script somewhere.
+</p>
+<p>
+  <img
+    src="{{ site.baseurl }}/assets/2019/05/IMG_1713.png"
+    class="aligncenter wp-image-2665"
+    alt=""
+    width="320"
+    height="636"
+  />
+</p>
+<p>
+  Now whenever this is triggered you will get a notification sent to your device
+  which when opened will trigger a Shortcut.
+</p>
+<p>
+  <span style="text-align: center"
+    ><img
+      src="{{ site.baseurl }}/assets/2019/05/IMG_1714.png"
+      class="aligncenter wp-image-2664"
+      alt=""
+      width="320"
+      height="636"
+  /></span>
+</p>
+<p>
+  In addition to what I've outlined above you can enhance this with the Pro
+  options - allowing you to specify custom notification titles and content, and
+  also pass input to your shortcuts. You can also run URL schemes allowing you
+  to something like add a task to Due - without having to go via Shortcuts.
+</p>
+<p>
+  I've been fortunate enough to talk to the developer of Pushcut over the last
+  few weeks and he's been adding enhancements right and left! While the app and
+  service are already a step up from existing solutions just because of the ease
+  of use, the fact that this is a dedicated service for triggering automations
+  on iOS means it really is well thought out.
+</p>
+<p>
+  <a href="https://itunes.apple.com/us/app/id1450936447?at=1010lumu"
+    >Pushcut - Automation your way</a
+  >
+</p>
