@@ -3,7 +3,7 @@
 
 <article class="h-entry post-summary">
   {% if post.artwork %}
-    <div class="post-artwork"">{% include post-artwork.html key="nested_folders" %}</div>
+    <div class="post-artwork"">{% include post-artwork.html key=post.artwork %}</div>
   {% endif %}
   <a class="post-link" href="{{ post.url | relative_url }}"
     ><h3>{{ post.title }}</h3></a
