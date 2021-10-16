@@ -3,32 +3,31 @@ name: Automated Deployment to Server
 on:
   push:
     branches:
-    - main
+      - main
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - name: executing remote ssh commands using password
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        username: ${{ secrets.USERNAME }}
-        password: ${{ secrets.PASSWORD }}
-        port: ${{ secrets.PORT }}
-        timeout: 120s
-        script: |
-          cd /var/www/jekyll.rosemaryorchard.com
-          git stash
-          git pull -r
-          bundle install
-          bundle exec jekyll build
-    - name: Telegram Action
-      uses: xinthink/action-telegram@v1.1
-      with:
-        botToken: ${{ secrets.BotToken }}
-        chatId: ${{ secrets.ChatID }}
-        jobStatus: ${{ job.status }}
-        skipSuccess: false
-  
+      - name: executing remote ssh commands using password
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.USERNAME }}
+          password: ${{ secrets.PASSWORD }}
+          port: ${{ secrets.PORT }}
+          timeout: 120s
+          script: |
+            cd JekyllBlog
+            git stash
+            git pull -r
+            bundle install
+            bundle exec jekyll build
+      - name: Telegram Action
+        uses: xinthink/action-telegram@v1.1
+        with:
+          botToken: ${{ secrets.BotToken }}
+          chatId: ${{ secrets.ChatID }}
+          jobStatus: ${{ job.status }}
+          skipSuccess: false
