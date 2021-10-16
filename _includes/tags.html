@@ -2,7 +2,7 @@
   <div class="post-tags"><i class="fad fa-tags"></i>
   {% assign postTags = include.tags | sort %}
   {% for tag in postTags %}
-  <a class="tag p-category" href="/tag/{{ tag | slugify: "latin" }}">{{ tag }}</a>
+  <a class="tag p-category" href="/archive/tag/{{ tag | slugify: "latin" }}">{{ tag }}</a>
   {% endfor %} 
 </div>
 {% endif %}
