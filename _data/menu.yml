@@ -1,18 +1,17 @@
 items:
-  - title: 'Podcasts'
+  - title: "Podcasts"
     subfolderitems:
       - page: Automators
-        url: 'https://relay.fm/automators'
+        url: "https://relay.fm/automators"
       - page: iOS Today
-        url: 'https://twit.tv/ios'
+        url: "https://twit.tv/ios"
       - page: Nested Folders
-        url: 'https://nestedfolderspodcast.com'
-  - title: 'Books'
+        url: "https://nestedfolderspodcast.com"
+  - title: "Books"
     subfolderitems:
       - page: Build Your OmniFocus Workflow
-        url: 'https://omnifocusbook.com'
+        url: "https://omnifocusbook.com"
       - page: Take Control of Shortcuts
-        url: 'https://www.takecontrolbooks.com/shortcuts/'
-  - title: 'About'
-    url: '/about'
-  
+        url: "https://www.takecontrolbooks.com/shortcuts/"
+  - title: "About"
+    url: "/about"
