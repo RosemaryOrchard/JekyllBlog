@@ -91,6 +91,23 @@ hr {
   @extend %clearfix;
 }
 
+.artwork-display {
+  @extend %clearfix;
+  margin-bottom: $spacing-unit;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  > .artwork {
+    padding: 1em;
+
+    > a > img {
+      max-width: 150px;
+    }
+  }
+}
+
 /**
  * `main` element
  */

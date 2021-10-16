@@ -3,9 +3,12 @@ layout: default
 ---
 
 <div class="home h-feed">
+    
+    <h1>{{ page.title }}</h1>
 
-    {{ content | markdownify }}
-
+    {% if paginator.page == 1 %}
+        {{ content | markdownify }}
+    {% endif %}
 
     <div class="post-list">
       
@@ -20,13 +23,13 @@ layout: default
     <ul class="pagination">
         {% if paginator.first_page %}
         <li class="previous">
-            <a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">First</a>
+            <a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">&#8606; First</a>
         </li>
         {% endif %}
   
         {% if paginator.previous_page %}
         <li class="previous">
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous Page</a>
         </li>
         {% endif %}
   
@@ -40,17 +43,20 @@ layout: default
   
         {% if paginator.next_page %}
         <li class="next">
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next Page &rarr;</a>
         </li>
         {% endif %}
   
          {% if paginator.last_page %}
         <li class="previous">
-            <a href="{{ paginator.last_page_path | prepend: site.baseurl | replace: '//', '/' }}">Last</a>
+            <a href="{{ paginator.last_page_path | prepend: site.baseurl | replace: '//', '/' }}">Last &#8608;</a>
         </li>
         {% endif %}
     </ul>
     </div>
+    {% endif %}
+    {% if paginator.page != 1 %}
+        {{ content | markdownify }}
     {% endif %}
 
 
