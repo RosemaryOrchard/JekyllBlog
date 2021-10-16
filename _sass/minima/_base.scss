@@ -87,6 +87,10 @@ hr {
   text-align: center;
 }
 
+.post-summary {
+  @extend %clearfix;
+}
+
 /**
  * `main` element
  */
@@ -103,8 +107,13 @@ img {
 }
 
 .post-artwork {
-  max-height: 150px;
-  max-width: 150px;
+  float: right;
+  padding-left: 1rem;
+
+  > img {
+    max-height: 150px;
+    max-width: 150px;
+  }
 }
 
 /**
