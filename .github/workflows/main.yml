@@ -19,11 +19,12 @@ jobs:
           port: ${{ secrets.PORT }}
           timeout: 120s
           script: |
+            source ~/.bashrc
             cd JekyllBlog
             git stash
             git pull -r
-            /usr/local/rvm/gems/ruby-3.0.0/bin/bundle install
-            /usr/local/rvm/gems/ruby-3.0.0/bin/bundle exec jekyll build
+            bundle install
+            bundle exec jekyll build
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
         with:
