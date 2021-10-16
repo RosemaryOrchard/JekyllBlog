@@ -1,4 +1,16 @@
 {
+  "automators": {
+    "image_url": "/assets/podcasts/automators.png",
+    "alt": "Automators Podcast Artwork",
+    "height": "150",
+    "width": "150"
+  },
+  "ios_today": {
+    "image_url": "/assets/podcasts/ios_today.jpg",
+    "alt": "iOS Today Podcast Artwork",
+    "height": "150",
+    "width": "150"
+  },
   "nested_folders": {
     "image_url": "/assets/podcasts/nested_folder.png",
     "alt": "Nested Folders Podcast Artwork",
