@@ -1,0 +1,6 @@
+---
+---
+{% assign metadata = '' | split: '' %}{% assign categories = '' | split: '' %}{% assign categories_list = site.categories | sort %}{% for category in categories %}{% if category.size %}{% assign categories = categories | push: category[0] %}{% endif %}{% endfor %}{% assign tags = '' | split: '' %}{% assign tags_list = site.tags | sort %}{% for tag in tags_list %}{% if tag.size %}{% assign tags = tags | push: tag[0] %}{% endif %}{% endfor %}{
+  "categories": {{ categories | jsonify }},
+  "tags": {{ tags | jsonify }}
+}
