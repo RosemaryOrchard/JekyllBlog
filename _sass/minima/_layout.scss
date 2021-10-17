@@ -377,6 +377,12 @@ input:checked {
   display: flex;
   margin-bottom: 0.5rem;
 
+  .tag-icon {
+    height: 100% !important;
+    font-size: 2em;
+    padding-right: 0.5rem;
+  }
+
   .tag {
     border: 1px solid $rose-purple-light;
     border-radius: 3px;

@@ -1,5 +1,6 @@
 {% if include.tags.size >  0 %} 
-  <div class="post-tags"><i class="fad fa-tags"></i>
+  <div class="post-tags">
+    <span class="tag-icon"><i class="fad fa-tags" aria-hidden="true"></i></span>
   {% assign postTags = include.tags | sort %}
   {% for tag in postTags %}
   <a class="tag p-category" href="/tag/{{ tag | slugify: "latin" }}">{{ tag }}</a>
