@@ -376,10 +376,10 @@ input:checked {
 .post-tags {
   display: flex;
   margin-bottom: 0.5rem;
+  justify-content: center;
 
   .tag-icon {
-    height: 100% !important;
-    font-size: 2em;
+    font-size: 1.5em;
     padding-right: 0.5rem;
   }
 
