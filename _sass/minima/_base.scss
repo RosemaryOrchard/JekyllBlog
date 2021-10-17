@@ -103,7 +103,27 @@ hr {
     padding: 1em;
 
     > a > img {
-      max-width: 150px;
+      max-width: $large-artwork;
+    }
+  }
+
+  @include media-query((5 * $large-artwork) + (7 * 16px) + 100px) {
+    > .artwork {
+      padding: 0.6em;
+
+      > a > img {
+        max-width: $medium-artwork;
+      }
+    }
+  }
+
+  @include media-query((5 * $medium-artwork) + (7 * 10px) + 100px) {
+    > .artwork {
+      padding: 0.3em;
+
+      > a > img {
+        max-width: $small-artwork;
+      }
     }
   }
 }
@@ -126,10 +146,18 @@ img {
 .post-artwork {
   float: right;
   padding-left: 1rem;
+  padding-top: 0.5em;
 
   > img {
-    max-height: 150px;
-    max-width: 150px;
+    max-height: $large-artwork;
+    max-width: $large-artwork;
+  }
+
+  @include media-query($on-mobile) {
+    > img {
+      max-height: $medium-artwork;
+      max-width: $medium-artwork;
+    }
   }
 }
 
