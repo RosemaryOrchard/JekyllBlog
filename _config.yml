@@ -26,7 +26,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 timezone: Europe/London
 show_excerpts: true
-excerpt_separator: </p>
+excerpt_separator: <!--more-->
 author:
   name: Rosemary Orchard
   url: "https://rosemaryorchard.com"
