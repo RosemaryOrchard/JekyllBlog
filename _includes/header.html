@@ -5,7 +5,7 @@
     {% assign page_paths = site.header_pages | default: default_paths %}
     {% assign titles_size = site.pages | map: 'title' | join: '' | size %}
     
-    <a class="site-title" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    <a class="site-title" rel="author" href="{{ "/" | absolute_url }}">{{ site.title | escape }}</a>
 
     <div class="site-nav" id="site-nav">
         {% for item in site.data.menu.items | reverse %}
@@ -34,7 +34,7 @@
             {% endfor %}
           </div>
         </div>
-        <a class="menu-item" href="/search.html"><i class="fad fa-search"></i><span class="no-js"> Search</span></a>
+        <a class="menu-item" href="{{ "/search.html" | absolute_url }}"><i class="fad fa-search"></i><span class="no-js"> Search</span></a>
     </div>
     
     <span class="site-nav-icon" onclick="showNav()"><i class="fad fa-bars"></i></span>

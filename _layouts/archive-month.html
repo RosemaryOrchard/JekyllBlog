@@ -8,7 +8,7 @@ layout: default
   {% for post in page.posts %}
   <li>
     <span class="post-date">{{ post.date | date: "%b %-d, %Y" }}</span>
-    <a class="post-link" href="{{ post.url | relative_url }}"
+    <a class="post-link" href="{{ post.url | absolute_url }}"
       >{{ post.title }}</a
     >
   </li>

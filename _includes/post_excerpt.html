@@ -5,7 +5,7 @@
   {% if post.artwork %}
     <div class="post-artwork"">{% include post-artwork.html key=post.artwork %}</div>
   {% endif %}
-  <a class="post-link" href="{{ post.url | relative_url }}"
+  <a class="post-link" href="{{ post.url | absolute_url }}"
     ><h3>{{ post.title }}</h3></a
   >
   {% include tags.html tags=post.tags %}

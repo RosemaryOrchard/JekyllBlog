@@ -12,7 +12,7 @@
     {% endif %}
     "home_page_url": {{ '/' | absolute_url | jsonify }},
     "feed_url": {{ page.url | absolute_url | jsonify }},
-    "favicon": {{ "/favicon.ico" | prepend: site.baseurl | prepend: site.url | jsonify }},
+    "favicon": {{ "/favicon.ico" | absolute_url | jsonify }},
     {% if site.author %}
     "author": {
         "name": {{ site.author.name | default: site.author | jsonify }}

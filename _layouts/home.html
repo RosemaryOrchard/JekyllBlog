@@ -23,33 +23,33 @@ layout: default
     <ul class="pagination">
         {% if paginator.first_page %}
         <li class="previous">
-            <a href="{{ paginator.first_page_path | prepend: site.baseurl | replace: '//', '/' }}">&#8606; First</a>
+            <a href="{{ paginator.first_page_path | absolute_url }}">&#8606; First</a>
         </li>
         {% endif %}
   
         {% if paginator.previous_page %}
         <li class="previous">
-            <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Previous Page</a>
+            <a href="{{ paginator.previous_page_path | absolute_url }}">&larr; Previous Page</a>
         </li>
         {% endif %}
   
         {% if paginator.page_trail %}
           {% for trail in paginator.page_trail %}
             <li {% if page.url == trail.path %}class="selected"{% endif %}>
-                <a href="{{ trail.path | prepend: site.baseurl | replace: '//', '/' }}" title="{{trail.title}}">{{ trail.num }}</a>
+                <a href="{{ trail.path | absolute_url }}" title="{{trail.title}}">{{ trail.num }}</a>
             </li>
           {% endfor %}
         {% endif %}
   
         {% if paginator.next_page %}
         <li class="next">
-            <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next Page &rarr;</a>
+            <a href="{{ paginator.next_page_path | absolute_url }}">Next Page &rarr;</a>
         </li>
         {% endif %}
   
          {% if paginator.last_page %}
         <li class="previous">
-            <a href="{{ paginator.last_page_path | prepend: site.baseurl | replace: '//', '/' }}">Last &#8608;</a>
+            <a href="{{ paginator.last_page_path | absolute_url }}">Last &#8608;</a>
         </li>
         {% endif %}
     </ul>

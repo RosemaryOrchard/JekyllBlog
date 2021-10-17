@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   {% seo %} <link rel="stylesheet" href="{{ "/assets/css/style.css" |
-  relative_url }}">
+  absolute_url }}">
   <link
     rel="stylesheet"
     href="https://cloud.typography.com/7596276/6357012/css/fonts.css"
@@ -12,9 +12,10 @@
     src="https://kit.fontawesome.com/2239de7a70.js"
     crossorigin="anonymous"
   ></script>
-  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
-  {% feed_meta %} <link rel="alternate" title="{{ site.title }}"
-  type="application/json" href="{{ "/feed.json" | absolute_url }}" />
+  <link rel="shortcut icon" type="image/png" href="{{ "/favicon.png" |
+  absolute_url }} " /> {% feed_meta %} <link rel="alternate" title="{{
+  site.title }}" type="application/json" href="{{ "/feed.json" | absolute_url
+  }}" />
   <script>
     window.onload = function () {
       for (const hideMe of document.getElementsByClassName("no-js")) {
