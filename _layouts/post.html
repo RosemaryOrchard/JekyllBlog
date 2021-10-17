@@ -34,7 +34,12 @@ layout: default
     </p>
   </header>
 
-  <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
+  <div>
+    {% if page.artwork %}
+      <div class="post-artwork"">{% include post-artwork.html key=page.artwork %}</div>
+    {% endif %}
+    <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
+  </div>
 
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
