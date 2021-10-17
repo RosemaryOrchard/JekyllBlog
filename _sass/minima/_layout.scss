@@ -373,6 +373,18 @@ input:checked {
   @include relative-font-size(1.5);
 }
 
+.post-tags {
+  display: flex;
+  margin-bottom: 0.5rem;
+
+  .tag {
+    border: 1px solid $rose-purple-light;
+    border-radius: 3px;
+    padding: 0.5rem;
+    margin-right: 1rem;
+  }
+}
+
 /**
  * Posts
  */

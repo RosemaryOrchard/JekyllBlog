@@ -1,36 +1,41 @@
-@media (prefers-color-scheme: light){
-	body {
-		background: $light !important;
-		color: black !important;
-	}
-	a,
-	a:visited {
-	    color: $rose-purple-dark;
-	}
-	.site-nav {
-	    fill: black;
-	}
-	.site-nav .page-link {
-		color: white !important;
-	}
-	.site-header div.wrapper a.site-title {
-		color: $rose-purple-light;
-	}
+@media (prefers-color-scheme: light) {
+  body {
+    background: $light !important;
+    color: black !important;
+  }
+  a,
+  a:visited {
+    color: $rose-purple-dark;
+  }
+  .site-nav {
+    fill: black;
+  }
+  .site-nav .page-link {
+    color: white !important;
+  }
+  .site-header div.wrapper a.site-title {
+    color: $rose-purple-light;
+  }
 }
 
-@media (prefers-color-scheme: dark){
-	body {
-		background: $dark !important;
-		color: #d6d6d6 !important;
-	}
-	a,
-	a:visited {
-		color: $rose-purple-light;
-	}
-	.site-nav .page-link {
-		color: white !important;
-	}
-	.site-nav {
-		fill: white !important;
-	}
+@media (prefers-color-scheme: dark) {
+  $code-background-color: #212121;
+  body {
+    background: $dark !important;
+    color: #d6d6d6 !important;
+  }
+  a,
+  a:visited {
+    color: $rose-purple-light;
+  }
+  .site-nav .page-link {
+    color: white !important;
+  }
+  .site-nav {
+    fill: white !important;
+  }
+  code,
+  pre {
+    background-color: $code-background-color;
+  }
 }
