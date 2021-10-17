@@ -83,6 +83,7 @@ defaults:
       path: ""
     values:
       author: "Rosemary Orchard"
+      exclude_rss: false
   - scope:
       path: "archive"
     values:
