@@ -6,6 +6,7 @@ date: 2017-03-01 08:00:00.000000000 +00:00
 type: post
 published: true
 ---
-<p>I've recently been travelling a lot (which as my family is well aware, is a normal state!) and wanted to be able to easily keep track of the exchange rate, plus be able to calculate the prices including tax - as well as find out how much it would be in my normal currency.</p><!--more-->
+<p>I've recently been travelling a lot (which as my family is well aware, is a normal state!) and wanted to be able to easily keep track of the exchange rate, plus be able to calculate the prices including tax - as well as find out how much it would be in my normal currency.</p>
+<!--more-->
 <p>Step 1 was finding an API I could use. I'm a big fan of free - and when that's nor possible affordable. Naturally <a href="http://xe.com">XE Currency</a> was my first port of call but that was a little out of my price range. A little Googling found <a href="http://fixer.io">Fixer.io</a> which is free, and while not giving the identical rates to xe.com or my card company, close enough to give me a very good approximation. </p>
 <p>The first step was creating a Workflow which would get me the current exchange rate, and save it to a file so I could use it offline. A simple GET command and some RegEx was all that was needed to extract the exchange rate, then it was a simple matter of saving the file for later retrieval - and I added an alert at the end.</p>
