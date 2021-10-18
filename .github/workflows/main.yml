@@ -25,20 +25,8 @@ jobs:
             git pull -r
             /usr/local/rvm/gems/ruby-3.0.0/bin/bundle install
             JEKYLL_ENV=production /usr/local/rvm/gems/ruby-3.0.0/bin/bundle exec /usr/local/rvm/gems/ruby-3.0.0/bin/jekyll build --config _config.yml,_config_prod.yml
-      - name: send custom message with args
-        uses: appleboy/telegram-action@master
-        branding:
-          icon: "message-square"
-          color: "blue"
-        with:
-          to: ${{ secrets.ChatID }}
-          token: ${{ secrets.BotToken }}
-          disable_web_page_preview: true
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
-        branding:
-          icon: "send"
-          color: "blue"
         with:
           botToken: ${{ secrets.BotToken }}
           chatId: ${{ secrets.ChatID }}
