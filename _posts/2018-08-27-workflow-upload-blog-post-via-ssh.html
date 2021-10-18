@@ -15,7 +15,7 @@ tags:
     href="https://resources.rosemaryorchard.com/images/blog/workflow-upload-blog-post-via-ssh/workflow-upload-blog-post.png"
     ><img
       class="alignright"
-      src="{{ site.baseurl }}/assets/2018/08/workflow-upload-blog-post.png" /></a
+      src="{{ "/assets/2018/08/workflow-upload-blog-post.png" | absolute_url }}" /></a
   >I use <a href="https://getgrav.org">Grav</a> as my blog CMS, it's powerful
   and customisable, and it lets me upload blog posts via (S)FTP. The catch? My
   previous system for blogging involved using
@@ -76,39 +76,39 @@ cat &gt; blogpost.md;</code></pre>
   <li>
     <a
       href="https://resources.rosemaryorchard.com/images/workflow-icons/Scripting.png"
-      ><img src="{{ site.baseurl }}/assets/2018/08/Scripting.png" /></a
+      ><img src="{{ "/assets/2018/08/Scripting.png" | absolute_url }}" /></a
     ><code>Dictionary</code>: This is a list of the folders where I might choose
     to save a blog post.
   </li>
   <li>
     <a
       href="https://resources.rosemaryorchard.com/images/workflow-icons/Scripting.png"
-      ><img src="{{ site.baseurl }}/assets/2018/08/Scripting.png" /></a
+      ><img src="{{ "/assets/2018/08/Scripting.png" | absolute_url }}" /></a
     ><code>Choose from List</code>: I choose one of those folders
   </li>
   <li>
     <a
       href="https://resources.rosemaryorchard.com/images/workflow-icons/Scripting.png"
-      ><img src="{{ site.baseurl }}/assets/2018/08/Scripting.png" /></a
+      ><img src="{{ "/assets/2018/08/Scripting.png" | absolute_url }}" /></a
     ><code>Ask for Input</code>: And grab the slug for the post.
   </li>
   <li>
     <a
       href="https://resources.rosemaryorchard.com/images/workflow-icons/Variable.png"
-      ><img src="{{ site.baseurl }}/assets/2018/08/Variable.png" /></a
+      ><img src="{{ "/assets/2018/08/Variable.png" | absolute_url }}" /></a
     ><code>Set Variable</code>: I save the slug to a variable
   </li>
   <li>
     <a
       href="https://resources.rosemaryorchard.com/images/workflow-icons/Variable.png"
-      ><img src="{{ site.baseurl }}/assets/2018/08/Variable.png" /></a
+      ><img src="{{ "/assets/2018/08/Variable.png" | absolute_url }}" /></a
     ><code>Get Variable</code>: And then I get the blog post shared to the
     Workflow.
   </li>
   <li>
     <a
       href="https://resources.rosemaryorchard.com/images/workflow-icons/Scripting.png"
-      ><img src="{{ site.baseurl }}/assets/2018/08/Scripting.png" /></a
+      ><img src="{{ "/assets/2018/08/Scripting.png" | absolute_url }}" /></a
     ><code>Run Script Over SSH</code>: Finally I run the SSH script.
   </li>
 </ul>

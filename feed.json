@@ -30,8 +30,9 @@
           {% assign posts = posts | where_exp: "post", "post.draft != true" %}
         {% endunless %}
       {% assign posts = posts | where_exp: "post", "post.exclude_rss != true" | sort: "date" | reverse %}
+        {% assign posts = posts | uniq %}
       {% assign posts_limit = site.feed.posts_limit | default: 10 %}
-      {% for post in posts limit: posts_limit %}
+      {% for post in posts %}
         {
             "id": {{ post.id | absolute_url | jsonify }},
             "url": {{ post.url | absolute_url | jsonify }},

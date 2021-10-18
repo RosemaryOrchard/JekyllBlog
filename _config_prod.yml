@@ -1,2 +1,6 @@
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://rosemaryorchard.com" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: ""
+url: "https://rosemaryorchard.com"
+
+# Styling
+sass:
+  style: compressed
