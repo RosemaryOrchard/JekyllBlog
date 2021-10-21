@@ -66,10 +66,10 @@
     let idx = lunr(function () {
       this.field("id");
       this.field("title", { boost: 10 });
-      this.field("tags");
+      this.field("tags", {boost: 5});
       this.field("categories");
-      this.field("content");
-      this.field("excerpt");
+      this.field("content", {boost: 5});
+      this.field("excerpt", {boost: 2});
 
       postData.forEach(function (post) {
         this.add(post);
