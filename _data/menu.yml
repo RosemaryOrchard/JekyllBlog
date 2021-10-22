@@ -3,8 +3,8 @@ items:
     subfolderitems:
       - page: Above the Mess
         url: "https://www.abovethemess.com/"
-        - page: Automators
-          url: "https://relay.fm/automators"
+      - page: Automators
+        url: "https://relay.fm/automators"
       - page: iOS Today
         url: "https://twit.tv/ios"
       - page: Nested Folders
