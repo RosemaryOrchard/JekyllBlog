@@ -1,8 +1,10 @@
 items:
   - title: "Podcasts"
     subfolderitems:
-      - page: Automators
-        url: "https://relay.fm/automators"
+      - page: Above the Mess
+        url: "https://www.abovethemess.com/"
+        - page: Automators
+          url: "https://relay.fm/automators"
       - page: iOS Today
         url: "https://twit.tv/ios"
       - page: Nested Folders
@@ -14,4 +16,4 @@ items:
       - page: Take Control of Shortcuts
         url: "https://www.takecontrolbooks.com/shortcuts/"
   - title: "About"
-    url: "/about"
+    url: "/about/"

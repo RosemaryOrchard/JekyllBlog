@@ -5,6 +5,12 @@
     "height": "150",
     "width": "150"
   },
+  "automators": {
+    "image_url": "/assets/podcasts/above_the_mess.png",
+    "alt": "Above the Mess Podcast Artwork",
+    "height": "150",
+    "width": "150"
+  },
   "ios_today": {
     "image_url": "/assets/podcasts/ios_today.jpg",
     "alt": "iOS Today Podcast Artwork",
