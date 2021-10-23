@@ -1,2 +1,26 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
+
+pre {
+	code {
+	  counter-reset: line;
+	  
+	  .line {
+		counter-increment: line;
+	  }
+	
+	  .line ::before {
+		content: counter(line) ". ";
+		display: inline-block;
+		width: 8em;
+		padding-left: auto;
+		margin-left: auto;
+		text-align: right;
+	  }
+	}
+}
+
+.profile-photo {
+	max-width: 150px;
+	border-radius: 10px;
+}

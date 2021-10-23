@@ -3,7 +3,14 @@
 
   <div class="wrapper">
 
-    <div class="footer-col-wrapper">
+    <div class="footer-col-wrapper h-card">
+      <div class="footer-col">
+        {% include search-form.html %}
+      </div>
+      <div class="footer-col">
+        <h3>About Me</h3>
+        <p class="p-note">{{ site.description | escape }}</p>
+      </div>
       <div class="footer-col">
         <p class="feed-subscribe">
           <a href="{{ 'feed.xml' | absolute_url }}">
@@ -13,22 +20,16 @@
           </a>
         </p>
       {% if site.author %}
-        <ul class="contact-list">
           {% if site.author.name %}
-            <li class="p-name">{{ site.author.name | escape }}</li>
+            <a class="p-name u-url" href="{{ site.author.url }}">{{ site.author.name | escape }}</a>
           {% endif %}
           {% if site.author.email %}
-            <li><a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+            <a class="u-email" href="mailto:{{ site.author.email }}">{{ site.author.email }}</a>
           {% endif %}
-        </ul>
+          {% if site.author.photo %}
+            <img class="u-photo profile-photo" src="{{ site.author.photo | absolute_url }}"/>
+          {% endif %}
       {% endif %}
-      </div>
-      <div class="footer-col">
-        <h3>About Me</h3>
-        <p>{{ site.description | escape }}</p>
-      </div>
-      <div class="footer-col">
-        {% include search-form.html %}
       </div>
     </div>
 

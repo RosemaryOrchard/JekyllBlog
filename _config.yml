@@ -26,8 +26,10 @@ timezone: Europe/London
 show_excerpts: true
 excerpt_separator: <!--more-->
 author:
-  name: Rosemary Orchard
+  name: "Rosemary Orchard"
   url: "https://rosemaryorchard.com"
+  email: "contact@rosemaryorchard.com"
+  photo: "assets/me.jpg"
 
 # Build settings
 theme: minima
