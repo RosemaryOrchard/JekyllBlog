@@ -4,7 +4,7 @@
     {% assign default_paths = site.pages | map: "path" %}
     {% assign page_paths = site.header_pages | default: default_paths %}
     {% assign titles_size = site.pages | map: 'title' | join: '' | size %}
-    
+
     <a class="site-title" rel="author" href="{{ "/" | absolute_url }}">{{ site.title | escape }}</a>
 
     <div class="site-nav" id="site-nav">
@@ -27,16 +27,16 @@
         <div class="dropdown menu-item" id="socials">
           <div class="dropbtn">&nbsp;<i class="fad fa-globe" alt="Social Media"></i><span class="no-js"> Social Media</span>&nbsp;</span>
           <span class="dropdown-content">
-            {% for account in site.data.social_links %} 
+            {% for account in site.data.social_links %}
                 <a id="menu-{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}" href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
                   <i class="fab fa-{{ account[1].icon }}">&nbsp;</i>{{ account[1].mediaName }}
                 </a>
             {% endfor %}
           </div>
         </div>
-        <a class="menu-item" href="{{ "/search.html" | absolute_url }}"><i class="fad fa-search"></i><span class="no-js"> Search</span></a>
+        <a class="menu-item" href="{{ "/search" | absolute_url }}"><i class="fad fa-search"></i><span class="no-js"> Search</span></a>
     </div>
-    
+
     <span class="site-nav-icon" onclick="showNav()"><i class="fad fa-bars"></i></span>
   </div>
 </header>

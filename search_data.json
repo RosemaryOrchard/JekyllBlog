@@ -1,3 +1,4 @@
 ---
+permalink: /search/search_data.json
 ---
 [{%- for post in site.posts -%}{"id": {{- post.url | slugify | jsonify -}},"title": {{- post.title | jsonify -}},"categories": {{- post.category | jsonify -}},"tags": {{- post.tags | jsonify -}},"content": {{- post.content | strip_html | strip_newlines | strip | replace: "  ", " " | jsonify -}},"url": {{- post.url | jsonify -}},"excerpt": {{- post.excerpt | jsonify -}}}{%- unless forloop.last -%},{%- endunless -%}  {%- endfor -%}]
