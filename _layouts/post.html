@@ -36,7 +36,9 @@ layout: default
 
   <div>
     {% if page.artwork %}
-      <div class="post-artwork"">{% include post-artwork.html key=page.artwork %}</div>
+      <div class="post-artwork">{% include post-artwork.html key=page.artwork %}</div>
+    {% elsif page.custom_icon %}
+      <div class="custom-icon">{% include post-artwork.html custom=page.custom_icon %}</div>
     {% endif %}
     <div class="post-content e-content" itemprop="articleBody">{{ content }}</div>
   </div>

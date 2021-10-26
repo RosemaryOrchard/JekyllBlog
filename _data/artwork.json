@@ -3,24 +3,28 @@
     "image_url": "/assets/podcasts/automators.png",
     "alt": "Automators Podcast Artwork",
     "height": "150",
-    "width": "150"
+    "width": "150",
+    "url": "https://relay.fm/automators"
   },
   "automators": {
     "image_url": "/assets/podcasts/above_the_mess.png",
     "alt": "Above the Mess Podcast Artwork",
     "height": "150",
-    "width": "150"
+    "width": "150",
+    "url": "https://www.abovethemess.com"
   },
   "ios_today": {
     "image_url": "/assets/podcasts/ios_today.jpg",
     "alt": "iOS Today Podcast Artwork",
     "height": "150",
-    "width": "150"
+    "width": "150",
+    "url": "https://twit.tv/ios"
   },
   "nested_folders": {
     "image_url": "/assets/podcasts/nested_folder.png",
     "alt": "Nested Folders Podcast Artwork",
     "height": "150",
-    "width": "150"
+    "width": "150",
+    "url": "https://nestedfolderspodcast.com"
   }
 }

@@ -3,7 +3,9 @@
 
 <article class="h-entry post-summary">
   {% if post.artwork %}
-    <div class="post-artwork"">{% include post-artwork.html key=post.artwork %}</div>
+    <div class="post-artwork">{% include post-artwork.html key=post.artwork %}</div>
+  {% elsif post.custom_icon %}
+    <div class="custom-icon">{% include post-artwork.html custom=post.custom_icon %}</div>
   {% endif %}
   <a class="post-link" href="{{ post.url | absolute_url }}"
     ><h3>{{ post.title }}</h3></a

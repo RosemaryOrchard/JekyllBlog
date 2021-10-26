@@ -1,3 +1,7 @@
-{% assign art = site.data.artwork[include.key] %}
+{% if include.custom %}
+	{% assign art = include.custom %}
+{% else %}
+	{% assign art = site.data.artwork[include.key] %}
+{% endif %}
 
-<img src="{{ art.image_url | absolute_url }}" alt="{{ art.alt }}" />
+<a href="{{ art.url }}"><img src="{{ art.image_url | absolute_url }}" alt="{{ art.alt }}" /></a>

@@ -143,22 +143,30 @@ img {
   vertical-align: middle;
 }
 
-.post-artwork {
+.post-artwork,
+.custom-icon {
   float: right;
   padding-left: 1rem;
   padding-top: 0.5em;
 
-  > img {
+  > img,
+  > a > img {
     max-height: $large-artwork;
     max-width: $large-artwork;
   }
 
   @include media-query($on-mobile) {
-    > img {
+    > img,
+    > a > img {
       max-height: $medium-artwork;
       max-width: $medium-artwork;
     }
   }
+}
+
+.custom-icon > img,
+.custom-icon > a > img {
+  border-radius: 22.5%;
 }
 
 .workflow-icon {
