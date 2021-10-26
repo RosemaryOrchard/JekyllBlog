@@ -25,6 +25,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 timezone: Europe/London
 show_excerpts: true
 excerpt_separator: <!--more-->
+permalink: /blog/:title/
 author:
   name: "Rosemary Orchard"
   url: "https://rosemaryorchard.com"

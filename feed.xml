@@ -1,4 +1,5 @@
 ---
+permalink: /feed.xml
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" {% if site.lang %}xml:lang="{{ site.lang }}"{% endif %}>
@@ -38,7 +39,7 @@
 	</author>
   {% endif %}
 
- 
+
   {% assign posts = site.posts %}
   {% unless site.show_drafts %}
 	{% assign posts = posts | where_exp: "post", "post.draft != true" %}
