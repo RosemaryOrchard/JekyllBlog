@@ -1,0 +1,27 @@
+{%- assign content = '' -%}
+{%- assign content = content | append: "<div>" -%}
+
+{%- assign artContent = '' -%}
+{%- capture artContent -%}
+	{%- if include.post.artwork -%}
+		<div class="post-artwork">{%- include post-artwork.html key=include.post.artwork -%}</div>
+	{%- elsif include.post.custom_icon -%}
+		<div class="custom-icon">{%- include post-artwork.html custom=include.post.custom_icon -%}</div>
+	{%- endif -%}
+{%- endcapture -%}
+
+{%- assign content = content | append: artContent -%}
+{{ assign postContent = '' }}
+{%- capture postContent -%}
+	<div class="post-content e-content" itemprop="articleBody">{{ include.post.content | strip }}</div>
+{%- endcapture -%}
+{%- assign content = content | append: postContent -%}
+{%- assign content = content | append: "</div>" -%}
+
+{%- if include.json_feed -%}
+	{{ content | strip | jsonify }}
+{%- elsif include.rss_feed -%}
+	{{ content | strip | xml_escape }}
+{%- else -%}
+	{{ content }}
+{%- endif -%}

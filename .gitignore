@@ -2,6 +2,8 @@ _site
 .sass-cache
 .jekyll-cache
 .jekyll-metadata
+.gist-cache
 vendor
 .DS_Store
 .nova/Publishing/Hetzner Cloud.json
+_config_local.yml

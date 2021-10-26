@@ -1,5 +1,5 @@
-{% assign post = include.post %} {% assign date_format = site.minima.date_format
-| default: "%b %-d, %Y" %}
+{% assign post = include.post %}
+{% assign date_format = site.minima.date_format| default: "%b %-d, %Y" %}
 
 <article class="h-entry post-summary">
   {% if post.artwork %}
@@ -15,7 +15,8 @@
     >{{ post.date | date: "%b %-d, %Y" }}</time
   >
   <div class="p-summary entry-summary">
-    {% if site.show_excerpts %} <div class="post-excerpt">{{ post.excerpt }}</div> {% endif %}
-  </div>
+    {% if site.show_excerpts %}
+    <div class="post-excerpt">{{ post.excerpt }}</div>
+  {% endif %}
 </article>
 {% if include.last == false %} {% include seperator.html %} {% endif %}
