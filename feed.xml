@@ -57,7 +57,7 @@ permalink: /feed.xml
 	  <id>{{ post.id | absolute_url | xml_escape }}</id>
 	  {% assign excerpt_only = post.feed.excerpt_only | default: site.feed.excerpt_only %}
 	  {% unless excerpt_only %}
-		<content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">{% include post_full.html post=page rss_feed=true %}</content>
+		<content type="html" xml:base="{{ post.url | absolute_url | xml_escape }}">{{ post.content | strip | xml_escape }}</content>
 	  {% endunless %}
 
 	  {% assign post_author = post.author | default: post.authors[0] | default: site.author %}

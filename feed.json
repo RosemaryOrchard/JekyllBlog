@@ -38,7 +38,7 @@ permalink: /feed.json
             "id": {{ post.id | absolute_url | jsonify }},
             "url": {{ post.url | absolute_url | jsonify }},
             "title": {{ post.title | smartify | strip_html | normalize_whitespace | jsonify }},
-            "content_html": {% include post_full.html post=page json_feed=true %},
+            "content_html": {{ post.content | strip | jsonify }},
             {% if post.excerpt and post.excerpt != empty %}
             "summary": {{ post.excerpt | strip_html | normalize_whitespace | jsonify }},
             {% endif %}
