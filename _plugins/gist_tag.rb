@@ -1,22 +1,20 @@
-# Title: Gists with pygments tag for Jekyll
-# Author: Brett Terpstra <http://brettterpstra.com>
+# Title: Gists with Rouge tag for Jekyll
+# Author: Rosemary Orchard <https://rosemaryorchard.com>
 # Description: A Liquid tag for Jekyll that fetches and caches gist code samples locally, highlighted with pygments
-#   Does not use the script embed, which allows for better highlighting (pygments) and static loading.
+#   Does not use the script embed, which allows for better highlighting (Rouge) and static loading.
 #   Includes `gistnocache` tag to prevent caching, and `gistbust` to skip loading the cache but update the
 #   result (for one-off usage)
 #
 #   Set gist_check_update to true in _config.yml and the tag will check the API to see if the gist has been
 #   updated on every render.
 #
-# Syntax {% gist gist_id optional_filename %}
-#
 # Example:
 # {% gist d9719a4f53ec3ffd62ebb89359058529 %}
-#
 # or
-#
 # {% gist d9719a4f53ec3ffd62ebb89359058529 fish_prompt.fish %}
-#
+# 
+# Based on the plugin Brett Terpstra modified from the following:
+# 
 # Based on code by Brandon Tilly <http://brandontilley.com/2011/01/31/gist-tag-for-jekyll.html>
 # Source URL: https://gist.github.com/1027674
 
@@ -25,11 +23,10 @@ require "digest/md5"
 require "net/https"
 require "uri"
 require "json"
+require "rouge"
 
 module Jekyll
   class GistTag < Liquid::Tag
-    # include HighlightCode
-    # include TemplateWrapper
     def initialize(tag_name, text, token)
       super
       @filetype = nil
@@ -46,6 +43,9 @@ module Jekyll
     def render(context)
       begin
         @check_update = context.registers[:site].config["gist_check_update"] || false
+        @api_id = context.registers[:site].config["github_api"]["id"] || ""
+        @api_secret = context.registers[:site].config["github_api"]["secret"] || ""
+        @baseUrl = context.registers[:site].config["github_api"]["prefix"]
         if parts = @text.match(/([a-z0-9]+)( .+)?/i)
           @gist = parts[1].strip
           @file = parts[2] ? parts[2].strip : ""
@@ -65,8 +65,14 @@ module Jekyll
     end
 
     def html_for_data(data)
+      if @baseUrl
+        gistUrl = @baseUrl + data["gist"]
+      else
+        gistUrl = data["raw_url"]
+      end
       html = [%Q{<figure class="code">}]
-      html.push %Q{<figcaption><span>#{data["name"]}</span><a href="#{data["raw_url"]}">raw</a></figcaption>}
+      
+      html.push %Q{<figcaption><span class="gist-name">#{data["name"]}</span><button><a class="gist-url" href="#{gistUrl}">View GitHub Gist</a></button></figcaption>}
       html.push data["highlighted"]
       html.push %Q{</figure>}
       html.join("\n")
@@ -122,7 +128,12 @@ module Jekyll
       end
       https.use_ssl = true
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
+      
       request = Net::HTTP::Get.new raw_uri.request_uri
+      if @api_id && @api_secret 
+        request.basic_auth %Q{#{@api_id}}, %Q{#{@api_secret}}
+      end
+      
       data = https.request request
       data.body
     end
@@ -145,6 +156,9 @@ module Jekyll
       https.use_ssl = true
       https.verify_mode = OpenSSL::SSL::VERIFY_NONE
       request = Net::HTTP::Get.new raw_uri.request_uri
+      if @api_id && @api_secret 
+        request.basic_auth %Q{#{@api_id}}, %Q{#{@api_secret}}
+      end
       data = https.request request
       data = data.body
       json = JSON.parse(data)
@@ -164,7 +178,6 @@ module Jekyll
     end
 
     def gist_to_data(f)
-      Jekyll.logger.debug f
       res = { "gist" => @gist }
       res["updated"] = f["updated"]
       res["name"] = f["filename"]
@@ -181,10 +194,14 @@ module Jekyll
         res["lang"] = f["language"].downcase
         source = highlight(res["raw"], res["lang"])
       else
-        res["lang"] = ""
-        source = format_code(res["raw"].lstrip.rstrip.gsub(/</, "&lt;"))
+        file_ext = f["filename"].rpartition('.').last
+        if file_ext.end_with?('js')
+          source = highlight(res["raw"], file_ext)
+        else
+          res["lang"] = ""
+          source = format_code(res["raw"].lstrip.rstrip.gsub(/</, "&lt;"))
+        end
       end
-      # source = safe_wrap(source)
 
       res["highlighted"] = source
       cache_data res unless @cache_disabled
@@ -196,33 +213,22 @@ module Jekyll
       lang = "objc" if lang == "m"
       lang = "perl" if lang == "pl"
       lang = "yaml" if lang == "yml"
+      lang = "js" if lang == "omnijs"
       lang = "js" if lang == "omnifocusjs"
-      str = pygments(str, lang).match(/<pre>(.+)<\/pre>/m)[1].to_s.gsub(/ *$/, "") #strip out divs <div class="highlight">
-      format_code(str, lang)
-    end
-
-    def pygments(code, lang)
-      if defined?(PYGMENTS_CACHE_DIR)
-        path = File.join(PYGMENTS_CACHE_DIR, "#{lang}-#{Digest::MD5.hexdigest(code)}.html")
-        if File.exist?(path)
-          highlighted_code = File.read(path)
-        else
-          highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => "html", :options => { :encoding => "utf-8" })
-          File.open(path, "w") { |f| f.print(highlighted_code) }
-        end
-      else
-        highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => "html", :options => { :encoding => "utf-8" })
-      end
-      highlighted_code
+      
+      formatter = Rouge::Formatters::HTMLLinewise.new(Rouge::Formatters::HTML.new, class: 'line')
+      lexer = Rouge::Lexer.find(lang)
+      code = formatter.format(lexer.lex(str))
+      str = "<div class='highlight'><pre><code class='#{lang}'>#{code}</code></pre></div>"
     end
 
     def format_code(str, lang = "")
-      table = '<div class="highlight">'
+      block = '<div class="highlight">'
       code = ""
       str.lines.each_with_index do |line, index|
         code += "<span class='line'>#{line}</span>"
       end
-      table += "<pre><code class='#{lang}'>#{code}</code></pre></div>"
+      block += "<pre><code class='#{lang}'>#{code}</code></pre></div>"
     end
   end
 

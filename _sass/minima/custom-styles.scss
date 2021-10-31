@@ -1,23 +1,124 @@
 // Placeholder to allow defining custom styles that override everything else.
 // (Use `_sass/minima/custom-variables.scss` to override variable defaults)
 
+@media (prefers-color-scheme: light) {
+	body {
+		background: $light !important;
+		color: black !important;
+	}
+	a,
+	a:visited {
+		color: $rose-purple-dark;
+	}
+	.site-nav {
+		fill: black;
+	}
+	.site-nav .page-link {
+		color: white !important;
+	}
+	.site-header div.wrapper a.site-title {
+		color: $rose-purple-light;
+	}
+	pre {
+		code {
+			counter-reset: line;
+
+			div.line {
+				counter-increment: line;
+
+				&:nth-child(even) {
+					// background: $code-background-color
+				}
+				&:nth-child(odd) {
+					background: darken($code-background-color, 2%);
+				}
+			}
+		}
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	$code-background-color: #212121;
+	body {
+		background: $dark !important;
+		color: #d6d6d6 !important;
+	}
+	a,
+	a:visited {
+		color: $rose-purple-light;
+	}
+	.site-nav .page-link {
+		color: white !important;
+	}
+	.site-nav {
+		fill: white !important;
+	}
+	pre {
+		background-color: $code-background-color;
+		tab-size: 2;
+		white-space: pre-wrap;
+
+		code {
+			counter-reset: line;
+
+			div.line {
+				counter-increment: line;
+				overflow-wrap: break-word;
+
+				&:nth-child(odd) {
+					background: darken($code-background-color, 5%);
+				}
+			}
+		}
+	}
+}
+
+.gist-name {
+	font-weight: 600;
+	padding-right: 1em;
+}
+
+.gist-url {
+	align-self: right;
+}
+
+pre code div.line span ::before {
+	all: unset !important;
+}
 pre {
 	code {
-	  counter-reset: line;
-	  
-	  .line {
-		counter-increment: line;
-	  }
-	
-	  .line ::before {
-		content: counter(line) ". ";
-		display: inline-block;
-		width: 8em;
-		padding-left: auto;
-		margin-left: auto;
-		text-align: right;
-	  }
+		counter-reset: line;
+
+		div.line {
+			counter-increment: line;
+			box-sizing: border-box;
+		}
+
+		div.line::before {
+			content: counter(line) ". ";
+			display: inline-block;
+			width: 2em;
+			text-align: right;
+			-webkit-user-select: none;
+			font-size: 0.5em;
+			padding-right: 0.5em;
+		}
 	}
+}
+
+figcaption {
+	padding-bottom: 0.5em;
+}
+
+button {
+	background-color: $rose-purple-dark;
+	border: none;
+	color: white;
+	padding: 0.5em;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	border-radius: 0.5em;
 }
 
 .profile-photo {

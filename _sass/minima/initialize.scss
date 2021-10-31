@@ -28,10 +28,6 @@ $on-laptop: 800px !default;
 $on-medium: $on-mobile !default;
 $on-large: $on-laptop !default;
 
-$large-artwork: 150px;
-$medium-artwork: 100px;
-$small-artwork: 50px;
-
 // Use media queries like this:
 // @include media-query($on-mobile) {
 //   .wrapper {
@@ -60,5 +56,3 @@ $small-artwork: 50px;
   // Defines structure and style based on CSS selectors.
   "minima/custom-styles" // Hook to override existing styles.
 ;
-
-@import "darkmode";
