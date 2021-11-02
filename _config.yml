@@ -31,6 +31,9 @@ author:
   url: "https://rosemaryorchard.com"
   email: "contact@rosemaryorchard.com"
   photo: "assets/me.jpg"
+  
+collections:
+  - recommendations
 
 # Build settings
 theme: minima
