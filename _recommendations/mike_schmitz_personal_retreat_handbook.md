@@ -1,6 +1,6 @@
 ---
 name: Mike Schmitz: Personal Retreat Handbook
-url: https://courses.faithbasedproductivity.com/p/personal-retreat-handbook?affcode=289620_cb9jt9df
+url: 'https://courses.faithbasedproductivity.com/p/personal-retreat-handbook?affcode=289620_cb9jt9df'
 image_url: /assets/recommendations/mike-schmitz-personal-retreat-handbook.jpg
 type: Course
 date: 2019-05-25 07:05
