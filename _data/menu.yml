@@ -1,8 +1,6 @@
 items:
   - title: "Podcasts"
     subfolderitems:
-      - page: Above the Mess
-        url: "https://www.abovethemess.com/"
       - page: Automators
         url: "https://relay.fm/automators"
       - page: iOS Today

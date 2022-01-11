@@ -6,13 +6,6 @@
     "width": "150",
     "url": "https://relay.fm/automators"
   },
-  "above_the_mess": {
-    "image_url": "/assets/podcasts/above_the_mess.png",
-    "alt": "Above the Mess Podcast Artwork",
-    "height": "150",
-    "width": "150",
-    "url": "https://www.abovethemess.com"
-  },
   "ios_today": {
     "image_url": "/assets/podcasts/ios_today.jpg",
     "alt": "iOS Today Podcast Artwork",
