@@ -1,6 +1,6 @@
 ---
-name: Deliveries: a package tracker
-url: 'https://itunes.apple.com/us/app/deliveries-a-package-tracker/id290986013?mt=8&uo=4'
+name: "Deliveries: a package tracker"
+url: "https://itunes.apple.com/us/app/deliveries-a-package-tracker/id290986013?mt=8&uo=4"
 image_url: /assets/recommendations/deliveries-a-package-tracker.png
 type: iOS App
 date: 2019-05-27 21:05

@@ -1,5 +1,5 @@
 ---
-name: Shure Beta 87A Microphone
+name: "Shure Beta 87A Microphone"
 url: http://www.amazon.com/dp/B0002BACBO/?tag=pinterest08e-20
 image_url: /assets/recommendations/shure-beta-87a-microphone.jpeg
 type: Gear

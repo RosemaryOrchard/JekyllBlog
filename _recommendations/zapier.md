@@ -1,5 +1,5 @@
 ---
-name: Zapier
+name: "Zapier"
 url: https://zapier.com
 image_url: /assets/recommendations/zapier.png
 type: Service

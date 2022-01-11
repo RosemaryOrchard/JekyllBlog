@@ -1,5 +1,5 @@
 ---
-name: Waterfield Staad Backpack
+name: "Waterfield Staad Backpack"
 url: https://www.sfbags.com/collections/laptop-backpacks/products/staad-laptop-backpack
 image_url: /assets/recommendations/waterfield-staad-backpack.jpg
 type: Gear

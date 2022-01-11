@@ -1,5 +1,5 @@
 ---
-name: AirTable
+name: "AirTable"
 url: https://airtable.com/invite/r/XxNzmsB9
 image_url: /assets/recommendations/airtable.png
 type: Service

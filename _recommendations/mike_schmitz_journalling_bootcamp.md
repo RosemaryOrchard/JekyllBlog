@@ -1,6 +1,6 @@
 ---
-name: Mike Schmitz: Journalling Bootcamp
-url: 'https://courses.faithbasedproductivity.com/p/journaling-bootcamp?affcode=289620_cb9jt9df'
+name: "Mike Schmitz: Journalling Bootcamp"
+url: "https://courses.faithbasedproductivity.com/p/journaling-bootcamp?affcode=289620_cb9jt9df"
 image_url: /assets/recommendations/mike-schmitz-journalling-bootcamp.jpg
 type: Course
 date: 2019-05-25 07:05

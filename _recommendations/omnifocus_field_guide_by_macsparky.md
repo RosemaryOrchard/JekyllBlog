@@ -1,6 +1,6 @@
 ---
-name: OmniFocus Field Guide by MacSparky
-url: 'https://learn.macsparky.com/p/omnifocus?affcode=256645_0ohxw3fs'
+name: "OmniFocus Field Guide by MacSparky"
+url: "https://learn.macsparky.com/p/omnifocus?affcode=256645_0ohxw3fs"
 image_url: /assets/recommendations/omnifocus-field-guide-by-macsparky.png
 type: Course
 my_url: https://rosemaryorchard.com/tag/omnifocus/

@@ -1,5 +1,5 @@
 ---
-name: Coda by Panic
+name: "Coda by Panic"
 url: https://itunes.apple.com/us/app/coda-by-panic/id500906297?mt=8&uo=4
 image_url: /assets/recommendations/coda-by-panic.png
 type: iOS App

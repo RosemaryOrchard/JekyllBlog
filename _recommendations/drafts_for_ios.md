@@ -1,6 +1,6 @@
 ---
-name: Drafts for iOS
-url: 'https://itunes.apple.com/us/app/drafts-capture-act/id1236254471?mt=8&uo=4'
+name: "Drafts for iOS"
+url: "https://itunes.apple.com/us/app/drafts-capture-act/id1236254471?mt=8&uo=4"
 image_url: /assets/recommendations/drafts-for-ios.png
 type: iOS App
 my_url: https://rosemaryorchard.com/tag/drafts/date: 2019-05-25 07:05

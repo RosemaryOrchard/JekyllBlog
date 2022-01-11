@@ -1,6 +1,6 @@
 ---
-name: Mac Power Users
-url: 'https://podcasts.apple.com/us/podcast/mac-power-users/id458066753?uo=4'
+name: "Mac Power Users"
+url: "https://podcasts.apple.com/us/podcast/mac-power-users/id458066753?uo=4"
 image_url: /assets/recommendations/mac-power-users.png
 type: Podcast
 my_url: https://rosemaryorchard.com/tag/mac-power-users/

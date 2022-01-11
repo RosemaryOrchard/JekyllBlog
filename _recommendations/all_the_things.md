@@ -1,5 +1,5 @@
 ---
-name: All the Things
+name: "All the Things"
 url: https://thesweetsetup.com/things/?ref=18
 image_url: /assets/recommendations/all-the-things.jpeg
 type: iOS App

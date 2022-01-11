@@ -1,20 +1,20 @@
 twitter: 
   username: RosemaryOrchard
   mediaName: Twitter
-  url: 'https://twitter.com/RosemaryOrchard'
+  url: "https://twitter.com/RosemaryOrchard"
   icon: twitter
 github: 
   username: RosemaryOrchard
   mediaName: GitHub
-  url: 'https://github.com/RosemaryOrchard'
+  url: "https://github.com/RosemaryOrchard"
   icon: github
 instagram: 
   username: rosemary_orchard
   mediaName: Instagram
-  url: 'https://instagram.com/rosemary_orchard'
+  url: "https://instagram.com/rosemary_orchard"
   icon: instagram
 microdotblog: 
   username: rosemaryorchard
   mediaName: Micro.Blog
-  url: 'https://micro.blog/rosemaryorchard'
+  url: "https://micro.blog/rosemaryorchard"
   icon: microblog
