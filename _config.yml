@@ -37,6 +37,8 @@ collections:
 
 # Build settings
 theme: minima
+minima:
+  skin: auto
 plugins:
   - jekyll-feed
   - jekyll-archives

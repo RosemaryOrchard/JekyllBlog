@@ -1,4 +1,5 @@
-// Placeholder to allow overriding predefined variables smoothly.
+$title-font-family: "Archer A", "Archer B", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif !default;
+
 $rose-purple: #9D61E2;
 $rose-purple-dark: #583381;
 $rose-purple-light: #D9B7FF;
@@ -9,3 +10,9 @@ $light: #ffffff !default
 $large-artwork: 150px;
 $medium-artwork: 100px;
 $small-artwork: 50px;
+
+$code-background-color-dark: #212121;
+
+@media (prefers-color-scheme: dark) {
+	$code-background-color: #212121;
+}
