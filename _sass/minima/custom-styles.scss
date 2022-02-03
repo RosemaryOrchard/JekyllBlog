@@ -9,22 +9,54 @@
 	top: 0;
 	width: 100%;
 }
-@include media-query((5 * $large-artwork) + (7 * 16px) + 100px) {
+
+.post-seperator {
+  margin-top: $spacing-unit;
+  margin-bottom: $spacing-unit;
+  width: 100%;
+  text-align: center;
+}
+
+.post-summary {
+  @extend %clearfix;
+}
+
+.artwork-display {
+  @extend %clearfix;
+  margin-bottom: $spacing-unit;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+
+  > .artwork {
+	padding: 1em;
+
+	> a > img {
+	  max-width: $large-artwork;
+	}
+  }
+
+  @include media-query((5 * $large-artwork) + (7 * 16px) + 100px) {
 	> .artwork {
 	  padding: 0.6em;
+
 	  > a > img {
 		max-width: $medium-artwork;
 	  }
 	}
   }
+
   @include media-query((5 * $medium-artwork) + (7 * 10px) + 100px) {
 	> .artwork {
 	  padding: 0.3em;
+
 	  > a > img {
 		max-width: $small-artwork;
 	  }
 	}
   }
+}
 
   .site-title {
 	@include relative-font-size(1.75);
