@@ -10,6 +10,11 @@
 	width: 100%;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: $title-font-family;
+}
+
+
 .post-seperator {
   margin-top: $spacing-unit;
   margin-bottom: $spacing-unit;
