@@ -1,9 +1,10 @@
-{% if include.tags.size >  0 %} 
+{% if include.tags.size >  0 %}
+<div class="tags">
   <div class="post-tags">
-    <span class="tag-icon"><i class="fad fa-tags" aria-hidden="true"></i></span>
-  {% assign postTags = include.tags | sort %}
-  {% for tag in postTags %}
-  <a class="tag p-category" href="{{ tag | slugify: "latin" | prepend: "/tag/" | absolute_url }}">{{ tag }}</a>
-  {% endfor %} 
+    {% assign postTags = include.tags | sort %}
+    {% for tag in postTags %}
+    <a class="tag p-category" href="{{ tag | slugify: "latin" | prepend: "/tag/" | absolute_url }}"><i class="fad fa-tags" aria-hidden="true"></i>&nbsp; {{ tag }}</a>
+    {% endfor %}
+  </div>
 </div>
 {% endif %}

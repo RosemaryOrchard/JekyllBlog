@@ -24,6 +24,24 @@ h1, h2, h3, h4, h5, h6 {
 
 .post-summary {
   @extend %clearfix;
+
+  h3 {
+	  margin-bottom: unset;
+  }
+}
+
+.post-header {
+	margin-bottom: unset;
+}
+
+.post-content {
+	img {
+		max-height: calc((#{$content-width} - (#{$spacing-unit}))/2);
+  		max-width: 80%;
+  		vertical-align: middle;
+	    margin: auto;
+		display: block;
+	}
 }
 
 .artwork-display {
@@ -226,21 +244,34 @@ h1, h2, h3, h4, h5, h6 {
 		}
 	  }
 
-	  .post-tags {
-		display: flex;
-		margin-bottom: 0.5rem;
-		align-items: center;
-		.tag-icon {
-		  font-size: 1.5em;
-		  padding-right: 0.5rem;
-		}
-		.tag {
-		  border: 1px solid $rose-purple-light;
-		  border-radius: 3px;
-		  padding: 0.5rem;
-		  margin-right: 1rem;
-		}
+.tags {
+	display: grid;
+	grid-auto-columns: auto;
+	grid-auto-flow: column;
+	width: fit-content;
+
+  .post-tags {
+	display: grid;
+	grid-auto-flow: column;
+	grid-auto-columns: auto;
+	font-size: $small-font-size;
+
+	.tag {
+	  margin-right: 0.5rem;
+	  width: fit-content;
+	  padding-top: 0.25em;
+	  padding-bottom: 0.25em;
+	  padding-left: 0.5em;
+	  padding-right: 0.5em;
+	  border: 1px solid $background-color;
+	  border-radius: 1em;
+
+	  &:hover{
+		border-color: $rose-purple;
 	  }
+	}
+  }
+}
 
 .post-artwork,
 .custom-icon {
@@ -266,10 +297,18 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 22.5%;
 }
 
-a {
-&:hover {
+a,
+a:visited {
 	color: $rose-purple;
+	text-decoration: none;
 }
+a:hover {
+	background-color: $rose-purple;
+	color: white;
+	text-decoration: none;
+	&:visited {
+		color: white;
+	}
 }
 
 .workflow-icon {
@@ -305,45 +344,6 @@ a {
 
 				&:nth-child(even) {
 					background: $code-background-color
-				}
-				// &:nth-child(odd) {
-				// 	background: color.scale($code-background-color, $lightness: 2%);
-				// }
-			}
-		}
-	}
-}
-
-@media (prefers-color-scheme: dark) {
-	$code-background-color: #212121;
-	body {
-		background: $dark !important;
-		color: #d6d6d6 !important;
-	}
-	a,
-	a:visited {
-		color: $rose-purple-light;
-	}
-	.site-nav .page-link {
-		color: white !important;
-	}
-	.site-nav {
-		fill: white !important;
-	}
-	pre {
-		background-color: $code-background-color-dark !important;
-		tab-size: 2;
-		white-space: pre-wrap;
-
-		code {
-			counter-reset: line;
-
-			div.line {
-				counter-increment: line;
-				overflow-wrap: break-word;
-
-				&:nth-child(odd) {
-					background: darken($code-background-color-dark, 5%) !important;
 				}
 			}
 		}

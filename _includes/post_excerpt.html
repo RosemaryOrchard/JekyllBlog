@@ -10,10 +10,8 @@
   <a class="post-link" href="{{ post.url | absolute_url }}"
     ><h3>{{ post.title }}</h3></a
   >
-  {% include tags.html tags=post.tags %}
-  <time class="post-date dt-published"
-    >{{ post.date | date: "%b %-d, %Y" }}</time
-  >
+  <span class="summary-meta"><time class="post-date dt-published"
+    >{{ post.date | date: "%b %-d, %Y" }}</time>{% include tags.html tags=post.tags %}</span>
   <div class="p-summary entry-summary">
     {% if site.show_excerpts %}
     <div class="post-excerpt">{{ post.excerpt }}</div>
