@@ -268,6 +268,9 @@ h1, h2, h3, h4, h5, h6 {
 
 	  &:hover{
 		border-color: $rose-purple;
+		background-color: $rose-purple;
+		color: white;
+		text-decoration: none;
 	  }
 	}
   }
@@ -276,8 +279,8 @@ h1, h2, h3, h4, h5, h6 {
 .post-artwork,
 .custom-icon {
   float: right;
+  padding-bottom: 1rem;
   padding-left: 1rem;
-  padding-top: 0.5em;
   > img,
   > a > img {
 	max-height: $large-artwork;
@@ -303,12 +306,7 @@ a:visited {
 	text-decoration: none;
 }
 a:hover {
-	background-color: $rose-purple;
-	color: white;
-	text-decoration: none;
-	&:visited {
-		color: white;
-	}
+	color: $text-color;
 }
 
 .workflow-icon {

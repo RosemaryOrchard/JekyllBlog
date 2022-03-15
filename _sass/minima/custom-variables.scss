@@ -18,8 +18,13 @@ $small-artwork: 50px;
 
 $brand-color: $rose-purple;
 $link-base-color: $rose-purple;
-$code-background-color-dark: #212121;
 
-@media (prefers-color-scheme: dark) {
-	$code-background-color: #212121;
+:root {
+  --code-background-color: #{$code-background-color};
+
+  @media (prefers-color-scheme: dark) {
+	  --code-background-color: #212121;
+  }
+
+  $code-background-color: var(--code-background-color);
 }
