@@ -10,7 +10,7 @@ date: '2022-03-14 18:30'
 
 One of the things I mentioned in the [most recent episode of Automators]({% post_url 2022-03-11-automators-097 %}) was how I've been fixing small annoyances with automation tools, particularly Keyboard Maestro. I encountered another one with my label maker which I was happy to be able to solve!
 
-I have a Brother P-Touch PT710BT label maker. Naming aside it's an excellent device—and the Brother software on the Mac allows me to do a mail merge with CSVs—including print a list of labels. Collecting the list and merging that into a CSV is a Shortcuts story for another time, but the thing that annoyed me the most is connecting the label maker to my Mac didn't automatically open the software. It was just _one more step_ getting in my way. So I fixed it—with Keyboard Maestro.
+I have a Brother P-Touch PT710BT label maker. Naming aside, it's an excellent device—and the Brother software on the Mac allows me to do a mail merge with CSVs—including print a list of labels. Collecting the list and merging that into a CSV is a Shortcuts story for another time, but the thing that annoyed me the most is connecting the label maker to my Mac didn't automatically open the software. It was just _one more step_ getting in my way. So I fixed it—with Keyboard Maestro.
 
 <!--more-->
 

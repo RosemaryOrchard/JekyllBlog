@@ -15,6 +15,9 @@
   <div class="p-summary entry-summary">
     {% if site.show_excerpts %}
     <div class="post-excerpt">{{ post.excerpt }}</div>
-  {% endif %}
+    {% endif %}
+    {% if post.excerpt != post.content %}
+    <a href="{{ post.url | absolute_url }}" class="post-read-more">Continue reading...</div>
+    {% endif %}
 </article>
 {% if include.last == false %} {% include seperator.html %} {% endif %}
