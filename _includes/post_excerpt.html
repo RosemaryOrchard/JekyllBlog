@@ -17,7 +17,7 @@
     <div class="post-excerpt">{{ post.excerpt }}</div>
     {% endif %}
     {% if post.excerpt != post.content %}
-    <a href="{{ post.url | absolute_url }}" class="post-read-more">Continue reading...</div>
+    <small><a href="{{ post.url | absolute_url }}" class="post-read-more">Continue reading...</a></small>
     {% endif %}
 </article>
 {% if include.last == false %} {% include seperator.html %} {% endif %}
