@@ -1,11 +1,30 @@
-// Placeholder to allow overriding predefined variables smoothly.
+$title-font-family: "Archer A", "Archer B", -apple-system, BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji", "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif;
+$base-font-family: "Gotham SSm A", "Gotham SSm B", -apple-system,
+  BlinkMacSystemFont, "Segoe UI", "Segoe UI Symbol", "Segoe UI Emoji",
+  "Apple Color Emoji", Roboto, Helvetica, Arial, sans-serif;
+$code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono",
+  "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
+
 $rose-purple: #9D61E2;
 $rose-purple-dark: #583381;
 $rose-purple-light: #D9B7FF;
 
-$dark: #282828 !default
-$light: #ffffff !default
+$dark: #282828;
+$light: #ffffff;
 
 $large-artwork: 150px;
 $medium-artwork: 100px;
 $small-artwork: 50px;
+
+$brand-color: $rose-purple;
+$link-base-color: $rose-purple;
+
+:root {
+  --code-background-color: #{$code-background-color};
+
+  @media (prefers-color-scheme: dark) {
+	  --code-background-color: #212121;
+  }
+
+  $code-background-color: var(--code-background-color);
+}

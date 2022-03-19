@@ -6,6 +6,13 @@
     "width": "150",
     "url": "https://relay.fm/automators"
   },
+  "automators-max": {
+    "image_url": "/assets/podcasts/automators_max.jpg",
+    "alt": "Automators Max Podcast Artwork",
+    "height": "150",
+    "width": "150",
+    "url": "https://relay.fm/automators"
+  },
   "ios_today": {
     "image_url": "/assets/podcasts/ios_today.jpg",
     "alt": "iOS Today Podcast Artwork",

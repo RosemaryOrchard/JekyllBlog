@@ -5,72 +5,43 @@ html {
 /**
  * Reset some basic elements
  */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-hr,
-dl,
-dd,
-ol,
-ul,
-figure {
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
   margin: 0;
   padding: 0;
+
 }
+
+
 
 /**
  * Basic styling
  */
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height}
-    $base-font-family;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
   color: $text-color;
   background-color: $background-color;
   -webkit-text-size-adjust: 100%;
   -webkit-font-feature-settings: "kern" 1;
-  -moz-font-feature-settings: "kern" 1;
-  -o-font-feature-settings: "kern" 1;
-  font-feature-settings: "kern" 1;
+     -moz-font-feature-settings: "kern" 1;
+       -o-font-feature-settings: "kern" 1;
+          font-feature-settings: "kern" 1;
   font-kerning: normal;
   display: flex;
   min-height: 100vh;
   flex-direction: column;
   overflow-wrap: break-word;
-  padding-bottom: env(safe-area-inset-bottom);
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $title-font-family;
-}
+
 
 /**
  * Set `margin-bottom` to maintain vertical rhythm
  */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-ul,
-ol,
-dl,
-figure,
+h1, h2, h3, h4, h5, h6,
+p, blockquote, pre,
+ul, ol, dl, figure,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
@@ -80,60 +51,14 @@ hr {
   margin-bottom: $spacing-unit;
 }
 
-.post-seperator {
-  margin-top: $spacing-unit;
-  margin-bottom: $spacing-unit;
-  width: 100%;
-  text-align: center;
-}
-
-.post-summary {
-  @extend %clearfix;
-}
-
-.artwork-display {
-  @extend %clearfix;
-  margin-bottom: $spacing-unit;
-  text-align: center;
-  align-items: center;
-  display: flex;
-  justify-content: center;
-
-  > .artwork {
-    padding: 1em;
-
-    > a > img {
-      max-width: $large-artwork;
-    }
-  }
-
-  @include media-query((5 * $large-artwork) + (7 * 16px) + 100px) {
-    > .artwork {
-      padding: 0.6em;
-
-      > a > img {
-        max-width: $medium-artwork;
-      }
-    }
-  }
-
-  @include media-query((5 * $medium-artwork) + (7 * 10px) + 100px) {
-    > .artwork {
-      padding: 0.3em;
-
-      > a > img {
-        max-width: $small-artwork;
-      }
-    }
-  }
-}
-
 /**
  * `main` element
  */
 main {
   display: block; /* Default value of `display` of `main` element is 'inline' in IE 11. */
 }
+
+
 
 /**
  * Images
@@ -143,37 +68,7 @@ img {
   vertical-align: middle;
 }
 
-.post-artwork,
-.custom-icon {
-  float: right;
-  padding-left: 1rem;
-  padding-top: 0.5em;
 
-  > img,
-  > a > img {
-    max-height: $large-artwork;
-    max-width: $large-artwork;
-  }
-
-  @include media-query($on-mobile) {
-    > img,
-    > a > img {
-      max-height: $medium-artwork;
-      max-width: $medium-artwork;
-    }
-  }
-}
-
-.custom-icon > img,
-.custom-icon > a > img {
-  border-radius: 22.5%;
-}
-
-.workflow-icon {
-  max-height: 1rem !important;
-  max-width: 1rem !important;
-  padding-right: 0.5rem;
-}
 
 /**
  * Figures
@@ -186,11 +81,12 @@ figcaption {
   font-size: $small-font-size;
 }
 
+
+
 /**
  * Lists
  */
-ul,
-ol {
+ul, ol {
   margin-left: $spacing-unit;
 }
 
@@ -201,17 +97,16 @@ li {
   }
 }
 
+
+
 /**
  * Headings
  */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: $base-font-weight;
 }
+
+
 
 /**
  * Links
@@ -225,7 +120,8 @@ a {
   }
 
   &:hover {
-    color: $rose-purple;
+    color: $link-hover-color;
+    text-decoration: underline;
   }
 
   .social-media-list &:hover {
@@ -236,6 +132,7 @@ a {
     }
   }
 }
+
 
 /**
  * Blockquotes
@@ -251,11 +148,12 @@ blockquote {
     margin-bottom: 0;
   }
 
-  i,
-  em {
+  i, em {
     font-style: normal;
   }
 }
+
+
 
 /**
  * Code formatting
@@ -294,6 +192,8 @@ pre {
   }
 }
 
+
+
 /**
  * Wrapper
  */
@@ -312,6 +212,8 @@ pre {
   }
 }
 
+
+
 /**
  * Clearfix
  */
@@ -320,6 +222,8 @@ pre {
   display: table;
   clear: both;
 }
+
+
 
 /**
  * Icons
@@ -342,6 +246,7 @@ pre {
   vertical-align: text-bottom;
 }
 
+
 /**
  * Tables
  */
@@ -357,8 +262,7 @@ table {
       background-color: $table-zebra-color;
     }
   }
-  th,
-  td {
+  th, td {
     padding: ($spacing-unit / 3) ($spacing-unit / 2);
   }
   th {
@@ -373,6 +277,6 @@ table {
     display: block;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
   }
 }

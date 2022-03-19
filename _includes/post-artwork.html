@@ -4,4 +4,4 @@
 	{% assign art = site.data.artwork[include.key] %}
 {% endif %}
 
-<a href="{{ art.url }}"><img src="{{ art.image_url | absolute_url }}" alt="{{ art.alt }}" /></a>
+<a href="{{ art.url }}"><img class="{{ include.key }}-artwork" src="{{ art.image_url | absolute_url }}" alt="{{ art.alt }}" /></a>
