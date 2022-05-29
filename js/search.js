@@ -38,12 +38,8 @@
 
   function searchError() {
     var searchError = document.getElementById("search-error");
-
-    searchError.innerHTML = `Sorry, something went wrong! Try using <a href="https://duckduckgo.com/?q=${encodeURIComponent(
-      searchTerm
-    )}+site%https%3A%2F%2Frosemaryorchard.com">DuckDuckGo</a> or <a href="https://www.google.com/search?q=${encodeURIComponent(
-      searchTerm
-    )}+site%https%3A%2F%2Frosemaryorchard.com">Google</a> and putting <code>site:rosemaryorchard.com</code> after your search.`;
+	var externalSearch = searchTerm + " site:" + window.location.origin;
+    searchError.innerHTML = `Sorry, something went wrong! Try using <a href="https://duckduckgo.com/?q=${encodeURIComponent(externalSearch)}">DuckDuckGo</a> or <a href="https://www.google.com/search?q=${encodeURIComponent(externalSearch)}">Google</a> (this adds <code>site:${window.location.origin}</code> after your search, limiting it to this site!)`;
   }
 
   function getPostData() {
@@ -54,7 +50,7 @@
     xhr.onload = function () {
       var status = xhr.status;
       if (status === 200) {
-        runSearch(xhr.response);
+        runSearch(	xhr.response);
       } else {
         searchError();
       }
