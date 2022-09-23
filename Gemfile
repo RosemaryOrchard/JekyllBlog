@@ -19,7 +19,7 @@ group :jekyll_plugins do
   gem "jekyll-archives"
   gem "jekyll-sitemap"
   gem "jekyll-paginate-v2"
-  gem "jekyll-json-feed-rose", :git => "git@github.com:RosemaryOrchard/jekyll-json-feed.git"
+  gem "jekyll-json-feed-rose", :git => "https://github.com/RosemaryOrchard/jekyll-json-feed.git"
   gem "jekyll-redirect-from"
 end
 
