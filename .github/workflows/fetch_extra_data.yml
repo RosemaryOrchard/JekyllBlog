@@ -1,0 +1,19 @@
+name: Automated Deployment to Server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  extra-data:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch API Data
+        uses: JamesIves/fetch-api-data-action@v2.2.3
+        with:
+          endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
+          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
+          branch: main
+          save-location: _data
+          save-name: recommendations.json
