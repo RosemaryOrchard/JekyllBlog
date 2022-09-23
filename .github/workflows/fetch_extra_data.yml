@@ -1,4 +1,4 @@
-name: Automated Deployment to Server
+name: Fetch Extra Data from Airtable
 
 on:
   push:
