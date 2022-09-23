@@ -35,6 +35,12 @@ author:
 collections:
   - recommendations
 
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - vendor/bin
+
 # Build settings
 theme: minima
 minima:
