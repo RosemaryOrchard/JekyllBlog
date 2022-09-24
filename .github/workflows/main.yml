@@ -19,11 +19,10 @@ jobs:
           timeout: 120s
           script: |
             cd /home/git/JekyllBlog
-            pwd
             git stash
             git pull -r
-            /usr/local/rvm/gems/ruby-3.0.0/bin/bundle install
-            JEKYLL_ENV=production /usr/local/rvm/gems/ruby-3.0.0/bin/bundle exec /usr/local/rvm/gems/ruby-3.0.0/bin/jekyll build --config _config.yml,_config_prod.yml
+            $(which bundle) install
+            JEKYLL_ENV=production $(which bundle) exec $(which jekyll) build --config _config.yml,_config_prod.yml
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
         with:

@@ -15,4 +15,4 @@ jobs:
           endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
           save-location: _data
-          save-name: recommendations.json
+          save-name: recommendations
