@@ -21,6 +21,7 @@ jobs:
       # Build the Jekyll site
       - uses: helaili/jekyll-action@v2
         with:
-          jekyll_build_options: "JEKYLL_ENV=production -q"
+          jekyll_build_options: "JEKYLL_ENV=production -q  --config _config.yml,_config_prod.yml"
           token: ${{ secrets.GITHUB_TOKEN }}
           target_branch: 'gh-pages'
+      - name: Telegram Action        uses: xinthink/action-telegram@v1.1        with:          botToken: ${{ secrets.BotToken }}          chatId: ${{ secrets.ChatID }}          jobStatus: ${{ job.status }}          skipSuccess: false
