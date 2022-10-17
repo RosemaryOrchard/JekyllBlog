@@ -38,7 +38,7 @@ GEM
       terminal-table (~> 2.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
-    jekyll-feed (0.16.0)
+    jekyll-feed (0.17.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-paginate-v2 (3.0.0)
       jekyll (>= 3.0, < 5.0)
@@ -88,7 +88,7 @@ PLATFORMS
 DEPENDENCIES
   jekyll (~> 4.2.0)
   jekyll-archives
-  jekyll-feed (~> 0.12)
+  jekyll-feed (~> 0.17)
   jekyll-json-feed-rose!
   jekyll-paginate-v2
   jekyll-redirect-from
