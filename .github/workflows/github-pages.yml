@@ -10,10 +10,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  extra-data:
-    name: Fetch Airtable Data
+  github-pages:
+    name: Build for GitHub Pages
     runs-on: ubuntu-latest
     steps:
+      # Fetch recommendations from Airtable
       - name: Fetch API Data
         uses: JamesIves/fetch-api-data-action@v2.2.3
         with:
@@ -21,10 +22,6 @@ jobs:
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
           save-location: _data
           save-name: recommendations
-  github-pages:
-    name: Build for GitHub Pages
-    runs-on: ubuntu-latest
-    steps:
       # Check out the repo
       - uses: actions/checkout@v2
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
