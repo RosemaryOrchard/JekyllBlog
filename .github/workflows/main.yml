@@ -23,6 +23,8 @@ jobs:
           timeout: 120s
           script: |
             touch debug.txt
+            echo "===" >> debug.txt
+            echo "path: $(echo $PATH)" >> debug.txt
             echo "pwd: $(pwd)" >> debug.txt
             echo "which ruby: $(which ruby)" >> debug.txt
             echo "ruby -v: $(ruby -v)" >> debug.txt
