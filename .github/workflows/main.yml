@@ -15,28 +15,20 @@ jobs:
     steps:
       - name: executing remote ssh commands using password
         uses: appleboy/ssh-action@master
+        env:
+          JEKYLL_ENV: "production"
         with:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
           port: ${{ secrets.PORT }}
-          timeout: 120s
+          envs: JEKYLL_ENV
           script: |
-            touch debug.txt
-            echo "===" >> debug.txt
-            echo "path: $(echo $PATH)" >> debug.txt
-            echo "pwd: $(pwd)" >> debug.txt
-            echo "which ruby: $(which ruby)" >> debug.txt
-            echo "ruby -v: $(ruby -v)" >> debug.txt
-            echo "which bundle $(which bundle)" >> debug.txt
-            echo "bundle -v: $(bundle -v)" >> debug.txt
-            echo "bash -lc: $(bash -lc)" >> debug.txt
-            cd ~/JekyllBlog
-            git stash
-            git pull -r
-            $(which bundle) install
-            export JEKYLL_ENV=production
-            bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml
+            cd ~/JekyllBlog;
+            git stash;
+            git pull -r;
+            $(which bundle) install;
+            bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml && echo 0;
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
         with:
