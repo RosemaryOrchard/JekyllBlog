@@ -23,11 +23,11 @@ jobs:
           timeout: 120s
           script: |
             touch debug.txt
-            echo 'eval "pwd: $(pwd)"' >> debug.txt
-            echo 'eval "which ruby: $(which ruby)"' >> debug.txt
-            echo 'eval "ruby -v: $(ruby -v)"' >> debug.txt
-            echo 'eval "which bundle $(which bundle)"' >> debug.txt
-            echo 'eval "bundle -v: $(bundle -v)"' >> debug.txt
+            echo "pwd: $(pwd)" >> debug.txt
+            echo "which ruby: $(which ruby)" >> debug.txt
+            echo "ruby -v: $(ruby -v)" >> debug.txt
+            echo "which bundle $(which bundle)" >> debug.txt
+            echo "bundle -v: $(bundle -v)" >> debug.txt
             cd ~/JekyllBlog
             git stash
             git pull -r
