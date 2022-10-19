@@ -6,7 +6,23 @@ on:
       - main
 
 jobs:
+  extra-data:
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch API Data
+        uses: JamesIves/fetch-api-data-action@v2.2.3
+        with:
+          endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
+          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
+          save-location: _data
+          save-name: recommendations
   github-pages:
+    concurrency:
+      group: ${{ github.ref }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       # Check out the repo
