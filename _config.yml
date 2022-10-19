@@ -108,3 +108,10 @@ defaults:
       path: "category"
     values:
       sitemap: false
+  - scope:
+      path: "posts"
+    values:
+      layout: "post"
+      published: true
+      sitemap: true
+      hidden: false
