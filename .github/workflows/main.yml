@@ -26,7 +26,8 @@ jobs:
             git stash
             git pull -r
             $(which bundle) install
-            JEKYLL_ENV=production $(which bundle) exec $(which jekyll) build --config _config.yml,_config_prod.yml
+            export JEKYLL_ENV=production
+            $(which bundle) exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
         with:
