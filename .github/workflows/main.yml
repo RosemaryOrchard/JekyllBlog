@@ -30,6 +30,7 @@ jobs:
             echo "ruby -v: $(ruby -v)" >> debug.txt
             echo "which bundle $(which bundle)" >> debug.txt
             echo "bundle -v: $(bundle -v)" >> debug.txt
+            echo "bash -lc: $(bash -lc)" >> debug.txt
             cd ~/JekyllBlog
             git stash
             git pull -r
