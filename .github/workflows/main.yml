@@ -22,11 +22,12 @@ jobs:
           port: ${{ secrets.PORT }}
           timeout: 120s
           script: |
-            pwd
-            which ruby
-            ruby -v
-            which bundle
-            bundle -v
+            touch debug.txt
+            echo 'eval "pwd: $(pwd)"' >> debug.txt
+            echo 'eval "which ruby: $(which ruby)"' >> debug.txt
+            echo 'eval "ruby -v: $(ruby -v)"' >> debug.txt
+            echo 'eval "which bundle $(which bundle)"' >> debug.txt
+            echo 'eval "bundle -v: $(bundle -v)"' >> debug.txt
             cd ~/JekyllBlog
             git stash
             git pull -r
