@@ -441,3 +441,30 @@ button {
     max-width: 150px;
     border-radius: 10px;
 }
+
+form#search-blog {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "search-title search-title"
+      "search-input search-button";
+
+    label {
+        grid-area: search-title;
+    }
+
+    input {
+        grid-area: search-input;
+    }
+
+    button {
+        grid-area: search-button;
+        aspect-ratio: 1;
+    }
+}
+
+.social-links {
+    a {
+        border: none !important;
+    }
+}
