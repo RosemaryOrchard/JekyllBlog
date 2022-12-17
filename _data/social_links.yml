@@ -18,3 +18,8 @@ microdotblog:
   mediaName: Micro.Blog
   url: "https://micro.blog/rosemaryorchard"
   icon: microblog
+mastodon:
+  username: "@rosemary@snailedit.social"
+  mediaName: Mastodon
+  url: "https://snailedit.social/@rosemary"
+  icon: mastodon
