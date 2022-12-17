@@ -34,7 +34,8 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: unset;
 }
 
-.post-content {
+.post-content,
+.post-excerpt {
     @media screen and (min-width: $on-large) {
         img {
             //max-height: calc((#{$content-width} - (#{$spacing-unit})) / 2);
