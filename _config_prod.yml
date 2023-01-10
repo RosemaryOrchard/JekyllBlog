@@ -4,3 +4,5 @@ url: "https://rosemaryorchard.com"
 # Styling
 sass:
   style: compressed
+
+quiet: true

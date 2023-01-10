@@ -28,7 +28,7 @@ jobs:
             git stash;
             git pull -r;
             $(which bundle) install;
-            bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml && echo 0;
+            bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml --quiet && echo 0;
       - name: Telegram Action
         uses: xinthink/action-telegram@v1.1
         with:

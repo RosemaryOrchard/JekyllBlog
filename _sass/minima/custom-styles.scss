@@ -34,13 +34,32 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: unset;
 }
 
-.post-content {
-    img {
-        max-height: calc((#{$content-width} - (#{$spacing-unit})) / 2);
-        max-width: 80%;
-        vertical-align: middle;
-        margin: auto;
-        display: block;
+.post-content,
+.post-excerpt {
+    @media screen and (min-width: $on-large) {
+        img {
+            //max-height: calc((#{$content-width} - (#{$spacing-unit})) / 2);
+            max-width: calc((#{$content-width} - (#{$spacing-unit})) / 2);
+            vertical-align: middle;
+            margin: auto;
+            display: block;
+        }
+    }
+    @media screen and (max-width: $on-palm) {
+        max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+    }
+
+
+    @media screen and (min-width: $on-large) {
+        p:nth-of-type(odd) > img:only-child {
+            float: left;
+            padding-right: 1em;
+        }
+
+        p:nth-of-type(even) > img:only-child {
+            float: right;
+            padding-left: 1em;
+        }
     }
 }
 
@@ -421,4 +440,31 @@ button {
 .profile-photo {
     max-width: 150px;
     border-radius: 10px;
+}
+
+form#search-blog {
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-areas:
+      "search-title search-title"
+      "search-input search-button";
+
+    label {
+        grid-area: search-title;
+    }
+
+    input {
+        grid-area: search-input;
+    }
+
+    button {
+        grid-area: search-button;
+        aspect-ratio: 1;
+    }
+}
+
+.social-links {
+    a {
+        border: none !important;
+    }
 }
