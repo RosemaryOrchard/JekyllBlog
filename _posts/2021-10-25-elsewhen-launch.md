@@ -1,5 +1,4 @@
 ---
-layout: post
 type: post
 published: true
 title: 'Elsewhen, An App For Translating Times'

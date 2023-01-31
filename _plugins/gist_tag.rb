@@ -72,9 +72,9 @@ module Jekyll
       end
       html = [%Q{<figure class="code">}]
       
-      html.push %Q{<figcaption><span class="gist-name">#{data["name"]}</span><button><a class="gist-url" href="#{gistUrl}">View GitHub Gist</a></button></figcaption>}
+      html.push %Q{<span class="github-gist"><figcaption><span class="gist-name"><a href="#{gistUrl}">#{data["name"]}</a></span><button class="gist-url"><a href="#{gistUrl}">View on GitHub <i class="fa-brands fa-github"></i></a></button></figcaption>}
       html.push data["highlighted"]
-      html.push %Q{</figure>}
+      html.push %Q{</figure></span>}
       html.join("\n")
     end
 

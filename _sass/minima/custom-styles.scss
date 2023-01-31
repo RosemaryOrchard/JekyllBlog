@@ -388,52 +388,59 @@ a:hover {
     }
 }
 
-.gist-name {
-    font-weight: 600;
-    padding-right: 1em;
-}
+.github-gist {
+    figcaption {
+        padding-bottom: 0.5em;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
 
-.gist-url {
-    align-self: right;
-}
-
-pre code div.line span ::before {
-    all: unset !important;
-}
-
-pre {
-    code {
-        counter-reset: line;
-
-        div.line {
-            counter-increment: line;
-            box-sizing: border-box;
+        span.gist-name {
+            font-weight: 600;
+            padding-right: 1em;
+            margin-top: auto;
         }
 
-        div.line::before {
-            content: counter(line) ". ";
-            display: inline-block;
-            width: 2em;
-            text-align: right;
-            -webkit-user-select: none;
-            font-size: 0.5em;
-            padding-right: 0.5em;
+        button.gist-url {
+            float: right;
+        }
+    }
+
+    pre code div.line span ::before {
+        all: unset !important;
+    }
+
+    pre {
+        code {
+            counter-reset: line;
+
+            div.line {
+                counter-increment: line;
+                box-sizing: border-box;
+            }
+
+            div.line::before {
+                content: counter(line) ". ";
+                display: inline-block;
+                width: 2em;
+                text-align: right;
+                -webkit-user-select: none;
+                font-size: 0.5em;
+                padding-right: 0.5em;
+            }
         }
     }
 }
 
-figcaption {
-    padding-bottom: 0.5em;
-}
-
-button {
+button,
+button > a,
+button > a:hover {
     background-color: $rose-purple-dark;
     border: none;
     color: white;
     padding: 0.5em;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     border-radius: 0.5em;
 }
 
@@ -442,24 +449,27 @@ button {
     border-radius: 10px;
 }
 
-form#search-blog {
+.carplay-screenshot {
+    border-radius: 40px;
+    border-color: var(--code-background-color);
+    border-style: solid;
+    border-width: 5px;
+}
+
+.search-form {
     display: grid;
-    grid-auto-flow: column;
-    grid-template-areas:
-      "search-title search-title"
-      "search-input search-button";
 
-    label {
-        grid-area: search-title;
+    .search-label {
+        grid-column: 1;
+        grid-row: 1;
     }
-
-    input {
-        grid-area: search-input;
+    .search-input {
+        grid-column: 1;
+        grid-row: 2;
     }
-
-    button {
-        grid-area: search-button;
-        aspect-ratio: 1;
+    .search-button {
+        grid-column: 2;
+        grid-row: 2;
     }
 }
 

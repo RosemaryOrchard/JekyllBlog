@@ -1,5 +1,4 @@
 ---
-layout: post
 published: true
 title: "Improving my Label Maker with Keyboard Maestro"
 tags:

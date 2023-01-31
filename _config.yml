@@ -115,3 +115,9 @@ defaults:
       published: true
       sitemap: true
       hidden: false
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - vendor/bin

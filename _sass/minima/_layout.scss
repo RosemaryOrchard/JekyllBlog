@@ -298,6 +298,7 @@
       display: block;
       padding: $spacing-unit / 4;
       border: 1px solid $border-color-01;
+      border-radius: 1em;
       &:hover { border-color: $border-color-02 }
     }
   }
