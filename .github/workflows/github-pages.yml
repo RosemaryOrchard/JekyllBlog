@@ -15,13 +15,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # Fetch recommendations from Airtable
-      - name: Fetch API Data
-        uses: JamesIves/fetch-api-data-action@v2.2.3
-        with:
-          endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
-          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
-          save-location: _data
-          save-name: recommendations
+#      - name: Fetch API Data
+#        uses: JamesIves/fetch-api-data-action@v2.2.3
+#        with:
+#          endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
+#          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
+#          save-location: _data
+#          save-name: recommendations
       # Check out the repo
       - uses: actions/checkout@v2
       # Use GitHub Actions' cache to shorten build times and decrease load on servers
