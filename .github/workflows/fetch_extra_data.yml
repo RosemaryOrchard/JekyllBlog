@@ -10,6 +10,9 @@ permissions:
 
 jobs:
   extra-data:
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+      cancel-in-progress: true
     runs-on: ubuntu-latest
     steps:
       # Check out the repo
