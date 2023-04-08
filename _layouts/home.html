@@ -3,9 +3,53 @@ layout: default
 ---
 
 <div class="home h-feed">
-    
-    <h1>{{ page.title }}</h1>
 
+    <div class="artwork-display">
+        <span class="artwork">
+            <a href="https://relay.fm/automators">
+                <img title="Automators (Podcast)" src="/assets/podcasts/automators.png" alt="Automators Podcast Artwork">
+                <span class="artwork-title"><i class="fa-duotone fa-microphone-lines"></i>&nbsp; Automators</span>
+            </a>
+        </span>
+        <span class="artwork">
+            <a href="https://www.takecontrolbooks.com/shortcuts/">
+                <img title="Take Control of Shortcuts (Book)" src="/assets/books/take_control_shortcuts.png"
+                    alt="Take Control of Shortcuts Book Artwork">
+                <span class="artwork-title"><i class="fa-duotone fa-book"></i>&nbsp; Take Control of Shortcuts</span>
+            </a>
+        </span>
+        <span class="artwork">
+            <a href="https://twit.tv/ios">
+                <img title="iOS Today (Podcast)" src="/assets/podcasts/ios_today.jpg" alt="iOS Today Podcast Artwork">
+                <span class="artwork-title"><i class="fa-duotone fa-microphone-lines"></i>&nbsp; iOS Today</span>
+            </a>
+        </span>
+        <!-- <span class="artwork">
+                                    <a href="https://snailedit.dev">
+                                        <object data="{{ '/assets/snailedit/snail.svg' | relative_url }}" style="width: 50px; height: 20px"
+                                            type="image/svg+xml"></object>
+                                    </a>
+                                </span> -->
+        <span class="artwork">
+            <a href="https://pushcut.io">
+                <img title="Pushcut App" src="/assets/snailedit/pushcut.png" alt="Pushcut App">
+                <span class="artwork-title"><i class="fa-duotone fa-mobile"></i>&nbsp; Pushcut</span>
+            </a>
+        </span>
+        <span class="artwork">
+            <a href="https://whenworks.app">
+                <img title="WhenWorks App" src="/assets/snailedit/whenworks.png" alt="WhenWorks App">
+                <span class="artwork-title"><i class="fa-duotone fa-desktop"></i>&nbsp; WhenWorks</span>
+            </a>
+        </span>
+        <span class="artwork">
+            <a href="https://focuscuts.com/">
+                <img title="FocusCuts App" src="/assets/snailedit/focuscuts.png" alt="FocusCuts App">
+                <span class="artwork-title"><i class="fa-duotone fa-mobile"></i>&nbsp; FocusCuts</span>
+            </a>
+        </span>
+    </div>
+    <h1>{{ page.title }}</h1>
     {% if paginator.page == 1 %}
         {{ content | markdownify }}
     {% endif %}

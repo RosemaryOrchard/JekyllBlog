@@ -76,6 +76,10 @@ h1, h2, h3, h4, h5, h6 {
 
         > a > img {
             max-width: $large-artwork;
+            padding-bottom: 0.25em;
+        }
+        .artwork-title {
+            padding-top: 0.25em;
         }
     }
 
