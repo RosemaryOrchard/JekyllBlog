@@ -23,3 +23,8 @@ mastodon:
   mediaName: Mastodon
   url: "https://snailedit.social/@rosemary"
   icon: mastodon
+bluesky:
+  username: "@rosemaryorchard.bsky.social"
+  mediaName: Bluesky
+  url: "https://bsky.app/profile/rosemaryorchard.bsky.social"
+  icon: cloud
