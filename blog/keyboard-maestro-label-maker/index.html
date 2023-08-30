@@ -1,0 +1,13 @@
+<p>One of the things I mentioned in the <a href="/blog/automators-097/">most recent episode of Automators</a> was how I’ve been fixing small annoyances with automation tools, particularly Keyboard Maestro. I encountered another one with my label maker which I was happy to be able to solve!</p>
+
+<p>I have a Brother P-Touch PT710BT label maker. Naming aside, it’s an excellent device—and the Brother software on the Mac allows me to do a mail merge with CSVs—including print a list of labels. Collecting the list and merging that into a CSV is a Shortcuts story for another time, but the thing that annoyed me the most is connecting the label maker to my Mac didn’t automatically open the software. It was just <em>one more step</em> getting in my way. So I fixed it—with Keyboard Maestro.</p>
+
+<!--more-->
+
+<p>Keyboard Maestro has a trigger for <a href="https://wiki.keyboardmaestro.com/trigger/USB_Device">connecting USB devices</a>. Because I’m me, I didn’t check the documentation when I went to set this up, so I found the name of the trigger the hard way—through the Apple Menu, System Report, USB, and then scrolling.</p>
+
+<p><img src="/assets/2022/macos_usb_devices.png" alt="My Label Maker in the System Report" /></p>
+
+<p>The macro is very simple: <code class="language-plaintext highlighter-rouge">Activate "Brother P-touch Editor"</code>. One action. But it works! And that’s one less annoyance in my life.</p>
+
+<p><img src="/assets/2022/keyboard-maestro-activate-application.png" alt="Keyboard Maestro Macro to activate the label maker software when the device is connected" /></p>

@@ -1,0 +1,56 @@
+<p>A while ago in the Mac Power Users Facebook Group I was challenged to make a Workflow which would tell the user about their upcoming day. When it runs Workflow will say something like this:</p>
+<!--more-->
+<blockquote>
+<p>Good morning Rose, it is 07:38.<br />
+In Vienna the weather will be mixed precipitation throughout the week, with temperatures rising to 6°C on Friday..<br />
+The current temperature is 0 degrees celcius.<br />
+There is a 11% chance of rain.<br />
+Your iPad has 80% battery.<br />
+Your calendar events for today are Shrove Tuesday, Work.<br />
+The top news headlines for today are:</p>
+<ol>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+<li>
+</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>Here is some of your favourite music:</p>
+</blockquote>
+<p>After it speaks this it then plays some of my favourite music (shuffling from a playlist I chose). </p>
+<p>So, how does this all work? </p>
+<p>When you import the Workflow it asks you three questions, what you name is, your Dark Sky Weather API, and the RSS feed of your favourite news source.</p>
+<p><a href="https://resources.rosemaryorchard.com/images/blog/good-morning-computer/workflow_import_questions.png">https://resources.rosemaryorchard.com/images/blog/good-morning-computer/workflow_import_questions.png</a>)</p>
+<p>You can get your <a href="https://darksky.net/dev/docs">API Key from Dark Sky</a>, on the free plan you get up to 1000 calls per day - more than enough for our Workflow.</p>
+<p>Next the Workflow gets the data we need:</p>
+<ul>
+<li>the date</li>
+<li>the titles of the last 6 items from the RSS feed</li>
+<li>the current location and the name of it</li>
+<li>the weather for your current location</li>
+<li>the kind of device you're using</li>
+<li>the battery level of the device you're using</li>
+<li>your calendar events for today</li>
+</ul>
+<p>Then this information is inserted into the text, let's look at that again.</p>
+<blockquote>
+<p>Good morning <strong>Name</strong>, it is <strong>Current Time</strong>.<br />
+In <strong>City</strong> the weather will be <strong>Weather Summary</strong>.<br />
+The current temperature is <strong>Temperature degrees celcius</strong>.<br />
+There is a <strong>Rain %</strong>% chance of rain.<br />
+Your <strong>Device Model</strong> has <strong>Battery Level</strong>% battery.<br />
+<strong>Calendar Events.</strong><br />
+The top news headlines for today are <strong>Headlines</strong>.<br />
+Here is some of your favourite music:</p>
+</blockquote>
+<p>Everything in bold is a variable, replaced with data we either fetched from the internet, or collected from the device. After this text all that Workflow has to do is use the speak text action, and the play music action. </p>
+<p>There are two current versions of the Workflow, <a href="https://workflow.is/workflows/94ba7b07407948bdbabccfdb4c1d63fa">an imperial version for those who prefer Farenheit</a> and a <a href="https://workflow.is/workflows/c9964e848eee49c6a3b4290f00338322">metric version for those who prefer Celsius</a>. If you download either of these you can have your device talk to you in the morning, and tell you about your day.</p>
