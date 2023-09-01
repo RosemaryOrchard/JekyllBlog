@@ -291,9 +291,9 @@ input:checked {
     width: fit-content;
 
     .post-tags {
-        display: grid;
-        grid-auto-flow: column;
-        grid-auto-columns: auto;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
         font-size: $small-font-size;
 
         .tag {
