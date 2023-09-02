@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/RosemaryOrchard/jekyll-json-feed.git
-  revision: d0ddd7b731fd98005725524f757e16cad238eb45
+  revision: b3b3ff2abda5abae3780bd94c2d907fa3e79eed0
   specs:
-    jekyll-json-feed-rose (1.0.1)
+    jekyll-json-feed-rose (1.0.2)
       jekyll (>= 3.3, < 5.0)
 
 GEM
@@ -95,17 +95,17 @@ PLATFORMS
   universal-darwin-21
 
 DEPENDENCIES
-  jekyll (~> 4.3.2)
+  jekyll
   jekyll-archives
-  jekyll-feed (~> 0.12)
+  jekyll-feed
   jekyll-json-feed-rose!
   jekyll-paginate-v2
   jekyll-redirect-from
+  jekyll-sass-converter
   jekyll-sitemap
-  minima (~> 2.5)
-  tzinfo (~> 1.2)
+  minima
+  tzinfo
   tzinfo-data
-  wdm (~> 0.1.1)
   webrick
 
 BUNDLED WITH
