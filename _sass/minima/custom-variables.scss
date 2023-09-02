@@ -5,6 +5,8 @@ $base-font-family: "Gotham SSm A", "Gotham SSm B", -apple-system,
 $code-font-family: "Menlo", "Inconsolata", "Consolas", "Roboto Mono",
   "Ubuntu Mono", "Liberation Mono", "Courier New", monospace;
 
+$nav-bar-height: $spacing-unit * 1.865;
+
 $rose-purple: #9D61E2;
 $rose-purple-dark: #583381;
 $rose-purple-light: #D9B7FF;
@@ -12,8 +14,8 @@ $rose-purple-light: #D9B7FF;
 $dark: #282828;
 $light: #ffffff;
 
-$large-artwork: 150px;
-$medium-artwork: 100px;
+$large-artwork: 100px;
+$medium-artwork: 75px;
 $small-artwork: 50px;
 
 $brand-color: $rose-purple;

@@ -1,0 +1,34 @@
+<div class="artwork-display">
+    {% assign artwork_groups = site.data.home_artwork | sort: 'group_name' %}
+    {% for group in artwork_groups %}
+        <div class="artwork-group">
+            {% assign group_id = group.group_name | slugify: "pretty" %}
+            {% assign group_id = group_id | prepend: 'artwork-group-' %}
+                <input type="radio" id="{{ group_id }}" name="artwork-tab" class="artwork-tab"
+                       {% if forloop.first %}checked{% endif %}>
+                <label for="{{ group_id }}">
+                    <i class="{{ group.group_icon }}"></i>&nbsp;{{ group.group_name }}
+                </label>
+            <div class="artwork-icons {{ group_id }}">
+                {% assign items = group.items | where: 'published', true %}
+                {% assign items = items | sort: 'name' %}
+                {% for item in items %}
+                    <div class="artwork">
+                <span class="artwork-asset">
+                    <a href="{{ item.link }}">
+                        <img title="{{ item.name }} ({{ group.group_name }})"
+                             src="{{ item.artwork }}"
+                             alt="{{ item.name }} {{ group.group_name }} Artwork">
+                    </a>
+                </span>
+                        <span class="artwork-title">
+                    <a href="{{ item.link }}">
+                        {{ item.name }}
+                    </a>
+                </span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,74 @@
+[
+  {
+    "group_name": "Podcasts",
+    "group_icon": "fa-duotone fa-microphone-lines",
+    "items": [
+      {
+        "name": "Automators",
+        "artwork": "/assets/podcasts/automators.png",
+        "link": "https://relay.fm/automators",
+        "published": true
+      },
+      {
+        "name": "iOS Today",
+        "artwork": "/assets/podcasts/ios_today.jpg",
+        "link": "https://twit.tv/ios",
+        "published": true
+      }
+    ]
+  },
+  {
+    "group_name": "Book",
+    "group_icon": "fa-duotone fa-book",
+    "items": [
+      {
+        "name": "Take Control of Shortcuts",
+        "artwork": "/assets/books/take_control_shortcuts.png",
+        "link": "https://www.takecontrolbooks.com/shortcuts/",
+        "published": true
+      }
+    ]
+  },
+  {
+    "group_name": "Apps",
+    "group_icon": "fa-duotone fa-mobile",
+    "items": [
+      {
+        "name": "WhenWorks",
+        "artwork": "/assets/snailedit/whenworks.png",
+        "link": "https://whenworks.app",
+        "published": true
+      },
+      {
+        "name": "FocusCuts",
+        "artwork": "/assets/snailedit/focuscuts.png",
+        "link": "https://focuscuts.com",
+        "published": true
+      },
+      {
+        "name": "Pushcut",
+        "artwork": "/assets/snailedit/pushcut.png",
+        "link": "https://pushcut.io",
+        "published": true
+      },
+      {
+        "name": "Toolbox Pro",
+        "artwork": "/assets/snailedit/toolbox_pro.png",
+        "link": "https://toolboxpro.app",
+        "published": true
+      },
+      {
+        "name": "Nautomate",
+        "artwork": "/assets/snailedit/nautomate.png",
+        "link": "https://www.nautomate.app",
+        "published": true
+      },
+      {
+        "name": "Logger",
+        "artwork": "/assets/snailedit/logger.png",
+        "link": "https://shortcutslogger.dev",
+        "published": true
+      }
+    ]
+  }
+]
