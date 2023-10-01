@@ -33,3 +33,8 @@ threads:
   mediaName: Threads
   url: "https://threads.net/@rosemary_orchard"
   icon: fab fa-threads
+pixelfed:
+  username: "RosemaryOrchard"
+  mediaName: PixelFed
+  url: "https://pixelfed.social/RosemaryOrchard"
+  icon: fa-duotone fa-camera-retro
