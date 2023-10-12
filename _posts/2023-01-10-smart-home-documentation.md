@@ -1,6 +1,7 @@
 ---
 layout: post
 published: true
+layout: post
 title: Documenting My Smart Home
 tags:
   - Home Automation
