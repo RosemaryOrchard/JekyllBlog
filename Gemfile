@@ -9,6 +9,7 @@ group :jekyll_plugins do
   gem "jekyll-json-feed-rose", :git => "https://github.com/RosemaryOrchard/jekyll-json-feed.git"
   gem "jekyll-redirect-from"
   gem "jekyll-sass-converter"
+  gem "jekyll-mastodon_webfinger"
 end
 
 platforms :mingw, :x64_mingw, :mswin, :jruby do
