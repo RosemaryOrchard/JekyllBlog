@@ -19,13 +19,19 @@ jobs:
           endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
           save-name: recommendations.json
-          save-location: _data
+          # save-location: _data
       # - name: Save Airtable Recommendations
       #   uses: test-room-7/action-update-file@v1
       #   with:
       #     file-path: _data/recommendations.json
       #     commit-msg: Updated Recommmendations
       #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Save Recommendations
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: main # Pushes the updates to the main branch.
+          folder: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
+          target-folder: _data # Saves the data into the 'data' directory on the main branch.
       - name: Deploy on Server
         uses: appleboy/ssh-action@dce9d565de8d876c11d93fa4fe677c0285a66d78
         env:
@@ -40,7 +46,6 @@ jobs:
             cd ~/JekyllBlog;
             git stash;
             git pull -r;
-            echo "$fetch-api-data" > _data/recommendations.json
             $(which bundle) install;
             bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml --quiet && echo 0;
       - name: Telegram Action
