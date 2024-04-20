@@ -549,3 +549,10 @@ button > a:hover {
         border: none !important;
     }
 }
+
+.no-hover {
+    display: none;
+    @media (hover: none) {
+      display: block;
+    }
+}
