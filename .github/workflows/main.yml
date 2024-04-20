@@ -18,7 +18,7 @@ jobs:
     steps:
       - name: Fetch Airtable Recommendations
         continue-on-error: true
-        uses: JamesIves/fetch-api-data-action@v2.2.3
+        uses: JamesIves/fetch-api-data-action@v2.3.0
         with:
           endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
