@@ -16,13 +16,13 @@ jobs:
   personal-server:
     runs-on: ubuntu-latest
     steps:
-      - name: Fetch Airtable Recommendations
-        continue-on-error: true
-        uses: JamesIves/fetch-api-data-action@v2.3.0
-        with:
-          endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
-          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
-          save-name: recommendations
+      # - name: Fetch Airtable Recommendations
+      #   continue-on-error: true
+      #   uses: JamesIves/fetch-api-data-action@v2.3.0
+      #   with:
+      #     endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
+      #     configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
+      #     save-name: recommendations
           # save-location: _data
       # - uses: stefanzweifel/git-auto-commit-action@v4
       #   with:
@@ -54,7 +54,8 @@ jobs:
             cd ~/JekyllBlog;
             git stash;
             git pull -r;
-            echo "$fetchApiData" > _data/recommendations.json
+            curl "${{ secrets.AIRTABLE_RECOMMENDATIONS }}" \
+-H "Authorization: Bearer ${{ secrets.AIRTABLE_TOKEN }}" >> _data/recommendations.json
             $(which bundle) install;
             bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml --quiet && echo 0;
       - name: Telegram Action
