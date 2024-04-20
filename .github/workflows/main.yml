@@ -38,7 +38,7 @@ jobs:
           folder: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
           target-folder: _data # Saves the data into the 'data' directory on the main branch.
       - name: Deploy on Server
-        uses: appleboy/ssh-action@v1
+        uses: appleboy/ssh-action@v1.0.3
         env:
           JEKYLL_ENV: "production"
         with:
