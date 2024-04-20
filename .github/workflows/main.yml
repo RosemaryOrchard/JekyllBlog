@@ -37,9 +37,8 @@ jobs:
           branch: main # Pushes the updates to the main branch.
           folder: fetch-api-data-action # The location of the data.json file saved by the Fetch API Data action.
           target-folder: _data # Saves the data into the 'data' directory on the main branch.
-          token: ${{ secrets.DEPLOY_TOKEN }}
       - name: Deploy on Server
-        uses: appleboy/ssh-action@dce9d565de8d876c11d93fa4fe677c0285a66d78
+        uses: appleboy/ssh-action@v1
         env:
           JEKYLL_ENV: "production"
         with:
