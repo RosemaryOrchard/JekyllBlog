@@ -29,7 +29,8 @@ jobs:
         with:
           endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
           configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
-          save-name: recommendations
+          save-name: recommendations.json
+          save-location: _data
       - name: Save the data
         uses: JamesIves/github-pages-deploy-action@v4.4.1
         with:
