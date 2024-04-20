@@ -40,7 +40,7 @@ jobs:
             cd ~/JekyllBlog;
             git stash;
             git pull -r;
-            echo $fetch-api-data > _data/recommendations.json
+            echo "$fetch-api-data" > _data/recommendations.json
             $(which bundle) install;
             bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml --quiet && echo 0;
       - name: Telegram Action
