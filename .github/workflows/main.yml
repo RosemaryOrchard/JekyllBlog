@@ -30,8 +30,8 @@ jobs:
             cd ~/JekyllBlog;
             git stash;
             git pull -r;
-            curl "${{ secrets.AIRTABLE_RECOMMENDATIONS }}" -H "Authorization: Bearer ${{ secrets.AIRTABLE_TOKEN }}" >> _data/recommendations.json
-            cat _data/recommendations.json | jq '.records | map(.fields)' >> _data/recommendations.json
+            curl "${{ secrets.AIRTABLE_RECOMMENDATIONS }}" -H "Authorization: Bearer ${{ secrets.AIRTABLE_TOKEN }}" > _data/recommendations.json
+            cat _data/recommendations.json | jq '.records | map(.fields)' > _data/recommendations.json
             $(which bundle) install;
             bundle exec jekyll build --config _config.yml,_config_prod.yml,_config_local.yml --quiet && echo 0;
       - name: Telegram Action
