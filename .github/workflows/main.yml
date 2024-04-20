@@ -13,7 +13,20 @@ jobs:
   personal-server:
     runs-on: ubuntu-latest
     steps:
-      - name: executing remote ssh commands using password
+      - name: Fetch Airtable Recommendations
+        uses: JamesIves/fetch-api-data-action@v2.2.3
+        with:
+          endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
+          configuration: '{ "method": "GET", "headers": {"Authorization": "Bearer ${{ secrets.AIRTABLE_TOKEN }}"} }'
+          save-name: recommendations.json
+          save-location: _data
+      - name: Save Airtable Recommendations
+        uses: test-room-7/action-update-file
+        with:
+          file-path: _data/recommendations.json
+          commit-msg: Updated Recommmendations
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Deploy on Server
         uses: appleboy/ssh-action@dce9d565de8d876c11d93fa4fe677c0285a66d78
         env:
           JEKYLL_ENV: "production"
