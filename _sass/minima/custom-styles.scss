@@ -51,6 +51,8 @@ h1, h2, h3, h4, h5, h6 {
             vertical-align: middle;
             margin: auto;
             display: block;
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
     }
     @media screen and (max-width: $on-palm) {
@@ -59,14 +61,17 @@ h1, h2, h3, h4, h5, h6 {
 
 
     @media screen and (min-width: $on-large) {
+        img {
+            border-radius: 0.25em;
+        }
         p:nth-of-type(odd) > img:only-child {
             float: left;
-            padding-right: 1em;
+            margin-right: 1em;
         }
 
         p:nth-of-type(even) > img:only-child {
             float: right;
-            padding-left: 1em;
+            margin-left: 1em;
         }
     }
 }

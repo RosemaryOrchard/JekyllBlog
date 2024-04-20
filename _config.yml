@@ -39,6 +39,7 @@ collections:
   - recommendations
 
 exclude:
+  - _drafts
   - Gemfile
   - Gemfile.lock
   - vendor

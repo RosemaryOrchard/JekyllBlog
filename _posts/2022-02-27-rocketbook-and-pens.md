@@ -1,5 +1,6 @@
 ---
 published: true
+layout: post
 title: "Rocketbook & Pens"
 tags:
   - Analogue Tools
@@ -9,6 +10,7 @@ date: '2022-02-27 17:00'
 ---
 
 On the [latest episode of Automators](https://www.relay.fm/automators/96) with [Mikah Sargent](https://mikah.co), we went down a little bit of a rabbit hole with my RocketBook. After the show, both Sparky and Mikah decided to give it a try! Since then I've been contacted by a few people asking about my RocketBook, so here are the full details.
+
 
 <!--more-->
 

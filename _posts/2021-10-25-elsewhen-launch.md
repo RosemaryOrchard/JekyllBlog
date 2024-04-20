@@ -1,6 +1,7 @@
 ---
 type: post
 published: true
+layout: post
 title: 'Elsewhen, An App For Translating Times'
 date: '2021-10-25 23:00'
 custom_icon:
@@ -10,6 +11,7 @@ custom_icon:
 ---
 
 Time is hard, and moreso when you and your friends are spread out around the world. Fortunately, technology can help us handle these things!
+
 
 <!--more-->
 
