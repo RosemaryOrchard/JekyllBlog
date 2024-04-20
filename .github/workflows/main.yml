@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - main
+      
+permissions: 
+  contents: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -14,6 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Fetch Airtable Recommendations
+        continue-on-error: true
         uses: JamesIves/fetch-api-data-action@v2.2.3
         with:
           endpoint: ${{ secrets.AIRTABLE_RECOMMENDATIONS }}
@@ -27,6 +31,7 @@ jobs:
       #     commit-msg: Updated Recommmendations
       #     github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Save Recommendations
+        continue-on-error: true
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: main # Pushes the updates to the main branch.
