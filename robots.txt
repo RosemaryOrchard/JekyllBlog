@@ -1,0 +1,8 @@
+---
+# intentionally left blank
+---
+{% for bot in site.data.robots %}
+User-agent: {{ bot }}
+Disallow: /
+  
+{% endfor %}
