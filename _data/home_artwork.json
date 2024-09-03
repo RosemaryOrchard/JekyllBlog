@@ -34,6 +34,12 @@
     "group_icon": "fa-duotone fa-mobile",
     "items": [
       {
+        "name": "Menu Box",
+        "artwork": "/assets/snailedit/menubox.png",
+        "link": "https://menubox.app",
+        "published": true
+      }
+    ,{
         "name": "WhenWorks",
         "artwork": "/assets/snailedit/whenworks.png",
         "link": "https://whenworks.app",
