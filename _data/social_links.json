@@ -1,82 +1,102 @@
-{
-  "twitter": {
+[
+  {
+    "slug": "twitter",
     "header": true,
     "footer": true,
     "username": "RosemaryOrchard",
-    "mediaName": "Twitter",
+    "media_name": "Twitter",
     "url": "https://twitter.com/RosemaryOrchard",
-    "icon": "fab fa-twitter"
+    "icon": "fab fa-twitter",
+    "show": false
   },
-  "github": {
+  {
+    "slug": "github",
     "header": true,
     "footer": true,
     "username": "RosemaryOrchard",
-    "mediaName": "GitHub",
+    "media_name": "GitHub",
     "url": "https://github.com/RosemaryOrchard",
-    "icon": "fab fa-github"
+    "icon": "fab fa-github",
+    "show": true
   },
-  "instagram": {
+  {
+    "slug": "instagram",
     "header": true,
     "footer": true,
     "username": "rosemary_orchard",
-    "mediaName": "Instagram",
+    "media_name": "Instagram",
     "url": "https://instagram.com/rosemary_orchard",
-    "icon": "fab fa-instagram"
+    "icon": "fab fa-instagram",
+    "show": true
   },
-  "microdotblog": {
+  {
+    "slug": "microdotblog",
     "header": true,
     "footer": true,
     "username": "rosemaryorchard",
-    "mediaName": "Micro.Blog",
+    "media_name": "Micro.Blog",
     "url": "https://micro.blog/rosemaryorchard",
-    "icon": "fab fa-microblog"
+    "icon": "fab fa-microblog",
+    "show": true
   },
-  "mastodon": {
+  {
+    "slug": "mastodon",
     "header": true,
     "footer": true,
     "username": "@rosemary@snailedit.social",
-    "mediaName": "Mastodon",
+    "media_name": "Mastodon",
     "url": "https://snailedit.social/@rosemary",
-    "icon": "fab fa-mastodon"
+    "icon": "fab fa-mastodon",
+    "show": true
   },
-  "bluesky": {
+  {
+    "slug": "bluesky",
     "header": true,
     "footer": true,
     "username": "@rosemaryorchard.bsky.social",
-    "mediaName": "Bluesky",
+    "media_name": "Bluesky",
     "url": "https://bsky.app/profile/rosemaryorchard.bsky.social",
-    "icon": "fas fa-cloud"
+    "icon": "fab fa-bluesky",
+    "show": true
   },
-  "threads": {
+  {
+    "slug": "threads",
     "header": true,
     "footer": true,
     "username": "@rosemary_orchard",
-    "mediaName": "Threads",
+    "media_name": "Threads",
     "url": "https://threads.net/@rosemary_orchard",
-    "icon": "fab fa-threads"
+    "icon": "fab fa-threads",
+    "show": true
   },
-  "pixelfed": {
+  {
+    "slug": "pixelfed",
     "header": true,
     "footer": true,
     "username": "RosemaryOrchard",
-    "mediaName": "PixelFed",
+    "media_name": "PixelFed",
     "url": "https://pixelfed.social/RosemaryOrchard",
-    "icon": "fa-duotone fa-camera-retro"
+    "icon": "fa-solid fa-camera-retro",
+    "show": true
   },
-  "mapstr": {
+  {
+    "slug": "mapstr",
     "header": true,
     "footer": true,
     "username": "rosemaryorchard",
-    "mediaName": "Mapstr",
+    "media_name": "Mapstr",
     "url": "https://go.mapstr.com/dUQRrwneSub",
-    "icon": "fa-duotone fa-location-smile"
+    "icon": "fa-duotone fa-location-smile",
+    "show": false
   },
-  "tiktok": {
+  {
+    "slug": "tiktok",
     "header": true,
     "footer": true,
     "username": "rosemaryorchard",
-    "mediaName": "TikTok",
+    "media_name": "TikTok",
     "url": "https://www.tiktok.com/@rosemaryorchard",
-    "icon": "fab fa-tiktok"
+    "icon": "fab fa-tiktok",
+    "show": true
   }
-}
+]

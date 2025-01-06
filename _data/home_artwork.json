@@ -1,26 +1,21 @@
 [
   {
-    "group_name": "Podcasts",
+    "group_name": "Books & Podcasts",
+    "group_slug": "books-podcasts",
     "group_icon": "fa-duotone fa-microphone-lines",
     "items": [
       {
         "name": "Automators",
         "artwork": "/assets/podcasts/automators.png",
         "link": "https://relay.fm/automators",
-        "published": true
+        "published": false
       },
       {
         "name": "iOS Today",
         "artwork": "/assets/podcasts/ios_today.jpg",
         "link": "https://twit.tv/ios",
         "published": true
-      }
-    ]
-  },
-  {
-    "group_name": "Book",
-    "group_icon": "fa-duotone fa-book",
-    "items": [
+      },
       {
         "name": "Take Control of Shortcuts",
         "artwork": "/assets/books/take_control_shortcuts.png",
@@ -31,6 +26,7 @@
   },
   {
     "group_name": "Apps",
+    "group_slug": "apps",
     "group_icon": "fa-duotone fa-mobile",
     "items": [
       {

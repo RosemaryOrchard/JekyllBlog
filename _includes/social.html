@@ -1,11 +1,11 @@
 {% assign social = site.minima.social_links -%}
 
-<ul class="social-media-list">
-  {% assign social_links = site.data.social_links | sort %}
+<ul class="social-media-list" id="social-media-list">
+  {% assign social_links = site.data.social_links | where:"show",true | where:"footer",true | sort: "slug" %}
   {% for account in social_links %}
-    <li id="{{ account[1].mediaName | downcase }}-{{ account[1].username | downcase }}">
-      <a rel="me" href="{{ account[1].url }}" title="{{ account[1].username }} on {{ account[1].mediaName }}">
-        <i class="{{ account[1].icon }}"></i><span class="no-hover">&nbsp;{{ account[1].mediaName }}</span>
+    <li id="{{ account.media_name | downcase }}-{{ account.username | downcase }}">
+      <a rel="me" href="{{ account.url }}" title="{{ account.username }} on {{ account.media_name }}">
+        <i class="{{ account.icon }}"></i><span class="no-hover">&nbsp;{{ account.media_name }}</span>
       </a>
     </li>
   {% endfor %}

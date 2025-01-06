@@ -2,7 +2,7 @@
     {% assign artwork_groups = site.data.home_artwork | sort: 'group_name' %}
     {% for group in artwork_groups %}
         <div class="artwork-group">
-            {% assign group_id = group.group_name | slugify: "pretty" %}
+            {% assign group_id = group.group_slug %}
             {% assign group_id = group_id | prepend: 'artwork-group-' %}
                 <input type="radio" id="{{ group_id }}" name="artwork-tab" class="artwork-tab"
                        {% if forloop.first %}checked{% endif %}>
